@@ -1,5 +1,5 @@
 // Мелкие помощники разметки: экранирование, иконки, аватары.
-import { ELEMENTS } from './lib/labels.js';
+import { ELEMENTS, WEAPONS } from './lib/labels.js';
 
 export const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -36,6 +36,7 @@ export const icons = {
   codes: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="11" rx="2.5"/><path d="M7 3.5h10M8 12.5h.01M12 12.5h.01M16 12.5h.01" stroke-linecap="round" stroke-width="2.4"/></svg>',
   reset: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"/></svg>',
   info: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01" stroke-linecap="round" stroke-width="2.2"/></svg>',
+  sword: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5H20.5V9.5L9 21 3 15z"/><path d="M5 13l6 6M3 21l3-3"/></svg>',
   drought: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M4 4l16 16"/></svg>',
 };
 
@@ -43,6 +44,34 @@ export function ava(c, cls = '') {
   if (!c) return '';
   const r4 = c.rarity === 4 ? ' r4' : '';
   return `<span class="ava ${cls}${r4}" style="--el:${elColor(c.element)}"><img src="${esc(c.icon)}" alt="${esc(c.name)}" loading="lazy" decoding="async"></span>`;
+}
+
+const RARITY_COLOR = { 5: 'var(--gold)', 4: 'var(--purple)', 3: '#5aa9ff' };
+
+/** Панель с описанием оружия: статы на 90 ур., пассивка (R1–R5), у кого сигнатурное. */
+export function weaponSheet(name, d) {
+  const w = d.weapons[name] || {};
+  const owner = d.chars.find((c) => c.signature === name);
+  const users = d.chars.filter((c) => c.build?.weapons?.some((x) => x.name === name) && c.signature !== name).slice(0, 8);
+  return `<div class="panel wsheet">
+    <div class="row">
+      <span class="wi lg" style="--rc:${RARITY_COLOR[w.rarity] || 'var(--gold)'}">${w.icon ? `<img src="${esc(w.icon)}" alt="">` : ''}</span>
+      <div class="grow">
+        <div class="wsheet-name">${esc(name)}</div>
+        <div class="muted" style="font-size:13px;margin-top:4px"><span class="stars">${'★'.repeat(w.rarity || 0)}</span> · ${WEAPONS[w.type]?.ru || ''}</div>
+      </div>
+      <button class="sheet-x" data-close aria-label="Закрыть">✕</button>
+    </div>
+    <div class="wstats">
+      <div><span>Атака</span><b>${w.atk ?? '—'}</b></div>
+      ${w.sub ? `<div><span>${esc(w.sub.name)}</span><b>${esc(w.sub.value)}</b></div>` : ''}
+    </div>
+    ${w.passive ? `<div class="label" style="margin-top:16px">${esc(w.passive)}</div>` : ''}
+    <p class="wdesc">${esc(w.ru || w.en || 'Описание появится позже.')}</p>
+    <p class="muted" style="font-size:12px;margin:8px 0 0">Статы — на 90 уровне. Значения «12–24%» — от R1 до R5.</p>
+    ${owner ? `<div class="label" style="margin-top:16px">Сигнатурное</div><a class="item" href="#/char/${owner.id}" data-close style="margin-top:8px">${ava(owner)}<div class="grow"><div class="t1">${esc(owner.name)}</div><div class="t2">${esc(owner.ru)}</div></div></a>` : ''}
+    ${users.length ? `<div class="label" style="margin-top:16px">Подходит также</div><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px">${users.map((c) => `<a href="#/char/${c.id}" data-close title="${esc(c.name)}">${ava(c, 'sm')}</a>`).join('')}</div>` : ''}
+  </div>`;
 }
 
 export const pct = (x) => {

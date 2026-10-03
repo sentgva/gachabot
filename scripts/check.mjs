@@ -21,7 +21,13 @@ for (const b of d.banners) {
 }
 for (const t of d.tier.tiers) for (const k of ['dps', 'hybrid', 'support']) for (const id of t[k]) if (!has(id)) errors.push(`тир ${t.tier}: нет ${id}`);
 for (const c of d.chars) {
-  for (const team of c.build?.teams || []) for (const id of team) if (!has(id)) errors.push(`${c.id}: в команде нет ${id}`);
+  for (const team of c.build?.teams || []) {
+    const slots = Array.isArray(team) ? team.map((x) => [x]) : team.slots || [];
+    if (slots.length !== 3) errors.push(`${c.id}: в команде не 3 слота`);
+    for (const id of slots.flat()) if (!has(id)) errors.push(`${c.id}: в команде нет ${id}`);
+  }
+  for (const w of c.build?.weapons || []) if (!d.weapons[w.name]?.ru) errors.push(`${c.id}: нет описания оружия ${w.name}`);
+  if (c.bg && !(await exists(c.bg))) errors.push(`${c.id}: нет фона ${c.bg}`);
   for (const s of c.build?.sets || []) if (!d.setsByName[s.name]) errors.push(`${c.id}: неизвестный сет ${s.name}`);
   for (const f of ['icon', 'art']) if (!c[f] || !(await exists(c[f]))) errors.push(`${c.id}: нет картинки ${f}`);
   if (!c.element || !c.weapon || !c.rarity) errors.push(`${c.id}: не заполнены element/weapon/rarity (запусти npm run sync)`);

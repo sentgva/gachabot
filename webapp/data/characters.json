@@ -75,16 +75,37 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "jiyan",
-     "iuno",
-     "ciaccona"
-    ],
-    [
-     "jiyan",
-     "ciaccona",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T2",
+     "name": "Jiyan моно-аэро",
+     "slots": [
+      [
+       "jiyan"
+      ],
+      [
+       "iuno"
+      ],
+      [
+       "ciaccona"
+      ]
+     ]
+    },
+    {
+     "tier": "T3",
+     "name": "Jiyan два DPS",
+     "slots": [
+      [
+       "jiyan"
+      ],
+      [
+       "ciaccona"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-05-23",
@@ -95,7 +116,8 @@
   ],
   "icon": "assets/chars/jiyan.webp",
   "art": "assets/art/jiyan.webp",
-  "card": "assets/cards/jiyan.jpg"
+  "card": "assets/cards/jiyan.jpg",
+  "bg": "assets/bg/jiyan.webp"
  },
  {
   "id": "yinlin",
@@ -173,16 +195,41 @@
     "Интро"
    ],
    "teams": [
-    [
-     "xiangli-yao",
-     "yinlin",
-     "shorekeeper"
-    ],
-    [
-     "jinhsi",
-     "yinlin",
-     "verina"
-    ]
+    {
+     "tier": "T3",
+     "name": "Jinhsi гиперкэрри",
+     "slots": [
+      [
+       "jinhsi"
+      ],
+      [
+       "yinlin",
+       "zhezhi"
+      ],
+      [
+       "verina",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T3",
+     "name": "Xiangli Yao гиперкэрри",
+     "slots": [
+      [
+       "xiangli-yao"
+      ],
+      [
+       "yinlin",
+       "lynae"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-06-06",
@@ -195,7 +242,8 @@
   ],
   "icon": "assets/chars/yinlin.webp",
   "art": "assets/art/yinlin.webp",
-  "card": "assets/cards/yinlin.jpg"
+  "card": "assets/cards/yinlin.jpg",
+  "bg": "assets/bg/yinlin.webp"
  },
  {
   "id": "jinhsi",
@@ -268,16 +316,39 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "jinhsi",
-     "zhezhi",
-     "shorekeeper"
-    ],
-    [
-     "hsin",
-     "jinhsi",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T3",
+     "name": "Jinhsi гиперкэрри",
+     "slots": [
+      [
+       "jinhsi"
+      ],
+      [
+       "zhezhi",
+       "yinlin"
+      ],
+      [
+       "verina",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T1.5",
+     "name": "Hsin Unison",
+     "slots": [
+      [
+       "hsin"
+      ],
+      [
+       "jinhsi"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-06-28",
@@ -288,7 +359,8 @@
   ],
   "icon": "assets/chars/jinhsi.webp",
   "art": "assets/art/jinhsi.webp",
-  "card": "assets/cards/jinhsi.jpg"
+  "card": "assets/cards/jinhsi.jpg",
+  "bg": "assets/bg/jinhsi.webp"
  },
  {
   "id": "changli",
@@ -361,16 +433,38 @@
     "Интро"
    ],
    "teams": [
-    [
-     "changli",
-     "brant",
-     "shorekeeper"
-    ],
-    [
-     "galbrena",
-     "changli",
-     "brant"
-    ]
+    {
+     "tier": "T1.5",
+     "name": "три DPS, фьюжн",
+     "slots": [
+      [
+       "changli"
+      ],
+      [
+       "brant"
+      ],
+      [
+       "lupa"
+      ]
+     ]
+    },
+    {
+     "tier": "T1",
+     "name": "Aemeath моно-фьюжн",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "lupa"
+      ],
+      [
+       "changli",
+       "mornye",
+       "brant"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-07-22",
@@ -382,7 +476,8 @@
   ],
   "icon": "assets/chars/changli.webp",
   "art": "assets/art/changli.webp",
-  "card": "assets/cards/changli.jpg"
+  "card": "assets/cards/changli.jpg",
+  "bg": "assets/bg/changli.webp"
  },
  {
   "id": "zhezhi",
@@ -460,16 +555,41 @@
     "Интро"
    ],
    "teams": [
-    [
-     "carlotta",
-     "zhezhi",
-     "shorekeeper"
-    ],
-    [
-     "jinhsi",
-     "zhezhi",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T1.5",
+     "name": "Carlotta гиперкэрри",
+     "slots": [
+      [
+       "carlotta"
+      ],
+      [
+       "zhezhi",
+       "lynae"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    },
+    {
+     "tier": "T3",
+     "name": "Jinhsi гиперкэрри",
+     "slots": [
+      [
+       "jinhsi"
+      ],
+      [
+       "zhezhi",
+       "yinlin"
+      ],
+      [
+       "verina",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-08-15",
@@ -483,7 +603,8 @@
   ],
   "icon": "assets/chars/zhezhi.webp",
   "art": "assets/art/zhezhi.webp",
-  "card": "assets/cards/zhezhi.jpg"
+  "card": "assets/cards/zhezhi.jpg",
+  "bg": "assets/bg/zhezhi.webp"
  },
  {
   "id": "xiangli-yao",
@@ -557,16 +678,40 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "xiangli-yao",
-     "yinlin",
-     "shorekeeper"
-    ],
-    [
-     "xiangli-yao",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T3",
+     "name": "Xiangli Yao гиперкэрри",
+     "slots": [
+      [
+       "xiangli-yao"
+      ],
+      [
+       "lynae",
+       "yinlin"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    },
+    {
+     "tier": "T4",
+     "name": "Calcharo два DPS",
+     "slots": [
+      [
+       "calcharo"
+      ],
+      [
+       "xiangli-yao"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-09-07",
@@ -576,7 +721,8 @@
   ],
   "icon": "assets/chars/xiangli-yao.webp",
   "art": "assets/art/xiangli-yao.webp",
-  "card": "assets/cards/xiangli-yao.jpg"
+  "card": "assets/cards/xiangli-yao.jpg",
+  "bg": "assets/bg/xiangli-yao.webp"
  },
  {
   "id": "shorekeeper",
@@ -654,16 +800,40 @@
     "Высвобождение"
    ],
    "teams": [
-    [
-     "jinhsi",
-     "zhezhi",
-     "shorekeeper"
-    ],
-    [
-     "jingran",
-     "iuno",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0",
+     "name": "Jingran гиперкэрри",
+     "slots": [
+      [
+       "jingran"
+      ],
+      [
+       "iuno",
+       "mortefi"
+      ],
+      [
+       "shorekeeper",
+       "lupa"
+      ]
+     ]
+    },
+    {
+     "tier": "T0.5",
+     "name": "Aemeath Tune Rupture",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "lynae"
+      ],
+      [
+       "shorekeeper",
+       "mornye",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-09-29",
@@ -674,7 +844,8 @@
   ],
   "icon": "assets/chars/shorekeeper.webp",
   "art": "assets/art/shorekeeper.webp",
-  "card": "assets/cards/shorekeeper.jpg"
+  "card": "assets/cards/shorekeeper.jpg",
+  "bg": "assets/bg/shorekeeper.webp"
  },
  {
   "id": "camellya",
@@ -748,16 +919,25 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "camellya",
-     "roccia",
-     "shorekeeper"
-    ],
-    [
-     "camellya",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T3",
+     "name": "Camellya гиперкэрри",
+     "slots": [
+      [
+       "camellya"
+      ],
+      [
+       "lynae",
+       "roccia",
+       "sanhua"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2024-11-14",
@@ -768,7 +948,8 @@
   ],
   "icon": "assets/chars/camellya.webp",
   "art": "assets/art/camellya.webp",
-  "card": "assets/cards/camellya.jpg"
+  "card": "assets/cards/camellya.jpg",
+  "bg": "assets/bg/camellya.webp"
  },
  {
   "id": "carlotta",
@@ -841,16 +1022,24 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "carlotta",
-     "zhezhi",
-     "shorekeeper"
-    ],
-    [
-     "carlotta",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T1.5",
+     "name": "Carlotta гиперкэрри",
+     "slots": [
+      [
+       "carlotta"
+      ],
+      [
+       "lynae",
+       "zhezhi"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-01-02",
@@ -860,7 +1049,8 @@
   ],
   "icon": "assets/chars/carlotta.webp",
   "art": "assets/art/carlotta.webp",
-  "card": "assets/cards/carlotta.jpg"
+  "card": "assets/cards/carlotta.jpg",
+  "bg": "assets/bg/carlotta.webp"
  },
  {
   "id": "roccia",
@@ -938,16 +1128,45 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "camellya",
-     "roccia",
-     "shorekeeper"
-    ],
-    [
-     "phrolova",
-     "cantarella",
-     "roccia"
-    ]
+    {
+     "tier": "T1",
+     "name": "Phrolova эхо",
+     "slots": [
+      [
+       "phrolova"
+      ],
+      [
+       "lucilla",
+       "cantarella",
+       "sigrika",
+       "lynae"
+      ],
+      [
+       "roccia",
+       "qiuyuan",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T3",
+     "name": "Camellya гиперкэрри",
+     "slots": [
+      [
+       "camellya"
+      ],
+      [
+       "roccia",
+       "lynae",
+       "sanhua"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-01-23",
@@ -960,7 +1179,8 @@
   ],
   "icon": "assets/chars/roccia.webp",
   "art": "assets/art/roccia.webp",
-  "card": "assets/cards/roccia.jpg"
+  "card": "assets/cards/roccia.jpg",
+  "bg": "assets/bg/roccia.webp"
  },
  {
   "id": "phoebe",
@@ -1038,16 +1258,39 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "phoebe",
-     "chisa",
-     "rover-spectro"
-    ],
-    [
-     "zani",
-     "phoebe",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T2",
+     "name": "Phoebe гиперкэрри",
+     "slots": [
+      [
+       "phoebe"
+      ],
+      [
+       "lynae",
+       "chisa",
+       "mortefi"
+      ],
+      [
+       "rover-spectro"
+      ]
+     ]
+    },
+    {
+     "tier": "T2",
+     "name": "Zani гиперкэрри",
+     "slots": [
+      [
+       "zani"
+      ],
+      [
+       "phoebe"
+      ],
+      [
+       "rover-spectro",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-02-13",
@@ -1058,7 +1301,8 @@
   ],
   "icon": "assets/chars/phoebe.webp",
   "art": "assets/art/phoebe.webp",
-  "card": "assets/cards/phoebe.jpg"
+  "card": "assets/cards/phoebe.jpg",
+  "bg": "assets/bg/phoebe.webp"
  },
  {
   "id": "brant",
@@ -1136,16 +1380,40 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "brant",
-     "lupa",
-     "mornye"
-    ],
-    [
-     "changli",
-     "brant",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T2",
+     "name": "Brant гиперкэрри",
+     "slots": [
+      [
+       "brant"
+      ],
+      [
+       "lupa"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    },
+    {
+     "tier": "T1",
+     "name": "Aemeath моно-фьюжн",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "lupa"
+      ],
+      [
+       "brant",
+       "mornye",
+       "changli"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-03-06",
@@ -1157,7 +1425,8 @@
   ],
   "icon": "assets/chars/brant.webp",
   "art": "assets/art/brant.webp",
-  "card": "assets/cards/brant.jpg"
+  "card": "assets/cards/brant.jpg",
+  "bg": "assets/bg/brant.webp"
  },
  {
   "id": "cantarella",
@@ -1235,11 +1504,26 @@
     "Интро"
    ],
    "teams": [
-    [
-     "phrolova",
-     "cantarella",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T1",
+     "name": "Phrolova эхо",
+     "slots": [
+      [
+       "phrolova"
+      ],
+      [
+       "cantarella",
+       "lucilla",
+       "sigrika",
+       "lynae"
+      ],
+      [
+       "qiuyuan",
+       "roccia",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-03-27",
@@ -1253,7 +1537,8 @@
   ],
   "icon": "assets/chars/cantarella.webp",
   "art": "assets/art/cantarella.webp",
-  "card": "assets/cards/cantarella.jpg"
+  "card": "assets/cards/cantarella.jpg",
+  "bg": "assets/bg/cantarella.webp"
  },
  {
   "id": "zani",
@@ -1327,16 +1612,22 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "zani",
-     "phoebe",
-     "shorekeeper"
-    ],
-    [
-     "zani",
-     "phoebe",
-     "rover-spectro"
-    ]
+    {
+     "tier": "T2",
+     "name": "Zani гиперкэрри",
+     "slots": [
+      [
+       "zani"
+      ],
+      [
+       "phoebe"
+      ],
+      [
+       "rover-spectro",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-04-29",
@@ -1348,7 +1639,8 @@
   ],
   "icon": "assets/chars/zani.webp",
   "art": "assets/art/zani.webp",
-  "card": "assets/cards/zani.jpg"
+  "card": "assets/cards/zani.jpg",
+  "bg": "assets/bg/zani.webp"
  },
  {
   "id": "ciaccona",
@@ -1430,16 +1722,39 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "cartethyia",
-     "ciaccona",
-     "chisa"
-    ],
-    [
-     "jiyan",
-     "ciaccona",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Sigrika гиперкэрри",
+     "slots": [
+      [
+       "sigrika"
+      ],
+      [
+       "qiuyuan",
+       "lucilla"
+      ],
+      [
+       "ciaccona",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T1",
+     "name": "Cartethyia гиперкэрри",
+     "slots": [
+      [
+       "cartethyia"
+      ],
+      [
+       "ciaccona"
+      ],
+      [
+       "chisa",
+       "rover-aero"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-05-22",
@@ -1450,7 +1765,8 @@
   ],
   "icon": "assets/chars/ciaccona.webp",
   "art": "assets/art/ciaccona.webp",
-  "card": "assets/cards/ciaccona.jpg"
+  "card": "assets/cards/ciaccona.jpg",
+  "bg": "assets/bg/ciaccona.webp"
  },
  {
   "id": "cartethyia",
@@ -1523,16 +1839,22 @@
     "Интро"
    ],
    "teams": [
-    [
-     "cartethyia",
-     "ciaccona",
-     "chisa"
-    ],
-    [
-     "cartethyia",
-     "ciaccona",
-     "rover-aero"
-    ]
+    {
+     "tier": "T1",
+     "name": "Cartethyia гиперкэрри",
+     "slots": [
+      [
+       "cartethyia"
+      ],
+      [
+       "ciaccona"
+      ],
+      [
+       "chisa",
+       "rover-aero"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-06-12",
@@ -1544,7 +1866,8 @@
   ],
   "icon": "assets/chars/cartethyia.webp",
   "art": "assets/art/cartethyia.webp",
-  "card": "assets/cards/cartethyia.jpg"
+  "card": "assets/cards/cartethyia.jpg",
+  "bg": "assets/bg/cartethyia.webp"
  },
  {
   "id": "lupa",
@@ -1617,16 +1940,40 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "galbrena",
-     "lupa",
-     "mornye"
-    ],
-    [
-     "aemeath",
-     "lupa",
-     "mornye"
-    ]
+    {
+     "tier": "T0",
+     "name": "Jingran гиперкэрри",
+     "slots": [
+      [
+       "jingran"
+      ],
+      [
+       "iuno",
+       "mortefi"
+      ],
+      [
+       "lupa",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T0.5",
+     "name": "Aemeath Fusion Burst",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "denia"
+      ],
+      [
+       "lupa",
+       "chisa",
+       "suisui"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-07-03",
@@ -1638,7 +1985,8 @@
   ],
   "icon": "assets/chars/lupa.webp",
   "art": "assets/art/lupa.webp",
-  "card": "assets/cards/lupa.jpg"
+  "card": "assets/cards/lupa.jpg",
+  "bg": "assets/bg/lupa.webp"
  },
  {
   "id": "phrolova",
@@ -1719,16 +2067,44 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "phrolova",
-     "cantarella",
-     "shorekeeper"
-    ],
-    [
-     "phrolova",
-     "lucilla",
-     "lynae"
-    ]
+    {
+     "tier": "T1",
+     "name": "Phrolova эхо",
+     "slots": [
+      [
+       "phrolova"
+      ],
+      [
+       "lucilla",
+       "cantarella",
+       "sigrika",
+       "lynae"
+      ],
+      [
+       "qiuyuan",
+       "roccia",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T2",
+     "name": "Phrolova два DPS",
+     "slots": [
+      [
+       "phrolova"
+      ],
+      [
+       "galbrena",
+       "augusta",
+       "jiyan"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-07-24",
@@ -1740,7 +2116,8 @@
   ],
   "icon": "assets/chars/phrolova.webp",
   "art": "assets/art/phrolova.webp",
-  "card": "assets/cards/phrolova.jpg"
+  "card": "assets/cards/phrolova.jpg",
+  "bg": "assets/bg/phrolova.webp"
  },
  {
   "id": "augusta",
@@ -1821,16 +2198,42 @@
     "Интро"
    ],
    "teams": [
-    [
-     "augusta",
-     "iuno",
-     "shorekeeper"
-    ],
-    [
-     "augusta",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T1",
+     "name": "Augusta гиперкэрри",
+     "slots": [
+      [
+       "augusta"
+      ],
+      [
+       "iuno",
+       "lynae",
+       "mortefi"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    },
+    {
+     "tier": "T2",
+     "name": "Phrolova два DPS",
+     "slots": [
+      [
+       "phrolova"
+      ],
+      [
+       "augusta",
+       "galbrena",
+       "jiyan"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-08-28",
@@ -1841,7 +2244,8 @@
   ],
   "icon": "assets/chars/augusta.webp",
   "art": "assets/art/augusta.webp",
-  "card": "assets/cards/augusta.jpg"
+  "card": "assets/cards/augusta.jpg",
+  "bg": "assets/bg/augusta.webp"
  },
  {
   "id": "iuno",
@@ -1923,16 +2327,40 @@
     "Интро"
    ],
    "teams": [
-    [
-     "iuno",
-     "lynae",
-     "mornye"
-    ],
-    [
-     "jingran",
-     "iuno",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T1",
+     "name": "Iuno гиперкэрри",
+     "slots": [
+      [
+       "iuno"
+      ],
+      [
+       "lynae"
+      ],
+      [
+       "mornye",
+       "ciaccona",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T0",
+     "name": "Jingran гиперкэрри",
+     "slots": [
+      [
+       "jingran"
+      ],
+      [
+       "iuno",
+       "mortefi"
+      ],
+      [
+       "shorekeeper",
+       "lupa"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-09-17",
@@ -1944,7 +2372,8 @@
   ],
   "icon": "assets/chars/iuno.webp",
   "art": "assets/art/iuno.webp",
-  "card": "assets/cards/iuno.jpg"
+  "card": "assets/cards/iuno.jpg",
+  "bg": "assets/bg/iuno.webp"
  },
  {
   "id": "galbrena",
@@ -2025,16 +2454,40 @@
     "Интро"
    ],
    "teams": [
-    [
-     "galbrena",
-     "lupa",
-     "mornye"
-    ],
-    [
-     "galbrena",
-     "qiuyuan",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T1",
+     "name": "Galbrena гиперкэрри",
+     "slots": [
+      [
+       "galbrena"
+      ],
+      [
+       "lupa",
+       "qiuyuan",
+       "lucilla"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    },
+    {
+     "tier": "T1.5",
+     "name": "три DPS, фьюжн",
+     "slots": [
+      [
+       "galbrena"
+      ],
+      [
+       "brant"
+      ],
+      [
+       "lupa"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-10-09",
@@ -2044,7 +2497,8 @@
   ],
   "icon": "assets/chars/galbrena.webp",
   "art": "assets/art/galbrena.webp",
-  "card": "assets/cards/galbrena.jpg"
+  "card": "assets/cards/galbrena.jpg",
+  "bg": "assets/bg/galbrena.webp"
  },
  {
   "id": "qiuyuan",
@@ -2126,16 +2580,42 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "sigrika",
-     "qiuyuan",
-     "shorekeeper"
-    ],
-    [
-     "galbrena",
-     "qiuyuan",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Sigrika гиперкэрри",
+     "slots": [
+      [
+       "sigrika"
+      ],
+      [
+       "qiuyuan",
+       "lucilla"
+      ],
+      [
+       "ciaccona",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T1",
+     "name": "Galbrena гиперкэрри",
+     "slots": [
+      [
+       "galbrena"
+      ],
+      [
+       "qiuyuan",
+       "lupa",
+       "lucilla"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-10-30",
@@ -2146,7 +2626,8 @@
   ],
   "icon": "assets/chars/qiuyuan.webp",
   "art": "assets/art/qiuyuan.webp",
-  "card": "assets/cards/qiuyuan.jpg"
+  "card": "assets/cards/qiuyuan.jpg",
+  "bg": "assets/bg/qiuyuan.webp"
  },
  {
   "id": "chisa",
@@ -2228,16 +2709,43 @@
     "Интро"
    ],
    "teams": [
-    [
-     "yangyang-xuanling",
-     "chisa",
-     "suisui"
-    ],
-    [
-     "hiyuki",
-     "lucilla",
-     "chisa"
-    ]
+    {
+     "tier": "T0",
+     "name": "Hiyuki гиперкэрри",
+     "slots": [
+      [
+       "hiyuki"
+      ],
+      [
+       "lucilla",
+       "lynae"
+      ],
+      [
+       "chisa",
+       "suisui",
+       "mornye"
+      ]
+     ]
+    },
+    {
+     "tier": "T0",
+     "name": "Xuanling гиперкэрри",
+     "slots": [
+      [
+       "yangyang-xuanling"
+      ],
+      [
+       "chisa",
+       "rebecca",
+       "phrolova",
+       "lynae"
+      ],
+      [
+       "suisui",
+       "chisa"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-11-20",
@@ -2248,7 +2756,8 @@
   ],
   "icon": "assets/chars/chisa.webp",
   "art": "assets/art/chisa.webp",
-  "card": "assets/cards/chisa.jpg"
+  "card": "assets/cards/chisa.jpg",
+  "bg": "assets/bg/chisa.webp"
  },
  {
   "id": "lynae",
@@ -2321,16 +2830,40 @@
     "Интро"
    ],
    "teams": [
-    [
-     "aemeath",
-     "lynae",
-     "mornye"
-    ],
-    [
-     "qingxiao",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T0",
+     "name": "Hiyuki гиперкэрри",
+     "slots": [
+      [
+       "hiyuki"
+      ],
+      [
+       "lynae",
+       "lucilla"
+      ],
+      [
+       "suisui",
+       "chisa",
+       "mornye"
+      ]
+     ]
+    },
+    {
+     "tier": "T0",
+     "name": "Qingxiao гиперкэрри",
+     "slots": [
+      [
+       "qingxiao"
+      ],
+      [
+       "lynae",
+       "denia"
+      ],
+      [
+       "mornye"
+      ]
+     ]
+    }
    ]
   },
   "released": "2025-12-25",
@@ -2345,7 +2878,8 @@
   ],
   "icon": "assets/chars/lynae.webp",
   "art": "assets/art/lynae.webp",
-  "card": "assets/cards/lynae.jpg"
+  "card": "assets/cards/lynae.jpg",
+  "bg": "assets/bg/lynae.webp"
  },
  {
   "id": "mornye",
@@ -2419,16 +2953,40 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "qingxiao",
-     "denia",
-     "mornye"
-    ],
-    [
-     "aemeath",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T0",
+     "name": "Hiyuki гиперкэрри",
+     "slots": [
+      [
+       "hiyuki"
+      ],
+      [
+       "lucilla",
+       "lynae"
+      ],
+      [
+       "mornye",
+       "suisui",
+       "chisa"
+      ]
+     ]
+    },
+    {
+     "tier": "T0",
+     "name": "Qingxiao гиперкэрри",
+     "slots": [
+      [
+       "qingxiao"
+      ],
+      [
+       "denia",
+       "lynae"
+      ],
+      [
+       "mornye"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-01-15",
@@ -2441,7 +2999,8 @@
   ],
   "icon": "assets/chars/mornye.webp",
   "art": "assets/art/mornye.webp",
-  "card": "assets/cards/mornye.jpg"
+  "card": "assets/cards/mornye.jpg",
+  "bg": "assets/bg/mornye.webp"
  },
  {
   "id": "aemeath",
@@ -2514,16 +3073,40 @@
     "Интро"
    ],
    "teams": [
-    [
-     "aemeath",
-     "denia",
-     "chisa"
-    ],
-    [
-     "aemeath",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Aemeath Fusion Burst",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "denia"
+      ],
+      [
+       "chisa",
+       "suisui",
+       "lupa"
+      ]
+     ]
+    },
+    {
+     "tier": "T0.5",
+     "name": "Aemeath Tune Rupture",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "lynae"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-02-05",
@@ -2536,7 +3119,8 @@
   ],
   "icon": "assets/chars/aemeath.webp",
   "art": "assets/art/aemeath.webp",
-  "card": "assets/cards/aemeath.jpg"
+  "card": "assets/cards/aemeath.jpg",
+  "bg": "assets/bg/aemeath.webp"
  },
  {
   "id": "luuk-herssen",
@@ -2609,16 +3193,25 @@
     "Интро"
    ],
    "teams": [
-    [
-     "luuk-herssen",
-     "denia",
-     "mornye"
-    ],
-    [
-     "luuk-herssen",
-     "lynae",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Luuk гиперкэрри",
+     "slots": [
+      [
+       "luuk-herssen"
+      ],
+      [
+       "denia",
+       "lynae",
+       "sanhua"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-02-26",
@@ -2629,7 +3222,8 @@
   ],
   "icon": "assets/chars/luuk-herssen.webp",
   "art": "assets/art/luuk-herssen.webp",
-  "card": "assets/cards/luuk-herssen.jpg"
+  "card": "assets/cards/luuk-herssen.jpg",
+  "bg": "assets/bg/luuk-herssen.webp"
  },
  {
   "id": "sigrika",
@@ -2702,16 +3296,43 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "sigrika",
-     "qiuyuan",
-     "shorekeeper"
-    ],
-    [
-     "sigrika",
-     "lucilla",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Sigrika гиперкэрри",
+     "slots": [
+      [
+       "sigrika"
+      ],
+      [
+       "qiuyuan",
+       "lucilla"
+      ],
+      [
+       "ciaccona",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T1",
+     "name": "Phrolova эхо",
+     "slots": [
+      [
+       "phrolova"
+      ],
+      [
+       "sigrika",
+       "lucilla",
+       "cantarella",
+       "lynae"
+      ],
+      [
+       "qiuyuan",
+       "roccia",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-03-19",
@@ -2722,7 +3343,8 @@
   ],
   "icon": "assets/chars/sigrika.webp",
   "art": "assets/art/sigrika.webp",
-  "card": "assets/cards/sigrika.jpg"
+  "card": "assets/cards/sigrika.jpg",
+  "bg": "assets/bg/sigrika.webp"
  },
  {
   "id": "hiyuki",
@@ -2795,16 +3417,24 @@
     "Интро"
    ],
    "teams": [
-    [
-     "hiyuki",
-     "lucilla",
-     "chisa"
-    ],
-    [
-     "hiyuki",
-     "lynae",
-     "suisui"
-    ]
+    {
+     "tier": "T0",
+     "name": "Hiyuki гиперкэрри",
+     "slots": [
+      [
+       "hiyuki"
+      ],
+      [
+       "lucilla",
+       "lynae"
+      ],
+      [
+       "suisui",
+       "chisa",
+       "mornye"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-04-30",
@@ -2815,7 +3445,8 @@
   ],
   "icon": "assets/chars/hiyuki.webp",
   "art": "assets/art/hiyuki.webp",
-  "card": "assets/cards/hiyuki.jpg"
+  "card": "assets/cards/hiyuki.jpg",
+  "bg": "assets/bg/hiyuki.webp"
  },
  {
   "id": "denia",
@@ -2897,16 +3528,39 @@
     "Интро"
    ],
    "teams": [
-    [
-     "qingxiao",
-     "denia",
-     "mornye"
-    ],
-    [
-     "aemeath",
-     "denia",
-     "chisa"
-    ]
+    {
+     "tier": "T0",
+     "name": "Qingxiao гиперкэрри",
+     "slots": [
+      [
+       "qingxiao"
+      ],
+      [
+       "denia",
+       "lynae"
+      ],
+      [
+       "mornye"
+      ]
+     ]
+    },
+    {
+     "tier": "T0.5",
+     "name": "Aemeath Fusion Burst",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "denia"
+      ],
+      [
+       "chisa",
+       "suisui",
+       "lupa"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-05-21",
@@ -2920,7 +3574,8 @@
   ],
   "icon": "assets/chars/denia.webp",
   "art": "assets/art/denia.webp",
-  "card": "assets/cards/denia.jpg"
+  "card": "assets/cards/denia.jpg",
+  "bg": "assets/bg/denia.webp"
  },
  {
   "id": "lucy",
@@ -3001,16 +3656,23 @@
     "Интро"
    ],
    "teams": [
-    [
-     "lucy",
-     "rebecca",
-     "mornye"
-    ],
-    [
-     "lucy",
-     "rebecca",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T1",
+     "name": "Lucy гиперкэрри",
+     "slots": [
+      [
+       "lucy"
+      ],
+      [
+       "rebecca"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-06-08",
@@ -3022,7 +3684,8 @@
   ],
   "icon": "assets/chars/lucy.webp",
   "art": "assets/art/lucy.webp",
-  "card": "assets/cards/lucy.jpg"
+  "card": "assets/cards/lucy.jpg",
+  "bg": "assets/bg/lucy.webp"
  },
  {
   "id": "rebecca",
@@ -3104,16 +3767,42 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "lucy",
-     "rebecca",
-     "mornye"
-    ],
-    [
-     "yangyang-xuanling",
-     "rebecca",
-     "suisui"
-    ]
+    {
+     "tier": "T0",
+     "name": "Xuanling гиперкэрри",
+     "slots": [
+      [
+       "yangyang-xuanling"
+      ],
+      [
+       "rebecca",
+       "chisa",
+       "phrolova",
+       "lynae"
+      ],
+      [
+       "suisui",
+       "chisa"
+      ]
+     ]
+    },
+    {
+     "tier": "T1",
+     "name": "Lucy гиперкэрри",
+     "slots": [
+      [
+       "lucy"
+      ],
+      [
+       "rebecca"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-06-08",
@@ -3126,7 +3815,8 @@
   ],
   "icon": "assets/chars/rebecca.webp",
   "art": "assets/art/rebecca.webp",
-  "card": "assets/cards/rebecca.jpg"
+  "card": "assets/cards/rebecca.jpg",
+  "bg": "assets/bg/rebecca.webp"
  },
  {
   "id": "lucilla",
@@ -3208,16 +3898,41 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "hiyuki",
-     "lucilla",
-     "chisa"
-    ],
-    [
-     "sigrika",
-     "lucilla",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0",
+     "name": "Hiyuki гиперкэрри",
+     "slots": [
+      [
+       "hiyuki"
+      ],
+      [
+       "lucilla",
+       "lynae"
+      ],
+      [
+       "suisui",
+       "chisa",
+       "mornye"
+      ]
+     ]
+    },
+    {
+     "tier": "T0.5",
+     "name": "Sigrika гиперкэрри",
+     "slots": [
+      [
+       "sigrika"
+      ],
+      [
+       "lucilla",
+       "qiuyuan"
+      ],
+      [
+       "ciaccona",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-06-13",
@@ -3230,7 +3945,8 @@
   ],
   "icon": "assets/chars/lucilla.webp",
   "art": "assets/art/lucilla.webp",
-  "card": "assets/cards/lucilla.jpg"
+  "card": "assets/cards/lucilla.jpg",
+  "bg": "assets/bg/lucilla.webp"
  },
  {
   "id": "yangyang-xuanling",
@@ -3303,16 +4019,25 @@
     "Навык резонанса"
    ],
    "teams": [
-    [
-     "yangyang-xuanling",
-     "chisa",
-     "suisui"
-    ],
-    [
-     "yangyang-xuanling",
-     "rebecca",
-     "lynae"
-    ]
+    {
+     "tier": "T0",
+     "name": "Xuanling гиперкэрри",
+     "slots": [
+      [
+       "yangyang-xuanling"
+      ],
+      [
+       "chisa",
+       "rebecca",
+       "phrolova",
+       "lynae"
+      ],
+      [
+       "suisui",
+       "chisa"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-07-10",
@@ -3324,7 +4049,8 @@
   ],
   "icon": "assets/chars/yangyang-xuanling.webp",
   "art": "assets/art/yangyang-xuanling.webp",
-  "card": "assets/cards/yangyang-xuanling.jpg"
+  "card": "assets/cards/yangyang-xuanling.jpg",
+  "bg": "assets/bg/yangyang-xuanling.webp"
  },
  {
   "id": "suisui",
@@ -3402,16 +4128,43 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "hiyuki",
-     "lucilla",
-     "suisui"
-    ],
-    [
-     "yangyang-xuanling",
-     "chisa",
-     "suisui"
-    ]
+    {
+     "tier": "T0",
+     "name": "Hiyuki гиперкэрри",
+     "slots": [
+      [
+       "hiyuki"
+      ],
+      [
+       "lucilla",
+       "lynae"
+      ],
+      [
+       "suisui",
+       "chisa",
+       "mornye"
+      ]
+     ]
+    },
+    {
+     "tier": "T0",
+     "name": "Xuanling гиперкэрри",
+     "slots": [
+      [
+       "yangyang-xuanling"
+      ],
+      [
+       "chisa",
+       "rebecca",
+       "phrolova",
+       "lynae"
+      ],
+      [
+       "suisui",
+       "chisa"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-07-30",
@@ -3422,7 +4175,8 @@
   ],
   "icon": "assets/chars/suisui.webp",
   "art": "assets/art/suisui.webp",
-  "card": "assets/cards/suisui.jpg"
+  "card": "assets/cards/suisui.jpg",
+  "bg": "assets/bg/suisui.webp"
  },
  {
   "id": "qingxiao",
@@ -3495,16 +4249,22 @@
     "Интро"
    ],
    "teams": [
-    [
-     "qingxiao",
-     "denia",
-     "mornye"
-    ],
-    [
-     "qingxiao",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T0",
+     "name": "Qingxiao гиперкэрри",
+     "slots": [
+      [
+       "qingxiao"
+      ],
+      [
+       "denia",
+       "lynae"
+      ],
+      [
+       "mornye"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-08-20",
@@ -3514,7 +4274,8 @@
   ],
   "icon": "assets/chars/qingxiao.webp",
   "art": "assets/art/qingxiao.webp",
-  "card": "assets/cards/qingxiao.jpg"
+  "card": "assets/cards/qingxiao.jpg",
+  "bg": "assets/bg/qingxiao.webp"
  },
  {
   "id": "jingran",
@@ -3587,16 +4348,23 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jingran",
-     "iuno",
-     "shorekeeper"
-    ],
-    [
-     "jingran",
-     "mortefi",
-     "lupa"
-    ]
+    {
+     "tier": "T0",
+     "name": "Jingran гиперкэрри",
+     "slots": [
+      [
+       "jingran"
+      ],
+      [
+       "iuno",
+       "mortefi"
+      ],
+      [
+       "shorekeeper",
+       "lupa"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-09-10",
@@ -3606,7 +4374,8 @@
   ],
   "icon": "assets/chars/jingran.webp",
   "art": "assets/art/jingran.webp",
-  "card": "assets/cards/jingran.jpg"
+  "card": "assets/cards/jingran.jpg",
+  "bg": "assets/bg/jingran.webp"
  },
  {
   "id": "hsin",
@@ -3679,16 +4448,39 @@
     "Интро"
    ],
    "teams": [
-    [
-     "hsin",
-     "rover-electro",
-     "suisui"
-    ],
-    [
-     "hsin",
-     "jinhsi",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Hsin Electro Flare",
+     "slots": [
+      [
+       "hsin"
+      ],
+      [
+       "rover-electro"
+      ],
+      [
+       "suisui",
+       "chisa",
+       "buling"
+      ]
+     ]
+    },
+    {
+     "tier": "T1.5",
+     "name": "Hsin Unison",
+     "slots": [
+      [
+       "hsin"
+      ],
+      [
+       "jinhsi"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-09-30",
@@ -3701,7 +4493,8 @@
   ],
   "icon": "assets/chars/hsin.webp",
   "art": "assets/art/hsin.webp",
-  "card": "assets/cards/hsin.jpg"
+  "card": "assets/cards/hsin.jpg",
+  "bg": "assets/bg/hsin.webp"
  },
  {
   "id": "suoming",
@@ -3734,11 +4527,21 @@
    "substats": "",
    "skills": [],
    "teams": [
-    [
-     "hsin",
-     "suoming",
-     "jinhsi"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "hsin"
+      ],
+      [
+       "suoming"
+      ],
+      [
+       "jinhsi"
+      ]
+     ]
+    }
    ]
   },
   "released": "2026-10-21",
@@ -3751,7 +4554,8 @@
   ],
   "icon": "assets/chars/suoming.webp",
   "art": "assets/art/suoming.webp",
-  "card": "assets/cards/suoming.jpg"
+  "card": "assets/cards/suoming.jpg",
+  "bg": "assets/bg/suoming.webp"
  },
  {
   "id": "verina",
@@ -3820,16 +4624,42 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jiyan",
-     "mortefi",
-     "verina"
-    ],
-    [
-     "aemeath",
-     "lynae",
-     "verina"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Aemeath Tune Rupture",
+     "slots": [
+      [
+       "aemeath"
+      ],
+      [
+       "lynae"
+      ],
+      [
+       "verina",
+       "mornye",
+       "shorekeeper"
+      ]
+     ]
+    },
+    {
+     "tier": "T0.5",
+     "name": "Luuk гиперкэрри",
+     "slots": [
+      [
+       "luuk-herssen"
+      ],
+      [
+       "denia",
+       "lynae",
+       "sanhua"
+      ],
+      [
+       "verina",
+       "mornye",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -3840,7 +4670,8 @@
   ],
   "icon": "assets/chars/verina.webp",
   "art": "assets/art/verina.webp",
-  "card": "assets/cards/verina.jpg"
+  "card": "assets/cards/verina.jpg",
+  "bg": "assets/bg/verina.webp"
  },
  {
   "id": "encore",
@@ -3918,16 +4749,23 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "encore",
-     "lupa",
-     "mornye"
-    ],
-    [
-     "encore",
-     "brant",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T3",
+     "name": "Encore гиперкэрри",
+     "slots": [
+      [
+       "encore"
+      ],
+      [
+       "lupa"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "brant"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -3937,7 +4775,8 @@
   ],
   "icon": "assets/chars/encore.webp",
   "art": "assets/art/encore.webp",
-  "card": "assets/cards/encore.jpg"
+  "card": "assets/cards/encore.jpg",
+  "bg": "assets/bg/encore.webp"
  },
  {
   "id": "calcharo",
@@ -4011,16 +4850,22 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "calcharo",
-     "xiangli-yao",
-     "shorekeeper"
-    ],
-    [
-     "calcharo",
-     "yinlin",
-     "verina"
-    ]
+    {
+     "tier": "T4",
+     "name": "Calcharo два DPS",
+     "slots": [
+      [
+       "calcharo"
+      ],
+      [
+       "xiangli-yao"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4030,7 +4875,8 @@
   ],
   "icon": "assets/chars/calcharo.webp",
   "art": "assets/art/calcharo.webp",
-  "card": "assets/cards/calcharo.jpg"
+  "card": "assets/cards/calcharo.jpg",
+  "bg": "assets/bg/calcharo.webp"
  },
  {
   "id": "lingyang",
@@ -4108,16 +4954,24 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "lingyang",
-     "zhezhi",
-     "shorekeeper"
-    ],
-    [
-     "lingyang",
-     "lynae",
-     "mornye"
-    ]
+    {
+     "tier": "T3",
+     "name": "Lingyang гиперкэрри",
+     "slots": [
+      [
+       "lingyang"
+      ],
+      [
+       "lynae",
+       "zhezhi"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4126,7 +4980,8 @@
   ],
   "icon": "assets/chars/lingyang.webp",
   "art": "assets/art/lingyang.webp",
-  "card": "assets/cards/lingyang.jpg"
+  "card": "assets/cards/lingyang.jpg",
+  "bg": "assets/bg/lingyang.webp"
  },
  {
   "id": "jianxin",
@@ -4199,16 +5054,36 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jiyan",
-     "jianxin",
-     "verina"
-    ],
-    [
-     "xiangli-yao",
-     "jianxin",
-     "verina"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "jiyan"
+      ],
+      [
+       "jianxin"
+      ],
+      [
+       "verina"
+      ]
+     ]
+    },
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "xiangli-yao"
+      ],
+      [
+       "jianxin"
+      ],
+      [
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4220,7 +5095,8 @@
   ],
   "icon": "assets/chars/jianxin.webp",
   "art": "assets/art/jianxin.webp",
-  "card": "assets/cards/jianxin.jpg"
+  "card": "assets/cards/jianxin.jpg",
+  "bg": "assets/bg/jianxin.webp"
  },
  {
   "id": "rover-spectro",
@@ -4302,16 +5178,39 @@
     "Интро"
    ],
    "teams": [
-    [
-     "zani",
-     "phoebe",
-     "rover-spectro"
-    ],
-    [
-     "phoebe",
-     "chisa",
-     "rover-spectro"
-    ]
+    {
+     "tier": "T2",
+     "name": "Phoebe гиперкэрри",
+     "slots": [
+      [
+       "phoebe"
+      ],
+      [
+       "lynae",
+       "chisa",
+       "mortefi"
+      ],
+      [
+       "rover-spectro"
+      ]
+     ]
+    },
+    {
+     "tier": "T2",
+     "name": "Zani гиперкэрри",
+     "slots": [
+      [
+       "zani"
+      ],
+      [
+       "phoebe"
+      ],
+      [
+       "rover-spectro",
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4321,7 +5220,8 @@
   ],
   "icon": "assets/chars/rover-spectro.webp",
   "art": "assets/art/rover-spectro.webp",
-  "card": "assets/cards/rover-spectro.jpg"
+  "card": "assets/cards/rover-spectro.jpg",
+  "bg": null
  },
  {
   "id": "rover-havoc",
@@ -4394,16 +5294,25 @@
     "Интро"
    ],
    "teams": [
-    [
-     "rover-havoc",
-     "roccia",
-     "shorekeeper"
-    ],
-    [
-     "rover-havoc",
-     "danjin",
-     "verina"
-    ]
+    {
+     "tier": "T4",
+     "name": "Havoc Rover гиперкэрри",
+     "slots": [
+      [
+       "rover-havoc"
+      ],
+      [
+       "lynae",
+       "roccia",
+       "danjin"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4412,7 +5321,8 @@
   ],
   "icon": "assets/chars/rover-havoc.webp",
   "art": "assets/art/rover-havoc.webp",
-  "card": "assets/cards/rover-havoc.jpg"
+  "card": "assets/cards/rover-havoc.jpg",
+  "bg": null
  },
  {
   "id": "rover-aero",
@@ -4478,11 +5388,22 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "cartethyia",
-     "ciaccona",
-     "rover-aero"
-    ]
+    {
+     "tier": "T1",
+     "name": "Cartethyia гиперкэрри",
+     "slots": [
+      [
+       "cartethyia"
+      ],
+      [
+       "ciaccona"
+      ],
+      [
+       "rover-aero",
+       "chisa"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4493,7 +5414,8 @@
   ],
   "icon": "assets/chars/rover-aero.webp",
   "art": "assets/art/rover-aero.webp",
-  "card": "assets/cards/rover-aero.jpg"
+  "card": "assets/cards/rover-aero.jpg",
+  "bg": null
  },
  {
   "id": "rover-electro",
@@ -4566,11 +5488,23 @@
     "Интро"
    ],
    "teams": [
-    [
-     "hsin",
-     "rover-electro",
-     "suisui"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Hsin Electro Flare",
+     "slots": [
+      [
+       "hsin"
+      ],
+      [
+       "rover-electro"
+      ],
+      [
+       "suisui",
+       "chisa",
+       "buling"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4581,7 +5515,8 @@
   ],
   "icon": "assets/chars/rover-electro.webp",
   "art": "assets/art/rover-electro.webp",
-  "card": "assets/cards/rover-electro.jpg"
+  "card": "assets/cards/rover-electro.jpg",
+  "bg": null
  },
  {
   "id": "yangyang",
@@ -4659,11 +5594,21 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jiyan",
-     "yangyang",
-     "verina"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "jiyan"
+      ],
+      [
+       "yangyang"
+      ],
+      [
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4674,7 +5619,8 @@
   ],
   "icon": "assets/chars/yangyang.webp",
   "art": "assets/art/yangyang.webp",
-  "card": "assets/cards/yangyang.jpg"
+  "card": "assets/cards/yangyang.jpg",
+  "bg": null
  },
  {
   "id": "chixia",
@@ -4748,16 +5694,22 @@
     "Интро"
    ],
    "teams": [
-    [
-     "chixia",
-     "brant",
-     "mornye"
-    ],
-    [
-     "chixia",
-     "lupa",
-     "mornye"
-    ]
+    {
+     "tier": "T4",
+     "name": "Chixia моно-фьюжн",
+     "slots": [
+      [
+       "chixia"
+      ],
+      [
+       "brant",
+       "mornye"
+      ],
+      [
+       "lupa"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4766,7 +5718,8 @@
   ],
   "icon": "assets/chars/chixia.webp",
   "art": "assets/art/chixia.webp",
-  "card": "assets/cards/chixia.jpg"
+  "card": "assets/cards/chixia.jpg",
+  "bg": null
  },
  {
   "id": "sanhua",
@@ -4839,16 +5792,44 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "camellya",
-     "sanhua",
-     "shorekeeper"
-    ],
-    [
-     "luuk-herssen",
-     "sanhua",
-     "mornye"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Luuk гиперкэрри",
+     "slots": [
+      [
+       "luuk-herssen"
+      ],
+      [
+       "sanhua",
+       "denia",
+       "lynae"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    },
+    {
+     "tier": "T3",
+     "name": "Camellya гиперкэрри",
+     "slots": [
+      [
+       "camellya"
+      ],
+      [
+       "sanhua",
+       "lynae",
+       "roccia"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4858,7 +5839,8 @@
   ],
   "icon": "assets/chars/sanhua.webp",
   "art": "assets/art/sanhua.webp",
-  "card": "assets/cards/sanhua.jpg"
+  "card": "assets/cards/sanhua.jpg",
+  "bg": null
  },
  {
   "id": "taoqi",
@@ -4928,11 +5910,21 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jinhsi",
-     "taoqi",
-     "shorekeeper"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "jinhsi"
+      ],
+      [
+       "taoqi"
+      ],
+      [
+       "shorekeeper"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -4943,7 +5935,8 @@
   ],
   "icon": "assets/chars/taoqi.webp",
   "art": "assets/art/taoqi.webp",
-  "card": "assets/cards/taoqi.jpg"
+  "card": "assets/cards/taoqi.jpg",
+  "bg": null
  },
  {
   "id": "baizhi",
@@ -5021,11 +6014,21 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "lingyang",
-     "zhezhi",
-     "baizhi"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "lingyang"
+      ],
+      [
+       "zhezhi"
+      ],
+      [
+       "baizhi"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5036,7 +6039,8 @@
   ],
   "icon": "assets/chars/baizhi.webp",
   "art": "assets/art/baizhi.webp",
-  "card": "assets/cards/baizhi.jpg"
+  "card": "assets/cards/baizhi.jpg",
+  "bg": null
  },
  {
   "id": "danjin",
@@ -5118,16 +6122,25 @@
     "Интро"
    ],
    "teams": [
-    [
-     "rover-havoc",
-     "danjin",
-     "verina"
-    ],
-    [
-     "camellya",
-     "danjin",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T4",
+     "name": "Havoc Rover гиперкэрри",
+     "slots": [
+      [
+       "rover-havoc"
+      ],
+      [
+       "danjin",
+       "lynae",
+       "roccia"
+      ],
+      [
+       "mornye",
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5137,7 +6150,8 @@
   ],
   "icon": "assets/chars/danjin.webp",
   "art": "assets/art/danjin.webp",
-  "card": "assets/cards/danjin.jpg"
+  "card": "assets/cards/danjin.jpg",
+  "bg": null
  },
  {
   "id": "aalto",
@@ -5219,11 +6233,21 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jiyan",
-     "aalto",
-     "verina"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "jiyan"
+      ],
+      [
+       "aalto"
+      ],
+      [
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5233,7 +6257,8 @@
   ],
   "icon": "assets/chars/aalto.webp",
   "art": "assets/art/aalto.webp",
-  "card": "assets/cards/aalto.jpg"
+  "card": "assets/cards/aalto.jpg",
+  "bg": null
  },
  {
   "id": "mortefi",
@@ -5311,16 +6336,41 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jiyan",
-     "mortefi",
-     "verina"
-    ],
-    [
-     "jingran",
-     "mortefi",
-     "shorekeeper"
-    ]
+    {
+     "tier": "T0",
+     "name": "Jingran гиперкэрри",
+     "slots": [
+      [
+       "jingran"
+      ],
+      [
+       "mortefi",
+       "iuno"
+      ],
+      [
+       "shorekeeper",
+       "lupa"
+      ]
+     ]
+    },
+    {
+     "tier": "T1",
+     "name": "Augusta гиперкэрри",
+     "slots": [
+      [
+       "augusta"
+      ],
+      [
+       "mortefi",
+       "iuno",
+       "lynae"
+      ],
+      [
+       "shorekeeper",
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5332,7 +6382,8 @@
   ],
   "icon": "assets/chars/mortefi.webp",
   "art": "assets/art/mortefi.webp",
-  "card": "assets/cards/mortefi.jpg"
+  "card": "assets/cards/mortefi.jpg",
+  "bg": null
  },
  {
   "id": "yuanwu",
@@ -5414,11 +6465,21 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "calcharo",
-     "yuanwu",
-     "verina"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "calcharo"
+      ],
+      [
+       "yuanwu"
+      ],
+      [
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5430,7 +6491,8 @@
   ],
   "icon": "assets/chars/yuanwu.webp",
   "art": "assets/art/yuanwu.webp",
-  "card": "assets/cards/yuanwu.jpg"
+  "card": "assets/cards/yuanwu.jpg",
+  "bg": null
  },
  {
   "id": "lumi",
@@ -5508,11 +6570,21 @@
     "Обычная атака"
    ],
    "teams": [
-    [
-     "jinhsi",
-     "lumi",
-     "verina"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "jinhsi"
+      ],
+      [
+       "lumi"
+      ],
+      [
+       "verina"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5523,7 +6595,8 @@
   ],
   "icon": "assets/chars/lumi.webp",
   "art": "assets/art/lumi.webp",
-  "card": "assets/cards/lumi.jpg"
+  "card": "assets/cards/lumi.jpg",
+  "bg": null
  },
  {
   "id": "youhu",
@@ -5601,11 +6674,21 @@
     "Интро"
    ],
    "teams": [
-    [
-     "jiyan",
-     "mortefi",
-     "youhu"
-    ]
+    {
+     "tier": null,
+     "name": null,
+     "slots": [
+      [
+       "jiyan"
+      ],
+      [
+       "mortefi"
+      ],
+      [
+       "youhu"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5617,7 +6700,8 @@
   ],
   "icon": "assets/chars/youhu.webp",
   "art": "assets/art/youhu.webp",
-  "card": "assets/cards/youhu.jpg"
+  "card": "assets/cards/youhu.jpg",
+  "bg": null
  },
  {
   "id": "buling",
@@ -5690,11 +6774,23 @@
     "Высвобождение"
    ],
    "teams": [
-    [
-     "hsin",
-     "rover-electro",
-     "buling"
-    ]
+    {
+     "tier": "T0.5",
+     "name": "Hsin Electro Flare",
+     "slots": [
+      [
+       "hsin"
+      ],
+      [
+       "rover-electro"
+      ],
+      [
+       "buling",
+       "suisui",
+       "chisa"
+      ]
+     ]
+    }
    ]
   },
   "released": null,
@@ -5705,6 +6801,7 @@
   ],
   "icon": "assets/chars/buling.webp",
   "art": "assets/art/buling.webp",
-  "card": "assets/cards/buling.jpg"
+  "card": "assets/cards/buling.jpg",
+  "bg": null
  }
 ]

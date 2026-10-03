@@ -1,7 +1,7 @@
 import { plan, copiesCurve, ASTRITE_PER_PULL, HARD_PITY } from '../lib/gacha.js';
 import { upcomingBanners, currentBanners } from '../lib/logic.js';
 import { SERVERS, nextReset, fmtDate } from '../lib/time.js';
-import { ELEMENTS, plural } from '../lib/labels.js';
+import { ELEMENTS, WEAPONS, plural } from '../lib/labels.js';
 import { esc, icons, pct } from '../ui.js';
 import { state, save } from '../store.js';
 import { haptic, openLink } from '../tg.js';
@@ -10,6 +10,7 @@ const TOOLS = [
   ['calc', 'Калькулятор круток', 'Шанс выбить S0–S6 и сигнатуру за твои астриты', icons.calc],
   ['plan', 'Планер астритов', 'Сколько накопится к нужному баннеру', icons.plan],
   ['pity', 'Трекер гаранта', 'Счётчики круток для трёх баннеров', icons.pity],
+  ['weapons', 'Оружие', 'Статы и пассивки всего оружия', icons.sword],
   ['sets', 'Сеты эхо', 'Все бонусы сетов кратко по-русски', icons.sets],
   ['codes', 'Коды', 'Активные и истёкшие коды обмена', icons.codes],
   ['resets', 'Ресеты серверов', 'Ежедневный и недельный ресет', icons.reset],
@@ -310,7 +311,7 @@ function setsList(ctx) {
       const el = ELEMENTS[s.element];
       const who = (users[s.name] || []).slice(0, 6);
       return `<div class="set" style="--el:${el?.color || 'var(--acc)'}">
-        <div class="sn"><span class="chip el" style="--el:${el?.color || 'var(--muted)'};height:auto;padding:0;border:0;background:none"><span class="dot"></span></span>${esc(s.name)}<span class="pc">${s.pieces} шт</span></div>
+        <div class="sn">${s.icon ? `<img class="set-ico" src="${esc(s.icon)}" alt="" loading="lazy">` : ''}<span class="grow">${esc(s.name)}</span><span class="pc">${s.pieces} шт</span></div>
         <div class="sd">${s.two ? `<b>2:</b> ${esc(s.two)}<br>` : ''}<b>${s.pieces}:</b> ${esc(s.full)}</div>
         ${who.length ? `<div class="row" style="margin-top:10px;gap:6px">${who.map((c) => `<a href="#/char/${c.id}"><span class="ava sm" style="--el:${ELEMENTS[c.element]?.color}"><img src="${esc(c.icon)}" alt="${esc(c.name)}" loading="lazy"></span></a>`).join('')}<span class="muted" style="font-size:11.5px">носят как основной</span></div>` : ''}
       </div>`;
@@ -319,7 +320,7 @@ function setsList(ctx) {
 }
 function setsView(ctx) {
   return `
-  ${head('04', 'Сеты эхо', `Все ${ctx.data.sets.length} сонат: что дают 2 и 5 (или 3) предметов.`)}
+  ${head('05', 'Сеты эхо', `Все ${ctx.data.sets.length} сонат: что дают 2 и 5 (или 3) предметов.`)}
   <label class="search">${icons.search}<input id="sq" type="search" placeholder="Название или эффект: щит, крит…" value="${esc(setQuery)}"></label>
   <section class="section" id="sets">${setsList(ctx)}</section>`;
 }
@@ -340,7 +341,7 @@ function codesView(ctx) {
   const act = c.codes.filter((x) => x.active);
   const old = c.codes.filter((x) => !x.active);
   return `
-  ${head('05', 'Коды', esc(c.howTo))}
+  ${head('06', 'Коды', esc(c.howTo))}
   <section class="section"><div class="label">Активные<span class="count">${act.length}</span></div><div class="list" style="margin-top:10px">${act.map(row).join('') || '<div class="empty">Сейчас активных нет</div>'}</div></section>
   <button class="btn block" style="margin-top:14px" data-redeem>Открыть страницу активации</button>
   ${old.length ? `<section class="section"><div class="label">Истёкшие</div><div class="list" style="margin-top:10px">${old.map(row).join('')}</div></section>` : ''}`;
@@ -352,7 +353,7 @@ function mountCodes(root, ctx) {
 /* ---------------- resets ---------------- */
 function resetsView(ctx) {
   return `
-  ${head('06', 'Ресеты', 'Ежедневный ресет — 04:00 по времени сервера, недельный — в понедельник в 04:00.')}
+  ${head('07', 'Ресеты', 'Ежедневный ресет — 04:00 по времени сервера, недельный — в понедельник в 04:00.')}
   <section class="section"><div class="list resets">
     ${Object.entries(SERVERS)
       .map(([k, s]) => `<div class="item" ${k === ctx.server ? 'style="border-color:var(--acc)"' : ''}>
@@ -368,7 +369,7 @@ function resetsView(ctx) {
 function aboutView(ctx) {
   const m = ctx.data.meta;
   return `
-  ${head('07', 'О приложении', 'GachaBot — неофициальный фан-проект по Wuthering Waves. Не связан с Kuro Games.')}
+  ${head('08', 'О приложении', 'GachaBot — неофициальный фан-проект по Wuthering Waves. Не связан с Kuro Games.')}
   <section class="section card stack">
     <div><div class="label">Версия данных</div><div style="margin-top:8px;font:800 22px var(--f-display)">${esc(m.version)} <span class="muted" style="font:500 13px var(--f-body)">от ${esc(m.updated)}</span></div></div>
     <div><div class="label">Источники</div><ul style="margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:13.5px">${m.sources.map((s) => `<li>${esc(s)}</li>`).join('')}</ul></div>
@@ -381,7 +382,53 @@ function aboutView(ctx) {
 }
 
 /* ---------------- router ---------------- */
+/* ---------------- weapons ---------------- */
+let wQuery = '';
+let wType = '';
+function weaponsList(ctx) {
+  const q = wQuery.toLowerCase();
+  const list = Object.entries(ctx.data.weapons)
+    .filter(([n, w]) => (!wType || w.type === wType) && (!q || n.toLowerCase().includes(q) || (w.ru || '').toLowerCase().includes(q)))
+    .sort((a, b) => (b[1].rarity || 0) - (a[1].rarity || 0) || a[0].localeCompare(b[0]));
+  if (!list.length) return '<div class="empty"><b>Ничего</b>Попробуй другой запрос</div>';
+  const RC = { 5: 'var(--gold)', 4: 'var(--purple)', 3: '#5aa9ff' };
+  return list
+    .map(([n, w]) => `<button class="wpn" data-weapon="${esc(n)}">
+      <span class="wi" style="--rc:${RC[w.rarity] || 'var(--gold)'}">${w.icon ? `<img src="${esc(w.icon)}" alt="" loading="lazy">` : ''}</span>
+      <div class="grow"><div class="wn">${esc(n)}</div><div class="ws">${'★'.repeat(w.rarity || 0)} · ${WEAPONS[w.type]?.ru || ''}${w.sub ? ` · ${esc(w.sub.name)} ${esc(w.sub.value)}` : ''}</div></div>
+      ${icons.chev}
+    </button>`)
+    .join('');
+}
+function weaponsView(ctx) {
+  return `
+  ${head('04', 'Оружие', 'Всё оружие из сборок: статы на 90 уровне и что делает пассивка.')}
+  <label class="search">${icons.search}<input id="wq" type="search" placeholder="Название или эффект: щит, крит…" value="${esc(wQuery)}"></label>
+  <div class="chips" style="margin-top:10px">
+    <button class="chip" data-wt="" aria-pressed="${!wType}">Все</button>
+    ${Object.entries(WEAPONS).map(([k, v]) => `<button class="chip" data-wt="${k}" aria-pressed="${wType === k}">${v.ru}</button>`).join('')}
+  </div>
+  <section class="section stack" id="wlist">${weaponsList(ctx)}</section>`;
+}
+function mountWeapons(root, ctx) {
+  const i = root.querySelector('#wq');
+  const upd = () => (root.querySelector('#wlist').innerHTML = weaponsList(ctx));
+  i.addEventListener('input', () => {
+    wQuery = i.value;
+    upd();
+  });
+  root.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-wt]');
+    if (!b) return;
+    haptic.tap();
+    wType = b.dataset.wt;
+    for (const x of root.querySelectorAll('[data-wt]')) x.setAttribute('aria-pressed', String(x === b));
+    upd();
+  });
+}
+
 const VIEWS = {
+  weapons: [weaponsView, mountWeapons],
   calc: [calcView, mountCalc],
   plan: [planView, mountPlan],
   pity: [pityView, mountPity],

@@ -2,7 +2,7 @@ import { initTelegram, haptic, setBack, startParam } from './tg.js';
 import { state, loadState, save } from './store.js';
 import { SERVERS, fmtCountdown } from './lib/time.js';
 import { byId } from './lib/logic.js';
-import { esc } from './ui.js';
+import { esc, weaponSheet } from './ui.js';
 import * as home from './views/home.js';
 import * as banners from './views/banners.js';
 import * as chars from './views/chars.js';
@@ -53,6 +53,7 @@ function render(fresh = true) {
   const hash = location.hash || '#/';
   const r = match(hash);
   if (fresh && current) scrollMemo.set(current, scrollY);
+  if (fresh) $sheet.hidden = true;
   current = hash;
   ctx.params = r.params;
   $view.innerHTML = `<div class="page">${r.view.render(ctx)}</div>`;
@@ -117,6 +118,12 @@ function openServerSheet() {
   $sheet.hidden = false;
 }
 
+function openSheet(html) {
+  $sheet.innerHTML = html;
+  $sheet.hidden = false;
+}
+ctx.sheet = openSheet;
+
 $sheet.addEventListener('click', (e) => {
   const b = e.target.closest('[data-server]');
   if (b) {
@@ -126,7 +133,7 @@ $sheet.addEventListener('click', (e) => {
     haptic.impact();
     render(false);
   }
-  if (b || e.target === $sheet) $sheet.hidden = true;
+  if (b || e.target === $sheet || e.target.closest('[data-close]')) $sheet.hidden = true;
 });
 $server.addEventListener('click', openServerSheet);
 
@@ -137,6 +144,11 @@ document.addEventListener('click', (e) => {
   if (c) {
     e.preventDefault();
     copyText(c.dataset.copy);
+  }
+  const w = e.target.closest('[data-weapon]');
+  if (w && !$sheet.contains(w)) {
+    haptic.tap();
+    openSheet(weaponSheet(w.dataset.weapon, ctx.data));
   }
 });
 
@@ -183,7 +195,6 @@ async function boot() {
     return;
   }
   $server.textContent = SERVERS[state.server]?.short || 'EU';
-  document.getElementById('ver').textContent = `WUWA ${ctx.data.meta.version}`;
   routeFromStartParam();
   addEventListener('hashchange', () => render(true));
   render(true);

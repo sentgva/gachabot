@@ -1,5 +1,5 @@
-import { ELEMENTS, WEAPONS, ROLES, KINDS, COST_LABEL, plural } from '../lib/labels.js';
-import { charRuns } from '../lib/logic.js';
+import { ELEMENTS, WEAPONS, ROLES, KINDS, COST_LABEL } from '../lib/labels.js';
+import { charRuns, teamSlots } from '../lib/logic.js';
 import { fmtDate, daysBetween } from '../lib/time.js';
 import { esc, ava, elIcon, elColor, tierChip, icons } from '../ui.js';
 import { toggleFav } from '../store.js';
@@ -9,21 +9,21 @@ const RC = { 5: 'var(--gold)', 4: 'var(--purple)', 3: '#5aa9ff' };
 
 function weaponRow(w, i, d) {
   const meta = d.weapons[w.name] || {};
-  return `<div class="wpn">
+  return `<button class="wpn" data-weapon="${esc(w.name)}">
     <span class="rank">${String(i + 1).padStart(2, '0')}</span>
     <span class="wi" style="--rc:${RC[meta.rarity] || 'var(--gold)'}">${meta.icon ? `<img src="${esc(meta.icon)}" alt="" loading="lazy">` : ''}</span>
     <div class="grow">
       <div class="wn">${esc(w.name)}</div>
-      <div class="ws">${meta.rarity ? '★'.repeat(meta.rarity) : ''}${w.sig ? ' · сигнатурное' : i === 0 ? ' · лучший выбор' : ''}</div>
+      <div class="ws">${meta.rarity ? '★'.repeat(meta.rarity) : ''}${meta.sub ? ` · ${esc(meta.sub.name)} ${esc(meta.sub.value)}` : ''}</div>
     </div>
-    ${w.sig ? '<span class="badge acc">сигна</span>' : ''}
-  </div>`;
+    ${w.sig ? '<span class="badge acc">сигна</span>' : icons.chev}
+  </button>`;
 }
 
 function setCard(s, i, d) {
   const info = d.setsByName[s.name];
   return `<div class="set ${i ? 'alt' : ''}">
-    <div class="sn">${i ? '<span class="muted mono" style="font-size:11px">ALT</span>' : ''}${esc(s.name)}<span class="pc">${s.pieces} шт</span></div>
+    <div class="sn">${info?.icon ? `<img class="set-ico" src="${esc(info.icon)}" alt="" loading="lazy">` : ''}<span class="grow">${i ? '<span class="muted mono" style="font-size:11px">ALT · </span>' : ''}${esc(s.name)}</span><span class="pc">${s.pieces} шт</span></div>
     ${info ? `<div class="sd">${info.two ? `<b>2:</b> ${esc(info.two)}<br>` : ''}<b>${info.pieces}:</b> ${esc(info.full)}</div>` : ''}
   </div>`;
 }
@@ -49,7 +49,7 @@ function buildTab(c, d) {
   if (!b) return '<div class="empty"><b>Сборки пока нет</b>Данные появятся после обновления.</div>';
   return `
     ${b.preliminary ? '<div class="note" style="margin-top:18px">Персонаж ещё не вышел — сборка предварительная и будет уточнена после релиза.</div>' : ''}
-    <div class="block"><div class="label">Оружие</div><div class="stack">${b.weapons.map((w, i) => weaponRow(w, i, d)).join('')}</div></div>
+    <div class="block"><div class="label">Оружие<span class="count">нажми, чтобы прочитать</span></div><div class="stack">${b.weapons.map((w, i) => weaponRow(w, i, d)).join('')}</div></div>
     ${b.sets.length ? `<div class="block"><div class="label">Сет эхо</div>${b.sets.map((s, i) => setCard(s, i, d)).join('')}</div>` : ''}
     ${b.mainEcho.length ? `<div class="block"><div class="label">Главное эхо</div><div class="stack">${b.mainEcho.map((e, i) => echoRow(e, i, d)).join('')}</div></div>` : ''}
     ${b.mainStats.length ? `<div class="block"><div class="label">Основные статы<span class="count">${b.mainStats.map((m) => m.cost).join('-')}</span></div>
@@ -58,25 +58,34 @@ function buildTab(c, d) {
     ${b.skills.length ? `<div class="block"><div class="label">Прокачка навыков</div><ol class="steps">${b.skills.map((s) => `<li>${esc(s)}</li>`).join('')}</ol></div>` : ''}`;
 }
 
+function teamCard(t, c, d) {
+  const slots = teamSlots(t, d);
+  const member = (id) => {
+    const m = d.byId[id];
+    const inner = `${ava(m, 'lg')}<span>${esc(m.name)}</span>`;
+    return id === c.id ? `<div class="m-main">${inner}</div>` : `<a class="m-main" href="#/char/${id}">${inner}</a>`;
+  };
+  return `<div class="team-card">
+    ${t.name ? `<div class="team-head"><span>${esc(t.name)}</span>${tierChip(t.tier)}</div>` : ''}
+    <div class="team">
+      ${slots
+        .map(
+          (s, j) => `${j ? '<span class="plus">+</span>' : ''}<div class="m">
+            ${member(s.main)}
+            ${s.alts.length ? `<div class="alts"><em>или</em>${s.alts.map((a) => `<a href="#/char/${a}" title="${esc(d.byId[a].name)}">${ava(d.byId[a], 'xs')}</a>`).join('')}</div>` : ''}
+          </div>`,
+        )
+        .join('')}
+    </div>
+  </div>`;
+}
+
 function teamsTab(c, d) {
   const teams = c.build?.teams || [];
   if (!teams.length) return '<div class="empty"><b>Команд пока нет</b></div>';
   return `<div class="block"><div class="label">Рекомендуемые отряды</div>
-    ${teams
-      .map(
-        (t, i) => `<div class="team">
-        ${t
-          .map((id, j) => {
-            const m = d.byId[id];
-            if (!m) return '';
-            const inner = `${ava(m, 'lg')}<span>${esc(m.name)}</span>`;
-            return `${j ? '<span class="plus">+</span>' : ''}${id === c.id ? `<div class="m">${inner}</div>` : `<a class="m" href="#/char/${id}">${inner}</a>`}`;
-          })
-          .join('')}
-      </div>${i === 0 && teams.length > 1 ? '<div class="label" style="margin:14px 0 10px">Альтернатива</div>' : ''}`,
-      )
-      .join('')}
-    <p class="muted" style="font-size:12.5px;margin-top:14px">Состав — ориентир для Башни невзгод и Пустошей. Слоты саппортов часто взаимозаменяемы.</p>
+    <div class="stack">${teams.map((t) => teamCard(t, c, d)).join('')}</div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px">Под персонажем — кем его можно заменить в этом слоте.</p>
   </div>`;
 }
 
@@ -121,7 +130,7 @@ export function render(ctx) {
   const role = ROLES[c.role];
   return `
   <div class="ch-hero" style="--el:${elColor(c.element)}">
-    <span class="hero-ghost" aria-hidden="true">${esc(c.name)}</span>
+    ${c.bg ? `<img class="hero-bg" src="${esc(c.bg)}" alt="">` : ''}
     ${c.art ? `<img class="hero-art" src="${esc(c.art)}" alt="">` : ''}
     <div class="ch-info">
       <div class="row" style="gap:6px;flex-wrap:wrap">
@@ -144,7 +153,7 @@ export function render(ctx) {
     <button data-tab="history" aria-pressed="${tab === 'history'}">Баннеры</button>
   </div></div>
   <div id="tab">${tab === 'teams' ? teamsTab(c, d) : tab === 'history' ? historyTab(c, d, ctx.server) : buildTab(c, d)}</div>
-  <footer class="foot"><p>Сборка — сводка рекомендаций сообщества на патч ${esc(d.meta.version)}. Лучшее оружие/эхо зависит от команды и вложений.</p></footer>`;
+  `;
 }
 
 export function mount(root, ctx) {

@@ -1,130 +1,207 @@
-// Тексты сообщений бота (parse_mode: HTML).
-import { ELEMENTS, WEAPONS, ROLES, KINDS, plural } from '../webapp/js/lib/labels.js';
+// Тексты сообщений бота: обычный человеческий текст (parse_mode: HTML только ради имени и кодов).
+import { ELEMENTS, WEAPONS, ROLES, plural } from '../webapp/js/lib/labels.js';
 import { SERVERS, fmtLeft, fmtDate, nextReset, daysBetween } from '../webapp/js/lib/time.js';
-import { currentBanners, upcomingBanners, charRuns, rerunTable } from '../webapp/js/lib/logic.js';
+import { currentBanners, upcomingBanners, charRuns, rerunTable, teamSlots } from '../webapp/js/lib/logic.js';
 import { plan, ASTRITE_PER_PULL, HARD_PITY } from '../webapp/js/lib/gacha.js';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]);
-const el = (c) => `${ELEMENTS[c.element]?.emoji || ''} ${ELEMENTS[c.element]?.ru || ''}`;
-const ph = (b) => (b.kind === 'event' ? `${b.version} · фаза ${b.phase === 1 ? 'I' : 'II'}` : `${b.version} · ${KINDS[b.kind]}`);
 const now = () => Date.now();
+const lower = (s) => s.toLowerCase().replace(/\bhp\b/g, 'HP');
+const list = (arr) => (arr.length <= 1 ? arr.join('') : `${arr.slice(0, -1).join(', ')} и ${arr.at(-1)}`);
+const phaseName = (b) => (b.phase === 1 ? 'первая фаза' : 'вторая фаза');
+const names = (d, ids) => ids.map((id) => d.byId[id]?.name || id);
+
+/* ---------------- баннеры ---------------- */
 
 export function bannersText(d, server) {
   const live = currentBanners(d.banners, server);
   const up = upcomingBanners(d.banners, server);
-  const lines = [`<b>🌀 Баннеры</b> · сервер ${SERVERS[server].short}`, ''];
-  if (!live.length) lines.push('Сейчас между фазами.');
-  for (const b of live) {
-    lines.push(`<b>${ph(b)}</b> — до конца <b>${fmtLeft(b.endMs - now())}</b>`);
-    for (const id of b.featured) {
-      const c = d.byId[id];
-      if (!c) continue;
-      const tag = b.kind === 'reverb' ? '' : b.new.includes(id) ? ' 🆕' : ' · реран';
-      lines.push(`  ${ELEMENTS[c.element]?.emoji} <b>${esc(c.name)}</b>${tag}${c.tier ? ` · ${c.tier}` : ''}`);
-    }
-    if (b.weapons.length) lines.push(`  ⚔ ${b.weapons.map(esc).join(', ')}`);
-    if (b.fourStars.length) lines.push(`  4★: ${b.fourStars.map((id) => esc(d.byId[id]?.name)).join(', ')}`);
-    lines.push('');
+  const ev = live.find((b) => b.kind === 'event');
+  const out = [];
+  if (ev) {
+    out.push(`Сейчас идёт версия ${ev.version}, ${phaseName(ev)}. Она закончится ${fmtDate(ev.endMs, server)}, осталось ${fmtLeft(ev.endMs - now())}.`);
+    out.push('');
+    const fresh = names(d, ev.new);
+    const reruns = names(d, ev.featured.filter((id) => !ev.new.includes(id)));
+    const parts = [];
+    if (fresh.length) parts.push(`${fresh.length > 1 ? 'новые персонажи' : 'новый персонаж'} ${list(fresh)}`);
+    if (reruns.length) parts.push(`реран ${list(reruns)}`);
+    out.push(`На баннерах ${parts.join(', ')}.`);
+    if (ev.weapons.length) out.push(`Оружие: ${list(ev.weapons)}.`);
+    if (ev.fourStars.length) out.push(`Повышенный шанс из 4★: ${list(names(d, ev.fourStars))}.`);
+  } else {
+    out.push('Сейчас пауза между фазами.');
+  }
+  for (const b of live.filter((x) => x.kind !== 'event')) {
+    out.push('');
+    const what = b.kind === 'reverb' ? 'ревёрб-реран, можно выбрать одного из' : b.kind === 'collab' ? 'коллаборация' : 'юбилейный реран';
+    out.push(`Ещё идёт ${what}: ${list(names(d, b.featured))}. До ${fmtDate(b.endMs, server)}.`);
   }
   const next = up.find((b) => b.kind === 'event');
   if (next) {
-    lines.push(`<b>Далее: ${ph(next)}</b> — через ${fmtLeft(next.startMs - now())} (${fmtDate(next.startMs, server)})`);
-    lines.push(`  ${next.featured.map((id) => `${ELEMENTS[d.byId[id]?.element]?.emoji} ${esc(d.byId[id]?.name)}${next.new.includes(id) ? ' 🆕' : ''}`).join('  ')}`);
-    if (next.fourStars.length) lines.push(`  4★: ${next.fourStars.map((id) => esc(d.byId[id]?.name)).join(', ')}`);
+    out.push('');
+    const fresh = names(d, next.new);
+    const reruns = names(d, next.featured.filter((id) => !next.new.includes(id)));
+    const who = [fresh.length ? `${list(fresh)} (${fresh.length > 1 ? 'новые' : 'новый персонаж'})` : '', reruns.length ? `реран — ${list(reruns)}` : '']
+      .filter(Boolean)
+      .join(', ');
+    out.push(`Дальше, с ${fmtDate(next.startMs, server)} (через ${fmtLeft(next.startMs - now())}): ${who}.`);
+    if (next.fourStars.length) out.push(`Из 4★ там будут ${list(names(d, next.fourStars))}.`);
   }
-  return lines.join('\n').trim();
+  out.push('', `Время указано для сервера ${SERVERS[server].short}.`);
+  return out.join('\n');
+}
+
+/* ---------------- сборка ---------------- */
+
+function statText(s) {
+  return lower(s).replace(/ \/ /g, ' или ').replace(/ (≥|>|=) /g, ' или ');
+}
+
+function mainStatsText(main) {
+  const by = {};
+  for (const m of main) (by[m.cost] ||= []).push(statText(m.stat));
+  const parts = [];
+  for (const cost of ['4', '3', '1']) {
+    const arr = by[cost];
+    if (!arr) continue;
+    const uniq = [...new Set(arr)];
+    parts.push(uniq.length === 1 ? `в ${cost}-кост — ${uniq[0]}` : `в ${cost}-кост — ${uniq[0]}, во второй ${uniq[1]}`);
+  }
+  return parts.join('; ');
+}
+
+function substatsText(str) {
+  const groups = str.split(/\s+(?:>>>|>)\s+/).map((g) => g.split(/\s+(?:=|≥)\s+/).map(lower).join(' и '));
+  if (groups.length === 1) return groups[0];
+  return `сначала ${groups[0]}, потом ${groups[1]}${groups.length > 2 ? `, дальше ${groups.slice(2).join(', ')}` : ''}`;
+}
+
+function teamText(t, d) {
+  return teamSlots(t, d)
+    .map((s) => {
+      const main = d.byId[s.main]?.name || s.main;
+      return s.alts.length ? `${main} (или ${names(d, s.alts).join(', ')})` : main;
+    })
+    .join(' + ');
 }
 
 export function buildText(c, d) {
   const b = c.build;
+  const el = ELEMENTS[c.element]?.ru.toLowerCase() || '';
+  const wp = WEAPONS[c.weapon]?.ru.toLowerCase() || '';
   const role = ROLES[c.role]?.ru;
-  const head = [
-    `<b>${esc(c.name)}</b> · ${esc(c.ru)}`,
-    `${'★'.repeat(c.rarity || 0)} · ${el(c)} · ${WEAPONS[c.weapon]?.ru || ''}${role ? ' · ' + role : ''}${c.tier ? ` · <b>${c.tier}</b>` : ''}`,
-  ];
-  if (!b) return [...head, '', 'Сборки пока нет.'].join('\n');
-  const out = [...head, ''];
-  if (b.preliminary) out.push('⚠️ <i>Персонаж ещё не вышел — сборка предварительная.</i>', '');
-  out.push('<b>⚔ Оружие</b>');
-  b.weapons.forEach((w, i) => out.push(`${i + 1}. ${esc(w.name)}${w.sig ? ' — сигна' : ''}`));
+  const out = [`<b>${esc(c.name)}</b> (${esc(c.ru)}) — ${c.rarity}★, ${el}, ${wp}.${role ? ` ${role}` : ''}${c.tier ? `, тир ${c.tier}` : ''}.`];
+  if (!b) return [...out, '', 'Сборки для этого персонажа пока нет.'].join('\n');
+  if (b.preliminary) out.push('', 'Персонаж ещё не вышел, поэтому сборка предварительная.');
+
+  const [first, ...rest] = b.weapons;
+  if (first) {
+    out.push('');
+    const head = first.sig ? `Лучше всего сигнатурное оружие ${esc(first.name)}.` : `Лучшее оружие — ${esc(first.name)}.`;
+    out.push(`${head}${rest.length ? ` Если его нет, подойдут ${list(rest.map((w) => esc(w.name)))}.` : ''}`);
+  }
+
   if (b.sets.length) {
-    out.push('', '<b>💠 Сет эхо</b>');
-    b.sets.forEach((s, i) => {
-      const info = d.setsByName[s.name];
-      out.push(`${i ? '↳ альт: ' : ''}${esc(s.name)} (${s.pieces})${!i && info ? `\n<i>${esc(info.full)}</i>` : ''}`);
-    });
+    const [s, ...alt] = b.sets;
+    const info = d.setsByName[s.name];
+    out.push('');
+    const eff = info ? (/^[А-ЯЁ]/.test(info.full) ? info.full[0].toLowerCase() + info.full.slice(1) : info.full) : '';
+    out.push(`Эхо: ${s.pieces === 5 ? 'полный сет' : `сет на ${s.pieces} шт.`} ${esc(s.name)}${eff ? ` — ${esc(eff)}` : ''}.`);
+    if (alt.length) out.push(`Как альтернатива — ${list(alt.map((x) => esc(x.name)))}.`);
   }
-  if (b.mainEcho.length) out.push('', `<b>🐉 Главное эхо:</b> ${b.mainEcho.map(esc).join(' / ')}`);
-  if (b.mainStats.length) {
-    out.push('', `<b>📊 Статы ${b.mainStats.map((m) => m.cost).join('-')}</b>`);
-    b.mainStats.forEach((m) => out.push(`${m.cost}: ${esc(m.stat)}`));
-  }
-  if (b.substats) out.push('', `<b>🎯 Сабстаты:</b> ${esc(b.substats)}`);
-  if (b.skills.length) out.push('', `<b>📈 Навыки:</b> ${b.skills.map(esc).join(' → ')}`);
+  if (b.mainEcho.length) out.push(`Главное эхо — ${esc(b.mainEcho[0])}${b.mainEcho[1] ? `, можно ${esc(b.mainEcho[1])}` : ''}.`);
+  if (b.mainStats.length) out.push('', `Основные статы: ${esc(mainStatsText(b.mainStats))}.`);
+  if (b.substats) out.push(`Сабстаты: ${esc(substatsText(b.substats))}.`);
+  if (b.skills.length) out.push(`Навыки качать в таком порядке: ${lower(b.skills.join(', '))}.`);
+
   if (b.teams?.length) {
-    out.push('', '<b>👥 Команды</b>');
-    b.teams.forEach((t) => out.push('• ' + t.map((id) => esc(d.byId[id]?.name || id)).join(' + ')));
+    out.push('', 'С кем играть:');
+    for (const t of b.teams) out.push(esc(teamText(t, d)));
   }
   return out.join('\n');
 }
 
+/* ---------------- история и засуха ---------------- */
+
 export function historyText(c, d, server) {
   const runs = charRuns(c.id, d.banners, server);
-  if (!runs.length) return `<b>${esc(c.name)}</b> — ${c.limited ? 'баннеров ещё не было.' : 'не лимитный персонаж (стандарт / бесплатно).'}`;
+  if (!runs.length) {
+    return c.limited
+      ? `У ${esc(c.name)} ещё не было баннеров.`
+      : `${esc(c.name)} — не лимитный персонаж: есть в стандартном баннере или выдаётся бесплатно.`;
+  }
   const past = runs.filter((r) => r.status === 'past');
   const live = runs.find((r) => r.status === 'live');
   const next = runs.find((r) => r.status === 'upcoming');
   const last = past[past.length - 1];
-  const lines = [`<b>📜 ${esc(c.name)} — баннеры</b>`, ''];
-  if (live) lines.push(`🟢 Сейчас на баннере — ещё ${fmtLeft(live.endMs - now())}`);
-  else if (next) lines.push(`⏳ ${last ? 'Реран' : 'Дебют'} через ${fmtLeft(next.startMs - now())} (${fmtDate(next.startMs, server)})`);
-  if (!live && last) lines.push(`Без рерана: <b>${daysBetween(last.endMs, now())}</b> дн. (последний — ${last.version})`);
-  lines.push('');
-  for (const r of runs) {
-    lines.push(`${r.status === 'live' ? '🟢' : r.status === 'upcoming' ? '⏳' : '▫️'} ${ph(r)} — ${fmtDate(r.startMs, server, true)}${r.new.includes(c.id) ? ' · дебют' : ''}`);
-  }
-  return lines.join('\n');
+  const label = (r) => {
+    const base = r.kind === 'event' ? `${r.version}` : r.kind === 'reverb' ? `${r.version} (ревёрб, на выбор)` : r.kind === 'anniversary' ? `${r.version} (юбилейный)` : `${r.version} (коллаборация)`;
+    return r.new.includes(c.id) ? `${base} (дебют, ${fmtDate(r.startMs, server, true)})` : base;
+  };
+  const real = runs.filter((r) => r.status !== 'upcoming');
+  const out = [`Баннеров у ${esc(c.name)}: ${real.length}. Это ${list(real.map(label))}.`];
+  if (live) out.push(`Сейчас на баннере, осталось ${fmtLeft(live.endMs - now())}.`);
+  else if (last) out.push(`С последнего баннера прошло ${daysBetween(last.endMs, now())} ${plural(daysBetween(last.endMs, now()), 'день', 'дня', 'дней')} (закончился ${fmtDate(last.endMs, server, true)}).`);
+  if (next) out.push(`Следующий — с ${fmtDate(next.startMs, server)}, через ${fmtLeft(next.startMs - now())}.`);
+  else if (!live) out.push('Новых анонсов пока нет.');
+  return out.join('\n');
 }
 
 export function droughtText(d, server) {
   const rows = rerunTable(d.chars, d.banners, server).filter((r) => !r.live && !r.next).slice(0, 15);
   return [
-    '<b>🏜 Засуха реранов</b> — дольше всех без баннера:',
+    'Дольше всех без рерана:',
     '',
-    ...rows.map((r, i) => `${String(i + 1).padStart(2, ' ')}. ${ELEMENTS[r.char.element]?.emoji} <b>${esc(r.char.name)}</b> — ${r.days} дн. (посл. ${r.lastVersion})`),
+    ...rows.map((r, i) => `${i + 1}. ${esc(r.char.name)} — ${r.days} ${plural(r.days, 'день', 'дня', 'дней')} (последний раз в ${r.lastVersion})`),
   ].join('\n');
 }
 
+/* ---------------- тир-лист, коды, ресеты ---------------- */
+
 export function tierText(d) {
   const t = d.tier;
-  const role = { dps: 'DPS', hybrid: 'Гибрид', support: 'Саппорт' };
-  const lines = [`<b>🏆 Тир-лист</b> · патч ${esc(t.patch)}`, `<i>${esc(t.mode)}</i>`, ''];
+  const out = [`Тир-лист на патч ${esc(t.patch)}, ${esc(t.mode)}.`];
   for (const row of t.tiers) {
-    lines.push(`<b>${row.tier}</b> — ${esc(row.label)}`);
+    const parts = [];
     for (const k of ['dps', 'hybrid', 'support']) {
-      if (row[k].length) lines.push(`  ${role[k]}: ${row[k].map((id) => esc(d.byId[id]?.name || id)).join(', ')}`);
+      if (row[k].length) parts.push(`${ROLES[k].short}: ${names(d, row[k]).join(', ')}`);
     }
+    out.push('', `${row.tier} (${row.label.toLowerCase()})`, ...parts.map(esc));
   }
-  return lines.join('\n');
+  return out.join('\n');
 }
 
 export function codesText(d) {
   const act = d.codes.codes.filter((c) => c.active);
-  const lines = ['<b>🎁 Коды обмена</b>', ''];
-  if (!act.length) lines.push('Сейчас активных кодов нет.');
-  for (const c of act) lines.push(`<code>${esc(c.code)}</code> — ${esc(c.rewards)}`);
-  lines.push('', `<i>${esc(d.codes.howTo)}</i>`, 'Нажми на код, чтобы скопировать.');
-  return lines.join('\n');
+  const out = [];
+  if (!act.length) out.push('Сейчас активных кодов нет.');
+  else {
+    out.push(act.length > 1 ? 'Активные коды (нажми на код, чтобы скопировать):' : 'Активный код (нажми, чтобы скопировать):', '');
+    for (const c of act) out.push(`<code>${esc(c.code)}</code> — ${esc(c.rewards)}`);
+  }
+  out.push('', esc(d.codes.howTo));
+  return out.join('\n');
 }
 
 export function resetText(server) {
-  const lines = ['<b>⏰ Ресеты</b> (ежедневный 04:00, недельный — пн 04:00)', ''];
-  for (const [k, s] of Object.entries(SERVERS)) {
-    const mark = k === server ? '▸' : ' ';
-    lines.push(`${mark} <b>${s.short}</b>: через ${fmtLeft(nextReset(k) - now())} · неделя ${fmtLeft(nextReset(k, true) - now())}`);
+  const me = SERVERS[server];
+  const others = Object.entries(SERVERS).filter(([k]) => k !== server);
+  const groups = new Map();
+  for (const [k, s] of others) {
+    const left = fmtLeft(nextReset(k) - now());
+    if (!groups.has(left)) groups.set(left, []);
+    groups.get(left).push(s.short);
   }
-  return lines.join('\n');
+  return [
+    `Ежедневный ресет на ${me.short} через ${fmtLeft(nextReset(server) - now())}, недельный — через ${fmtLeft(nextReset(server, true) - now())}.`,
+    `На других серверах ежедневный ресет: ${[...groups].map(([left, s]) => `${s.join('/')} — через ${left}`).join(', ')}.`,
+    '',
+    'Ресет в 04:00 по времени сервера, недельный — в понедельник.',
+  ].join('\n');
 }
+
+/* ---------------- калькулятор ---------------- */
 
 /** /calc 16000 гарант s1 r1 pity 40  |  /calc 120 круток */
 export function parseCalc(text) {
@@ -148,12 +225,11 @@ export function calcText(o) {
   const pulls = o.pulls + Math.floor(o.astrite / ASTRITE_PER_PULL);
   if (!pulls) {
     return [
-      '<b>🎲 Калькулятор круток</b>',
+      'Напиши, сколько у тебя астритов или круток, и я посчитаю шанс. Например:',
       '',
-      'Примеры:',
-      '<code>/calc 16000</code> — астриты',
-      '<code>/calc 90 круток s1</code> — S1 за 90 круток',
-      '<code>/calc 28800 r1 гарант pity 40</code> — персонаж + сигна, есть гарант, 40 круток на счётчике',
+      '<code>/calc 16000</code> — шанс выбить персонажа с 16 000 астритов',
+      '<code>/calc 90 круток s1</code> — шанс на S1 за 90 круток',
+      '<code>/calc 28800 r1 гарант pity 40</code> — персонаж и сигна, есть гарант, 40 круток на счётчике',
     ].join('\n');
   }
   const r = plan({
@@ -162,35 +238,36 @@ export function calcText(o) {
     weapon: o.weapon ? { copies: o.weapon, pity: 0 } : null,
   });
   const goal = [`S${o.copies - 1}`, o.weapon ? `R${o.weapon}` : ''].filter(Boolean).join(' + ');
-  const pct = (x) => (x * 100 >= 99.95 ? '&gt;99.9' : (x * 100).toFixed(x < 0.1 ? 1 : 0));
+  const p = r.chance * 100;
+  const chance = p >= 99.95 ? 'больше 99.9%' : `${p.toFixed(r.chance < 0.1 ? 1 : 0)}%`;
+  const cond = [o.astrite ? `${o.astrite.toLocaleString('ru')} астритов` : '', o.pity ? `${o.pity} на счётчике` : '', o.guaranteed ? 'с гарантом' : '']
+    .filter(Boolean)
+    .join(', ');
+  const short = r.p90 - pulls;
   return [
-    '<b>🎲 Калькулятор круток</b>',
+    `С ${pulls} ${plural(pulls, 'круткой', 'крутками', 'крутками')}${cond ? ` (${cond})` : ''} шанс получить ${goal} — ${chance}.`,
+    `В среднем на это уходит ${Math.round(r.expected)} ${plural(Math.round(r.expected), 'крутка', 'крутки', 'круток')}, для уверенности 90% нужно ${r.p90}, в худшем случае — ${r.worst}.`,
+    short > 0
+      ? `До 90% не хватает примерно ${short} ${plural(short, 'крутки', 'круток', 'круток')}, это ${(short * ASTRITE_PER_PULL).toLocaleString('ru')} астритов.`
+      : 'Круток хватает с запасом.',
     '',
-    `Круток: <b>${pulls}</b>${o.astrite ? ` (${o.astrite} астр.)` : ''} · счётчик ${o.pity}${o.guaranteed ? ' · гарант' : ''}`,
-    `Цель: <b>${goal}</b>`,
-    '',
-    `Шанс: <b>${pct(r.chance)}%</b>`,
-    `В среднем нужно: ${Math.round(r.expected)} · для 90%: ${r.p90} · худший случай: ${r.worst}`,
-    r.p90 > pulls ? `До 90% не хватает ~${r.p90 - pulls} ${plural(r.p90 - pulls, 'крутки', 'круток', 'круток')} (${(r.p90 - pulls) * ASTRITE_PER_PULL} астр.)` : '✅ Хватает с запасом',
-    '',
-    '<i>Модель: 0.8%, мягкий гарант с 66-й, жёсткий 80, 50/50.</i>',
+    'Это оценка: базовый шанс 0.8%, мягкий гарант с 66-й крутки, жёсткий на 80-й, на персонажа 50/50.',
   ].join('\n');
 }
 
-export const HELP = `<b>GachaBot · Wuthering Waves</b>
+export const HELP = `Я помогаю с Wuthering Waves. Напиши имя персонажа — расскажу, как его собрать. Можно по-русски: «камелия», «шк», «синь».
 
-Просто напиши имя персонажа — пришлю сборку. Можно по-русски: «камелия», «шк», «синь».
-
-/banners — текущие и следующие баннеры
-/build имя — сборка (оружие, эхо, статы, команды)
+Что ещё умею:
+/banners — кто сейчас на баннерах и кто следующий
+/build имя — сборка персонажа
 /chars — выбрать персонажа по стихии
-/history имя — когда был на баннере
+/history имя — когда у персонажа были баннеры
 /drought — кто дольше всех без рерана
 /tier — тир-лист
 /codes — активные коды
 /calc — шанс выбить персонажа
-/reset — таймеры ресета
-/server — выбрать сервер
+/reset — когда ресет
+/server — выбрать свой сервер
 /app — открыть мини-приложение
 
-В любом чате: <code>@бот имя</code> — отправить сборку собеседнику.`;
+В любом чате можно написать <code>@бот имя</code> и отправить сборку собеседнику.`;

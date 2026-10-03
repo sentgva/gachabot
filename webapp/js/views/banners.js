@@ -104,7 +104,7 @@ export function render(ctx) {
     </div>
   </section>
   <section class="section">${tab === 'timeline' ? timeline(ctx) : drought(ctx)}</section>
-  <footer class="foot"><p>Время — по серверу ${esc(ctx.server.toUpperCase())}. Смена фаз идёт по местному времени сервера, старт версии — одновременно для всех.</p></footer>`;
+  `;
 }
 
 export function mount(root, ctx) {

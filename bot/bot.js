@@ -24,21 +24,21 @@ function appButton(kb, ctx, text, hash = '', startapp = '') {
 
 function menuKb(ctx) {
   const kb = new InlineKeyboard();
-  if (config.webappUrl) appButton(kb, ctx, '🌀 Открыть приложение').row();
+  if (config.webappUrl) appButton(kb, ctx, 'Открыть приложение').row();
   return kb
-    .text('🎴 Баннеры', 'banners').text('🧩 Сборки', 'chars').row()
-    .text('🏆 Тир-лист', 'tier').text('🎁 Коды', 'codes').row()
-    .text('⏰ Ресет', 'reset').text('🏜 Засуха', 'drought').row()
-    .text('🎲 Калькулятор', 'calc').text('🌍 Сервер', 'server');
+    .text('Баннеры', 'banners').text('Сборки', 'chars').row()
+    .text('Тир-лист', 'tier').text('Коды', 'codes').row()
+    .text('Ресет', 'reset').text('Засуха реранов', 'drought').row()
+    .text('Калькулятор', 'calc').text('Сервер', 'server');
 }
 
 function elementsKb() {
   const kb = new InlineKeyboard();
   Object.entries(ELEMENTS).forEach(([k, e], i) => {
-    kb.text(`${e.emoji} ${e.ru}`, `el:${k}`);
+    kb.text(e.ru, `el:${k}`);
     if (i % 3 === 2) kb.row();
   });
-  return kb.row().text('← Меню', 'menu');
+  return kb.row().text('Меню', 'menu');
 }
 
 function charsKb(d, element) {
@@ -47,16 +47,16 @@ function charsKb(d, element) {
     .sort((a, b) => b.rarity - a.rarity || TIER_ORDER.indexOf(a.tier) - TIER_ORDER.indexOf(b.tier));
   const kb = new InlineKeyboard();
   list.forEach((c, i) => {
-    kb.text(`${c.rarity === 5 ? '' : '·'}${c.name}${c.tier ? ' ' + c.tier : ''}`, `b:${c.id}`);
+    kb.text(`${c.name}${c.rarity === 4 ? ' (4★)' : ''}`, `b:${c.id}`);
     if (i % 2 === 1) kb.row();
   });
-  return kb.row().text('← Стихии', 'chars');
+  return kb.row().text('Назад', 'chars');
 }
 
 const backKb = (extra) => {
   const kb = new InlineKeyboard();
   if (extra) extra(kb);
-  return kb.text('← Меню', 'menu');
+  return kb.text('Меню', 'menu');
 };
 
 /* ---------------- ответы ---------------- */
@@ -75,37 +75,29 @@ async function show(ctx, text, extra = {}) {
 }
 
 function buildKb(ctx, c) {
-  const kb = new InlineKeyboard().text('📜 Баннеры', `h:${c.id}`);
-  appButton(kb, ctx, '📱 Подробнее', `#/char/${c.id}`, `char_${c.id}`);
-  const e = ELEMENTS[c.element];
-  return kb.row().text(`${e?.emoji || ''} Другие: ${e?.ru || ''}`, `el:${c.element}`);
-}
-
-function previewFor(c) {
-  const card = assetUrl(`assets/cards/${c.id}.jpg`);
-  return card ? { link_preview_options: { url: card, prefer_large_media: true, show_above_text: true } } : NO_PREVIEW;
+  const kb = new InlineKeyboard().text('История баннеров', `h:${c.id}`);
+  appButton(kb, ctx, 'В приложении', `#/char/${c.id}`, `char_${c.id}`);
+  return kb.row().text(`Другие: ${ELEMENTS[c.element]?.ru || ''}`, `el:${c.element}`);
 }
 
 async function sendBuild(ctx, c) {
   const d = await getData();
-  return show(ctx, F.buildText(c, d), { reply_markup: buildKb(ctx, c), ...previewFor(c) });
+  return show(ctx, F.buildText(c, d), { reply_markup: buildKb(ctx, c) });
 }
 
 async function sendBanners(ctx) {
   const d = await getData();
   const server = await getServer(ctx.from?.id);
-  const kb = new InlineKeyboard().text('🔄 Обновить', 'banners').text('🏜 Засуха', 'drought').row();
-  appButton(kb, ctx, '📱 Таймлайн', '#/banners', 'banners');
-  const live = currentBanners(d.banners, server).find((b) => b.kind === 'event');
-  const lead = live && d.byId[live.new[0] || live.featured[0]];
-  return show(ctx, F.bannersText(d, server), { reply_markup: kb.row().text('← Меню', 'menu'), ...(lead ? previewFor(lead) : {}) });
+  const kb = new InlineKeyboard().text('Обновить', 'banners').text('Засуха реранов', 'drought').row();
+  appButton(kb, ctx, 'Все баннеры в приложении', '#/banners', 'banners');
+  return show(ctx, F.bannersText(d, server), { reply_markup: kb.row().text('Меню', 'menu') });
 }
 
 async function findOne(ctx, query, { quiet = false } = {}) {
   const d = await getData();
   const found = findChars(d.chars, query, 6);
   if (!found.length) {
-    if (!quiet) await ctx.reply(`Не нашёл «${F.esc(query)}» 🤔 Напиши имя персонажа (можно по-русски) или выбери по стихии:`, { ...HTML, reply_markup: elementsKb() });
+    if (!quiet) await ctx.reply(`Не нашёл «${F.esc(query)}». Напиши имя персонажа (можно по-русски) или выбери его по стихии:`, { ...HTML, reply_markup: elementsKb() });
     return null;
   }
   const qn = norm(query);
@@ -116,7 +108,7 @@ async function findOne(ctx, query, { quiet = false } = {}) {
   if (prefixed.length > 1) {
     const kb = new InlineKeyboard();
     prefixed.forEach((c) => kb.text(c.name, `b:${c.id}`).row());
-    await ctx.reply('Кого именно?', { reply_markup: kb });
+    await ctx.reply('Кого именно ты имеешь в виду?', { reply_markup: kb });
     return null;
   }
   return found[0];
@@ -131,7 +123,7 @@ bot.command('start', async (ctx) => {
   if (p === 'banners') return sendBanners(ctx);
   const name = ctx.from?.first_name ? `, ${F.esc(ctx.from.first_name)}` : '';
   await ctx.reply(
-    `Привет${name}! 👋\n\nЯ <b>GachaBot</b> — всё по <b>Wuthering Waves ${F.esc(d.meta.version)}</b>: баннеры, сборки, тир-лист, коды и калькулятор круток.\n\nНапиши имя персонажа (можно по-русски) или выбери раздел:`,
+    `Привет${name}! Я GachaBot, помогаю с Wuthering Waves ${F.esc(d.meta.version)}: подскажу, кто сейчас на баннерах, как собрать персонажа, покажу тир-лист и коды, посчитаю шансы на крутки.\n\nНапиши имя персонажа (можно по-русски) или выбери раздел ниже.`,
     { ...HTML, reply_markup: menuKb(ctx) },
   );
 });
@@ -151,22 +143,22 @@ bot.command(['history', 'h'], async (ctx) => {
   const c = await findOne(ctx, q);
   if (!c) return;
   const d = await getData();
-  await show(ctx, F.historyText(c, d, await getServer(ctx.from?.id)), { reply_markup: new InlineKeyboard().text('🧩 Сборка', `b:${c.id}`) });
+  await show(ctx, F.historyText(c, d, await getServer(ctx.from?.id)), { reply_markup: new InlineKeyboard().text('Сборка', `b:${c.id}`) });
 });
 bot.command('drought', async (ctx) => show(ctx, F.droughtText(await getData(), await getServer(ctx.from?.id)), { reply_markup: backKb() }));
 bot.command(['tier', 'tierlist'], async (ctx) => {
-  show(ctx, F.tierText(await getData()), { reply_markup: backKb((kb) => appButton(kb, ctx, '📱 С картинками', '#/tier', 'tier').row()) });
+  show(ctx, F.tierText(await getData()), { reply_markup: backKb((kb) => appButton(kb, ctx, 'Тир-лист в приложении', '#/tier', 'tier').row()) });
 });
 bot.command('codes', async (ctx) => show(ctx, F.codesText(await getData()), { reply_markup: backKb() }));
-bot.command('reset', async (ctx) => show(ctx, F.resetText(await getServer(ctx.from?.id)), { reply_markup: backKb((kb) => kb.text('🌍 Сменить сервер', 'server').row()) }));
+bot.command('reset', async (ctx) => show(ctx, F.resetText(await getServer(ctx.from?.id)), { reply_markup: backKb((kb) => kb.text('Сменить сервер', 'server').row()) }));
 bot.command('calc', (ctx) => {
-  const kb = backKb((k) => appButton(k, ctx, '📱 Калькулятор с графиком', '#/tools/calc', 'calc').row());
+  const kb = backKb((k) => appButton(k, ctx, 'Калькулятор в приложении', '#/tools/calc', 'calc').row());
   return show(ctx, F.calcText(F.parseCalc(ctx.match || '')), { reply_markup: kb });
 });
 bot.command('server', (ctx) => showServers(ctx));
 bot.command('app', (ctx) => {
   if (!config.webappUrl) return ctx.reply('Mini App ещё не опубликован (не задан WEBAPP_URL).');
-  return ctx.reply('Жми, чтобы открыть 👇', { reply_markup: appButton(new InlineKeyboard(), ctx, '🌀 Открыть GachaBot') });
+  return ctx.reply('Жми кнопку ниже, чтобы открыть приложение.', { reply_markup: appButton(new InlineKeyboard(), ctx, 'Открыть GachaBot') });
 });
 
 async function showServers(ctx) {
@@ -176,7 +168,7 @@ async function showServers(ctx) {
     kb.text(`${k === cur ? '● ' : ''}${s.short} (UTC${s.offset >= 0 ? '+' : ''}${s.offset})`, `srv:${k}`);
     if (i % 2 === 1) kb.row();
   });
-  return show(ctx, 'На каком ты сервере? От этого зависят таймеры баннеров и ресетов.', { reply_markup: kb.row().text('← Меню', 'menu') });
+  return show(ctx, 'На каком ты сервере? От этого зависят таймеры баннеров и ресетов.', { reply_markup: kb.row().text('Меню', 'menu') });
 }
 
 /* ---------------- кнопки (callback) ---------------- */
@@ -197,7 +189,7 @@ bot.callbackQuery(/^el:(\w+)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
   const el = ctx.match[1];
   const d = await getData();
-  return show(ctx, `${ELEMENTS[el]?.emoji} <b>${ELEMENTS[el]?.ru}</b> — выбери персонажа:`, { reply_markup: charsKb(d, el) });
+  return show(ctx, `${ELEMENTS[el]?.ru}: выбери персонажа`, { reply_markup: charsKb(d, el) });
 });
 bot.callbackQuery(/^b:([\w-]+)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
@@ -209,11 +201,11 @@ bot.callbackQuery(/^h:([\w-]+)$/, async (ctx) => {
   const d = await getData();
   const c = d.byId[ctx.match[1]];
   if (!c) return;
-  return show(ctx, F.historyText(c, d, await getServer(ctx.from?.id)), { reply_markup: new InlineKeyboard().text('← Сборка', `b:${c.id}`) });
+  return show(ctx, F.historyText(c, d, await getServer(ctx.from?.id)), { reply_markup: new InlineKeyboard().text('Назад к сборке', `b:${c.id}`) });
 });
 bot.callbackQuery('tier', async (ctx) => {
   await ctx.answerCallbackQuery();
-  return show(ctx, F.tierText(await getData()), { reply_markup: backKb((kb) => appButton(kb, ctx, '📱 С картинками', '#/tier', 'tier').row()) });
+  return show(ctx, F.tierText(await getData()), { reply_markup: backKb((kb) => appButton(kb, ctx, 'Тир-лист в приложении', '#/tier', 'tier').row()) });
 });
 bot.callbackQuery('codes', async (ctx) => {
   await ctx.answerCallbackQuery();
@@ -221,7 +213,7 @@ bot.callbackQuery('codes', async (ctx) => {
 });
 bot.callbackQuery('reset', async (ctx) => {
   await ctx.answerCallbackQuery();
-  return show(ctx, F.resetText(await getServer(ctx.from?.id)), { reply_markup: backKb((kb) => kb.text('🔄 Обновить', 'reset').text('🌍 Сервер', 'server').row()) });
+  return show(ctx, F.resetText(await getServer(ctx.from?.id)), { reply_markup: backKb((kb) => kb.text('Обновить', 'reset').text('Сервер', 'server').row()) });
 });
 bot.callbackQuery('drought', async (ctx) => {
   await ctx.answerCallbackQuery();
@@ -229,7 +221,7 @@ bot.callbackQuery('drought', async (ctx) => {
 });
 bot.callbackQuery('calc', async (ctx) => {
   await ctx.answerCallbackQuery();
-  const kb = backKb((k) => appButton(k, ctx, '📱 Калькулятор с графиком', '#/tools/calc', 'calc').row());
+  const kb = backKb((k) => appButton(k, ctx, 'Калькулятор в приложении', '#/tools/calc', 'calc').row());
   return show(ctx, F.calcText(F.parseCalc('')), { reply_markup: kb });
 });
 bot.callbackQuery('server', async (ctx) => {
@@ -241,7 +233,7 @@ bot.callbackQuery(/^srv:(\w+)$/, async (ctx) => {
   if (!SERVERS[s]) return ctx.answerCallbackQuery();
   await setServer(ctx.from.id, s);
   await ctx.answerCallbackQuery(`Сервер: ${SERVERS[s].short}`);
-  return show(ctx, F.resetText(s), { reply_markup: backKb((kb) => kb.text('🎴 Баннеры', 'banners').row()) });
+  return show(ctx, F.resetText(s), { reply_markup: backKb((kb) => kb.text('Баннеры', 'banners').row()) });
 });
 
 /* ---------------- инлайн-режим: @бот имя ---------------- */
@@ -256,8 +248,8 @@ bot.on('inline_query', async (ctx) => {
     list = [...new Set(ids)].map((id) => d.byId[id]).filter(Boolean);
   }
   const results = list.map((c) => {
-    const kb = new InlineKeyboard().text('📜 Баннеры', `h:${c.id}`);
-    if (config.webappUrl) kb.url('📱 Подробнее', config.miniappLink ? `${config.miniappLink}?startapp=char_${c.id}` : `${config.webappUrl}#/char/${c.id}`);
+    const kb = new InlineKeyboard().text('История баннеров', `h:${c.id}`);
+    if (config.webappUrl) kb.url('В приложении', config.miniappLink ? `${config.miniappLink}?startapp=char_${c.id}` : `${config.webappUrl}#/char/${c.id}`);
     const set = c.build?.sets?.[0]?.name;
     return {
       type: 'article',
@@ -265,7 +257,7 @@ bot.on('inline_query', async (ctx) => {
       title: `${c.name} · ${c.ru}`,
       description: [c.tier, ELEMENTS[c.element]?.ru, c.build?.weapons?.[0]?.name, set].filter(Boolean).join(' · '),
       thumbnail_url: assetUrl(`assets/thumbs/${c.id}.jpg`) || undefined,
-      input_message_content: { message_text: F.buildText(c, d), ...HTML, ...previewFor(c) },
+      input_message_content: { message_text: F.buildText(c, d), ...HTML, ...NO_PREVIEW },
       reply_markup: kb,
     };
   });
@@ -273,7 +265,7 @@ bot.on('inline_query', async (ctx) => {
     results.unshift({
       type: 'article',
       id: 'banners',
-      title: '🎴 Текущие баннеры',
+      title: 'Текущие баннеры',
       description: 'Кто сейчас на баннере и сколько осталось',
       thumbnail_url: assetUrl('assets/thumbs/_banners.jpg') || undefined,
       input_message_content: { message_text: F.bannersText(d, server), ...HTML, ...NO_PREVIEW },

@@ -1,24 +1,22 @@
-import { ELEMENTS } from '../lib/labels.js';
+import { ROLES } from '../lib/labels.js';
 import { esc, ava, TIER_COLORS } from '../ui.js';
 import { haptic } from '../tg.js';
 
-const ROLE_COLS = [
-  ['dps', 'DPS'],
-  ['hybrid', 'ГИБ'],
-  ['support', 'САП'],
-];
-
-let elFilter = '';
+const ROLE_KEYS = ['dps', 'hybrid', 'support'];
+let roleFilter = '';
 
 function rows(ctx) {
   const d = ctx.data;
+  const keys = roleFilter ? [roleFilter] : ROLE_KEYS;
   return d.tier.tiers
     .map((t) => {
-      const lines = ROLE_COLS.map(([key, label]) => {
-        const list = t[key].map((id) => d.byId[id]).filter((c) => c && (!elFilter || c.element === elFilter));
-        if (!list.length) return '';
-        return `<div class="rl"><em>${label}</em><div class="avs">${list.map((c) => `<a href="#/char/${c.id}" title="${esc(c.name)}">${ava(c)}</a>`).join('')}</div></div>`;
-      }).join('');
+      const lines = keys
+        .map((key) => {
+          const list = t[key].map((id) => d.byId[id]).filter(Boolean);
+          if (!list.length) return '';
+          return `<div class="rl"><em>${ROLES[key].short}</em><div class="avs">${list.map((c) => `<a href="#/char/${c.id}" title="${esc(c.name)}">${ava(c)}</a>`).join('')}</div></div>`;
+        })
+        .join('');
       if (!lines) return '';
       return `<div class="tier-row">
         <div class="tl" style="--tc:${TIER_COLORS[t.tier]}"><b>${t.tier}</b><span>${esc(t.label)}</span></div>
@@ -38,24 +36,21 @@ export function render(ctx) {
     <p class="lead">${esc(d.tier.mode)}. Оценка при S0 для 5★ и S6 для 4★, в лучших командах.</p>
   </section>
   <section style="margin-top:14px">
-    <div class="chips">
-      <button class="chip" data-el="" aria-pressed="${!elFilter}">Все</button>
-      ${Object.entries(ELEMENTS)
-        .map(([k, e]) => `<button class="chip el" style="--el:${e.color}" data-el="${k}" aria-pressed="${elFilter === k}"><span class="dot"></span>${e.ru}</button>`)
-        .join('')}
+    <div class="seg" id="roles">
+      <button data-role="" aria-pressed="${!roleFilter}">Все</button>
+      ${ROLE_KEYS.map((k) => `<button data-role="${k}" aria-pressed="${roleFilter === k}">${ROLES[k].short}</button>`).join('')}
     </div>
   </section>
-  <section class="section" id="rows">${rows(ctx)}</section>
-  <footer class="foot"><p>Тир — ориентир, а не приговор: любимый персонаж с хорошей сборкой закрывает весь контент.</p></footer>`;
+  <section class="section" id="rows">${rows(ctx)}</section>`;
 }
 
 export function mount(root, ctx) {
   root.addEventListener('click', (e) => {
-    const b = e.target.closest('[data-el]');
+    const b = e.target.closest('[data-role]');
     if (!b) return;
     haptic.tap();
-    elFilter = b.dataset.el;
-    for (const x of root.querySelectorAll('[data-el]')) x.setAttribute('aria-pressed', String(x === b));
+    roleFilter = b.dataset.role;
+    for (const x of root.querySelectorAll('[data-role]')) x.setAttribute('aria-pressed', String(x === b));
     root.querySelector('#rows').innerHTML = rows(ctx);
   });
 }

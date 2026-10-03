@@ -10,7 +10,7 @@ function heroCard(c, b, d, single) {
   const target = upcoming ? b.startMs : b.endMs;
   const fours = b.fourStars.map((id) => d.byId[id]).filter(Boolean);
   return `<a class="hero" href="#/char/${c.id}" style="--el:${elColor(c.element)}">
-    <span class="hero-ghost" aria-hidden="true">${esc(c.name)}</span>
+    ${c.bg ? `<img class="hero-bg" src="${esc(c.bg)}" alt="" ${single ? '' : 'loading="lazy"'}>` : ''}
     <img class="hero-art" src="${esc(c.art)}" alt="" ${single ? '' : 'loading="lazy"'}>
     <div class="hero-top">
       ${upcoming ? '<span class="badge">скоро</span>' : '<span class="badge acc live">live</span>'}
@@ -135,11 +135,7 @@ export function render(ctx) {
       <a class="tile" href="#/tools/pity"><span class="ico">${icons.pity}</span><span class="n">03</span><div><div class="ttl">Трекер гаранта</div><div class="dsc">Свои счётчики круток</div></div></a>
       <a class="tile" href="#/banners" data-tab-drought><span class="ico">${icons.drought}</span><span class="n">04</span><div><div class="ttl">Засуха реранов</div><div class="dsc">Кто давно не выходил</div></div></a>
     </div>
-  </section>
-
-  <footer class="foot">
-    <p>Данные: версия ${esc(d.meta.version)}, обновлено ${esc(d.meta.updated)}. Неофициальный фан-проект.</p>
-  </footer>`;
+  </section>`;
 }
 
 export function mount(root, ctx) {

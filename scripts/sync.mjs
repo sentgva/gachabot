@@ -146,8 +146,11 @@ async function main() {
     c.tags = (d.Tags || []).map((t) => t.TagName).filter(Boolean);
     const head = await saveImage(d.RoleHeadIconLarge, join(ASSETS, 'chars', `${c.id}.webp`), { width: 160, height: 160, quality: 80 });
     const art = await saveImage(d.FormationRoleCard, join(ASSETS, 'art', `${c.id}.webp`), { height: 640, quality: 76 });
+    // Фон с баннера персонажа (есть у лимитных и части стандартных)
+    const bg = await saveImage(d.GachaViewInfo?.[0]?.UnderBgTexturePath, join(ASSETS, 'bg', `${c.id}.webp`), { width: 1000, quality: 70 });
     c.icon = head ? `assets/chars/${c.id}.webp` : null;
     c.art = art ? `assets/art/${c.id}.webp` : null;
+    c.bg = bg ? `assets/bg/${c.id}.webp` : null;
     process.stdout.write(`  ✓ ${c.name}\n`);
   }
   await makeShareImages(chars);
@@ -167,6 +170,9 @@ async function main() {
   const weaponList = (await getJson(`${API}/weapon`)).weapons;
   const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
   const wIndex = new Map(weaponList.map((w) => [norm(w.Name), w]));
+  // Статы на 90 уровне и пассивка (англ.). Русское описание `ru` пишется руками и сохраняется.
+  const SUB_RU = { 'Crit. DMG': 'Крит. урон', 'Crit. Rate': 'Крит. шанс', 'Energy Regen': 'Восст. энергии', ATK: 'Атака', HP: 'HP', DEF: 'Защита' };
+  const oldWeapons = await readJson('weapons.json').catch(() => ({}));
   const weapons = {};
   for (const name of wantWeapons) {
     const w = wIndex.get(norm(name));
@@ -177,7 +183,21 @@ async function main() {
     }
     const file = `assets/weapons/${slugify(name)}.webp`;
     const ok = await saveImage(w.Icon, join(ROOT, 'webapp', file), { width: 96, height: 96, quality: 80 });
-    weapons[name] = { rarity: w.QualityId, type: w.TypeName?.toLowerCase(), icon: ok ? file : null };
+    const info = { ...oldWeapons[name], rarity: w.QualityId, type: w.TypeName?.toLowerCase(), icon: ok ? file : null };
+    const det = await getJson(`${API}/weapon/${w.Id}`);
+    if (det) {
+      const props = (det.Properties || []).map((p) => [p.Name, p.GrowthValues?.at(-1)?.Value ?? String(p.BaseValue)]);
+      const atk = props.find(([n]) => n === 'ATK');
+      info.atk = atk ? Math.floor(Number(atk[1])) : null;
+      if (props[1]) {
+        const [n, v] = props[1];
+        info.sub = { name: SUB_RU[n] || n, value: v.endsWith('%') ? v : String(Math.floor(Number(v))) };
+      }
+      info.passive = det.ResonName || null;
+      info.en = (det.Desc || '').replace(/<[^>]+>/g, '').trim();
+      if (!info.ru) console.warn('  нет русского описания оружия:', name);
+    }
+    weapons[name] = info;
   }
   await writeJson('weapons.json', weapons);
 
@@ -197,6 +217,18 @@ async function main() {
     echoes[name] = { icon: ok ? file : null, element: e.Element?.Name?.toLowerCase() || null };
   }
   await writeJson('echoes.json', echoes);
+
+  // Значки сетов эхо (сонат)
+  const setIcons = new Map();
+  for (const e of echoList) for (const g of e.FetterGroups || []) if (!setIcons.has(g.Name)) setIcons.set(g.Name, g.Icon);
+  const sets = await readJson('echo-sets.json');
+  for (const s of sets) {
+    const file = `assets/sets/${slugify(s.name)}.webp`;
+    const ok = await saveImage(fixUrl(setIcons.get(s.name)), join(ROOT, 'webapp', file), { width: 72, height: 72, quality: 85 });
+    s.icon = ok ? file : null;
+    if (!ok) console.warn('  нет значка сета:', s.name);
+  }
+  await writeJson('echo-sets.json', sets);
 
   const meta = await readJson('meta.json').catch(() => ({}));
   meta.syncedAt = new Date().toISOString();

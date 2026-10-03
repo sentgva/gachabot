@@ -121,3 +121,15 @@ function lev(a, b) {
 }
 
 export const byId = (chars) => Object.fromEntries(chars.map((c) => [c.id, c]));
+
+/** Слоты команды: основной вариант и альтернативы, без повторов между слотами. */
+export function teamSlots(t, d) {
+  const slots = (Array.isArray(t) ? t.map((x) => [x]) : t.slots).map((opts) => opts.filter((id) => d.byId[id]));
+  const used = new Set();
+  const mains = slots.map((opts) => {
+    const m = opts.find((id) => !used.has(id)) || opts[0];
+    used.add(m);
+    return m;
+  });
+  return slots.map((opts, i) => ({ main: mains[i], alts: opts.filter((id) => !mains.includes(id)) }));
+}

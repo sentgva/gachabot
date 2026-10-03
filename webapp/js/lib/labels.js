@@ -18,9 +18,9 @@ export const WEAPONS = {
 };
 
 export const ROLES = {
-  dps: { ru: 'Основной DPS', short: 'DPS' },
-  hybrid: { ru: 'Саб-DPS / баффер', short: 'Гибрид' },
-  support: { ru: 'Поддержка', short: 'Саппорт' },
+  dps: { ru: 'Основной ДД', short: 'ДД' },
+  hybrid: { ru: 'Саб-ДД', short: 'Саб-ДД' },
+  support: { ru: 'Саппорт', short: 'Сапп' },
 };
 
 export const TIER_ORDER = ['T0', 'T0.5', 'T1', 'T1.5', 'T2', 'T3', 'T4'];
