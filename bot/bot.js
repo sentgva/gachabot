@@ -309,7 +309,8 @@ bot.on('message:text', async (ctx) => {
 /* ---------------- ошибки и меню команд ---------------- */
 
 bot.catch((err) => {
-  console.error('[bot] ошибка в обработке update', err.ctx?.update?.update_id, err.error);
+  const e = err.error;
+  console.error(`[bot] update ${err.ctx?.update?.update_id}: ${e?.description || e?.message || String(e)}`);
 });
 
 export const COMMANDS = [
