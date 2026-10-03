@@ -5,3 +5,7 @@ node_modules/
 Thumbs.db
 .cache/
 .claude/
+
+.vercel
+.env*
+!.env.example
