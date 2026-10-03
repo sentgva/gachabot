@@ -11,7 +11,7 @@ Mini App + бот по **Wuthering Waves**: текущие баннеры с т�
 
 ## Что умеет
 
-**Mini App** (`webapp/`, статический сайт на GitHub Pages)
+**Mini App** (`webapp/`, статический сайт без сборки — Vercel + зеркало на GitHub Pages)
 
 - **Сейчас** — карточки текущих баннеров с обратным отсчётом и прогрессом фазы, следующая фаза, ресеты, избранное, активные коды
 - **Баннеры** — таймлайн всех конвентов с 1.0 по 3.7 и «засуха реранов»: кто дольше всех не выходил
@@ -32,33 +32,34 @@ Mini App + бот по **Wuthering Waves**: текущие баннеры с т�
 
 ## Запуск
 
-### 1. Mini App на GitHub Pages
+Один проект на Vercel раздаёт и Mini App (папку `webapp/`), и бота (`api/bot` — вебхук). GitHub Pages собирается параллельно как зеркало (`https://<логин>.github.io/gachabot/`), но `github.io` блокируют некоторые российские провайдеры — поэтому основной адрес лучше брать с Vercel.
 
-Уже настроено: каждый пуш в `main` проверяет данные (`npm run check`) и выкладывает папку `webapp/` на Pages. Адрес: `https://<логин>.github.io/gachabot/`.
-
-Если Pages не включился сам: **Settings → Pages → Source: GitHub Actions**.
-
-### 2. Бот в @BotFather
+### 1. Бот в @BotFather
 
 1. `/newbot` → получить токен
 2. `/setinline` → включить инлайн-режим (плейсхолдер, например «имя персонажа»)
-3. `/newapp` → привязать Mini App: URL `https://<логин>.github.io/gachabot/`, короткое имя, например `app`. Получится ссылка `https://t.me/<бот>/app` — это `MINIAPP_LINK`
-4. По желанию: **Bot Settings → Configure Mini App → Main App** — кнопка «Открыть» в профиле бота
 
-### 3. Бот на Vercel (вебхук, бесплатно)
+### 2. Проект на Vercel (бесплатно)
 
 1. [vercel.com/new](https://vercel.com/new) → **Import Git Repository** → `gachabot`. Настройки сборки трогать не нужно — всё в `vercel.json`
 2. **Environment Variables** (до или после первого деплоя):
    - `BOT_TOKEN` — токен от BotFather
    - `WEBHOOK_SECRET` — любая длинная случайная строка
-   - `WEBAPP_URL` — `https://<логин>.github.io/gachabot/` (или домен Vercel — Mini App раздаётся и там)
-   - `MINIAPP_LINK` — `https://t.me/<бот>/app` (необязательно)
+   - `WEBAPP_URL` — не обязательно: по умолчанию берётся домен проекта (`https://<проект>.vercel.app/`)
+   - `MINIAPP_LINK` — `https://t.me/<бот>/app` (необязательно, см. шаг 3)
    - `UPSTASH_REDIS_REST_URL` и `UPSTASH_REDIS_REST_TOKEN` — необязательно: бесплатная база [Upstash](https://upstash.com) (есть в Vercel Marketplace), чтобы бот запоминал выбранный сервер. Без неё всё работает, просто выбор сервера сбрасывается на EU при «холодном» старте
 3. После деплоя (если переменные добавлял позже — сделай **Redeploy**) открой один раз в браузере:
    `https://<проект>.vercel.app/api/setup?key=<WEBHOOK_SECRET>`
    Это привяжет вебхук к Vercel, выставит меню команд и кнопку Mini App. В ответе будет `"ok": true`
 
-Готово: `/api/bot` принимает апдейты от Telegram, функция просыпается только на сообщения.
+Готово: `/api/bot` принимает апдейты от Telegram, функция просыпается только на сообщения. Каждый пуш в `main` передеплоит и приложение, и бота.
+
+### 3. Mini App в @BotFather (по желанию)
+
+1. `/newapp` → URL `https://<проект>.vercel.app/`, короткое имя, например `app`. Получится ссылка `https://t.me/<бот>/app` — впиши её в `MINIAPP_LINK` на Vercel: тогда кнопки «Подробнее» работают и в группах, и в инлайн-режиме
+2. **Bot Settings → Configure Mini App → Main App** — кнопка «Открыть» в профиле бота
+
+Кнопку меню с Mini App в личке бот ставит сам (в `/api/setup`).
 
 ### Альтернатива: long polling (свой сервер)
 
