@@ -1,0 +1,182 @@
+{
+ "Nightmare: Kelpie": {
+  "icon": "assets/echoes/nightmare-kelpie.webp",
+  "element": "spectro"
+ },
+ "Nightmare: Feilian Beringal": {
+  "icon": "assets/echoes/nightmare-feilian-beringal.webp",
+  "element": "electro"
+ },
+ "Impermanence Heron": {
+  "icon": "assets/echoes/impermanence-heron.webp",
+  "element": "havoc"
+ },
+ "Nightmare: Tempest Mephis": {
+  "icon": "assets/echoes/nightmare-tempest-mephis.webp",
+  "element": "electro"
+ },
+ "Jué": {
+  "icon": "assets/echoes/jue.webp",
+  "element": "spectro"
+ },
+ "Nightmare: Inferno Rider": {
+  "icon": "assets/echoes/nightmare-inferno-rider.webp",
+  "element": "electro"
+ },
+ "Nightmare: Lampylumen Myriad": {
+  "icon": "assets/echoes/nightmare-lampylumen-myriad.webp",
+  "element": "glacio"
+ },
+ "Nightmare: Thundering Mephis": {
+  "icon": "assets/echoes/nightmare-thundering-mephis.webp",
+  "element": "electro"
+ },
+ "Fallacy of No Return": {
+  "icon": "assets/echoes/fallacy-of-no-return.webp",
+  "element": "spectro"
+ },
+ "Spacetrek Explorer": {
+  "icon": "assets/echoes/spacetrek-explorer.webp",
+  "element": "spectro"
+ },
+ "Nightmare: Crownless": {
+  "icon": "assets/echoes/nightmare-crownless.webp",
+  "element": "electro"
+ },
+ "Mech Abomination": {
+  "icon": "assets/echoes/mech-abomination.webp",
+  "element": "electro"
+ },
+ "Sentry Construct": {
+  "icon": "assets/echoes/sentry-construct.webp",
+  "element": "electro"
+ },
+ "Nightmare: Impermanence Heron": {
+  "icon": "assets/echoes/nightmare-impermanence-heron.webp",
+  "element": "electro"
+ },
+ "Nightmare: Mourning Aix": {
+  "icon": "assets/echoes/nightmare-mourning-aix.webp",
+  "element": "electro"
+ },
+ "Capitaneus": {
+  "icon": "assets/echoes/capitaneus.webp",
+  "element": "aero"
+ },
+ "Dragon of Dirge": {
+  "icon": "assets/echoes/dragon-of-dirge.webp",
+  "element": "electro"
+ },
+ "Lorelei": {
+  "icon": "assets/echoes/lorelei.webp",
+  "element": "electro"
+ },
+ "Reminiscence: Fleurdelys": {
+  "icon": "assets/echoes/reminiscence-fleurdelys.webp",
+  "element": "electro"
+ },
+ "Lioness of Glory": {
+  "icon": "assets/echoes/lioness-of-glory.webp",
+  "element": "spectro"
+ },
+ "Nightmare: Hecate": {
+  "icon": "assets/echoes/nightmare-hecate.webp",
+  "element": "spectro"
+ },
+ "The False Sovereign": {
+  "icon": "assets/echoes/the-false-sovereign.webp",
+  "element": "spectro"
+ },
+ "Lady of the Sea": {
+  "icon": "assets/echoes/lady-of-the-sea.webp",
+  "element": "spectro"
+ },
+ "Corrosaurus": {
+  "icon": "assets/echoes/corrosaurus.webp",
+  "element": "spectro"
+ },
+ "Reminiscence: Fenrico": {
+  "icon": "assets/echoes/reminiscence-fenrico.webp",
+  "element": "spectro"
+ },
+ "Bell-Borne Geochelone": {
+  "icon": "assets/echoes/bell-borne-geochelone.webp",
+  "element": "glacio"
+ },
+ "Hyvatia": {
+  "icon": "assets/echoes/hyvatia.webp",
+  "element": "spectro"
+ },
+ "Reactor Husk": {
+  "icon": "assets/echoes/reactor-husk.webp",
+  "element": "spectro"
+ },
+ "Sigillum": {
+  "icon": "assets/echoes/sigillum.webp",
+  "element": "spectro"
+ },
+ "Twin Nova: Nebulous Cannon": {
+  "icon": "assets/echoes/twin-nova-nebulous-cannon.webp",
+  "element": "spectro"
+ },
+ "Nameless Explorer": {
+  "icon": "assets/echoes/nameless-explorer.webp",
+  "element": "spectro"
+ },
+ "Reminiscence: Threnodian - Voidborne Construct": {
+  "icon": "assets/echoes/reminiscence-threnodian-voidborne-construct.webp",
+  "element": "spectro"
+ },
+ "Reminiscence: Denia": {
+  "icon": "assets/echoes/reminiscence-denia.webp",
+  "element": "spectro"
+ },
+ "Voidwing Moth": {
+  "icon": "assets/echoes/voidwing-moth.webp",
+  "element": "spectro"
+ },
+ "Reminiscence - Nightmare: Adam Smasher": {
+  "icon": "assets/echoes/reminiscence-nightmare-adam-smasher.webp",
+  "element": "spectro"
+ },
+ "Stonewall Bracer": {
+  "icon": "assets/echoes/stonewall-bracer.webp",
+  "element": "physical"
+ },
+ "Glommoth": {
+  "icon": "assets/echoes/glommoth.webp",
+  "element": "spectro"
+ },
+ "Thousand-Puppet Pavilion": {
+  "icon": "assets/echoes/thousand-puppet-pavilion.webp",
+  "element": "spectro"
+ },
+ "Forbidden Bastion": {
+  "icon": "assets/echoes/forbidden-bastion.webp",
+  "element": "spectro"
+ },
+ "Calamity Effigy": {
+  "icon": "assets/echoes/calamity-effigy.webp",
+  "element": "spectro"
+ },
+ "Myriad Snare: Rustfire Chassis": {
+  "icon": "assets/echoes/myriad-snare-rustfire-chassis.webp",
+  "element": "spectro"
+ },
+ "Reminiscence: Suhsin the Inevitable": {
+  "icon": "assets/echoes/reminiscence-suhsin-the-inevitable.webp",
+  "element": "spectro"
+ },
+ "Inferno Rider": {
+  "icon": "assets/echoes/inferno-rider.webp",
+  "element": "fusion"
+ },
+ "Dreamless": {
+  "icon": "assets/echoes/dreamless.webp",
+  "element": "havoc"
+ },
+ "Soulfrayer": {
+  "icon": "assets/echoes/soulfrayer.webp",
+  "element": "spectro"
+ }
+}

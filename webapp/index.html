@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0a0d">
+  <title>GachaBot — Wuthering Waves</title>
+  <meta name="description" content="Баннеры, сборки, тир-лист и калькулятор круток по Wuthering Waves.">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="app">
+    <header class="top">
+      <a class="brand" href="#/" data-nav>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M2 12h3l2-6 3 12 3-9 2 5 2-2h5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-text">GACHA<i>/</i>BOT</span>
+      </a>
+      <span class="ver" id="ver">WUWA</span>
+      <button class="server" id="server" type="button" aria-label="Сервер">EU</button>
+    </header>
+    <svg class="wave" viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 12 Q 12.5 2 25 12 T 50 12 T 75 12 T 100 12 T 125 12 T 150 12 T 175 12 T 200 12 T 225 12 T 250 12 T 275 12 T 300 12 T 325 12 T 350 12 T 375 12 T 400 12"/>
+    </svg>
+    <main id="view" tabindex="-1">
+      <div class="boot">
+        <div class="boot-wave"><i></i><i></i><i></i><i></i><i></i></div>
+        <p>настраиваем резонанс…</p>
+      </div>
+    </main>
+    <nav class="nav" id="nav">
+      <a href="#/" data-tab="home">
+        <svg viewBox="0 0 24 24"><path d="M3 12h3l2.5-5 4 10 3-7 2 2H21"/></svg><span>Сейчас</span>
+      </a>
+      <a href="#/banners" data-tab="banners">
+        <svg viewBox="0 0 24 24"><rect x="4" y="7" width="13" height="13" rx="2.5"/><path d="M8 4h9.5A2.5 2.5 0 0 1 20 6.5V16"/></svg><span>Баннеры</span>
+      </a>
+      <a href="#/chars" data-tab="chars">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg><span>Сборки</span>
+      </a>
+      <a href="#/tier" data-tab="tier">
+        <svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Тир-лист</span>
+      </a>
+      <a href="#/tools" data-tab="tools">
+        <svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg><span>Тулзы</span>
+      </a>
+    </nav>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="sheet" id="sheet" hidden></div>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

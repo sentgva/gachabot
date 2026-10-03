@@ -1,0 +1,37 @@
+{
+ "redeemUrl": "https://wutheringwaves.kurogames.com/en/main/redeem",
+ "howTo": "В игре: Меню (Esc) → Настройки → Другое → Код обмена. Награда придёт на почту.",
+ "codes": [
+  {
+   "code": "WUTHERINGGIFT",
+   "rewards": "50 Астритов, 2 зелья резонанса, 2 ингалятора, 2 пакета энергии, 10 000 кредитов",
+   "active": true,
+   "expires": null,
+   "added": "2024-05-23"
+  },
+  {
+   "code": "FALLINGSANCTUM",
+   "rewards": "100 Астритов, 3 премиум-зелья резонанса, 2 продвинутых ингалятора",
+   "active": false,
+   "expires": "2026-09-21",
+   "added": "2026-09-19",
+   "source": "Стрим 3.7"
+  },
+  {
+   "code": "FINDSENTINEL",
+   "rewards": "100 Астритов, 20 000 кредитов, 3 премиум-баллона энергии",
+   "active": false,
+   "expires": "2026-09-21",
+   "added": "2026-09-19",
+   "source": "Стрим 3.7"
+  },
+  {
+   "code": "WAKINGMOON",
+   "rewards": "100 Астритов, 5 продвинутых запечатанных пробирок, 20 премиум-тюнеров",
+   "active": false,
+   "expires": "2026-09-21",
+   "added": "2026-09-19",
+   "source": "Стрим 3.7"
+  }
+ ]
+}

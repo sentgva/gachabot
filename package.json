@@ -1,0 +1,24 @@
+{
+  "name": "gachabot",
+  "version": "1.0.0",
+  "description": "Telegram Mini App + бот по Wuthering Waves: баннеры, сборки, тир-лист, калькулятор круток",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node bot/index.js",
+    "dev": "node --watch bot/index.js",
+    "web": "node scripts/serve.mjs",
+    "sync": "node scripts/sync.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "grammy": "^1.46.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

@@ -1,0 +1,5710 @@
+[
+ {
+  "id": "jiyan",
+  "gameId": 1404,
+  "name": "Jiyan",
+  "ru": "Цзиянь",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "broadblade",
+  "limited": true,
+  "signature": "Verdant Summit",
+  "role": "dps",
+  "tier": "T2",
+  "build": {
+   "weapons": [
+    {
+     "name": "Verdant Summit",
+     "sig": true
+    },
+    {
+     "name": "Thunderflare Dominion",
+     "sig": false
+    },
+    {
+     "name": "Ages of Harvest",
+     "sig": false
+    },
+    {
+     "name": "Kumokiri",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Windward Pilgrimage",
+     "pieces": 5
+    },
+    {
+     "name": "Sierra Gale",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Kelpie",
+    "Nightmare: Feilian Beringal"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % ≥ Урон Аэро"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) = Урон тяжёлой атаки %",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "jiyan",
+     "iuno",
+     "ciaccona"
+    ],
+    [
+     "jiyan",
+     "ciaccona",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2024-05-23",
+  "tags": [
+   "Main Damage Dealer",
+   "Heavy Attack DMG",
+   "Traction"
+  ],
+  "icon": "assets/chars/jiyan.webp",
+  "art": "assets/art/jiyan.webp",
+  "card": "assets/cards/jiyan.jpg"
+ },
+ {
+  "id": "yinlin",
+  "gameId": 1302,
+  "name": "Yinlin",
+  "ru": "Иньлинь",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Stringmaster",
+  "role": "hybrid",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Stringmaster",
+     "sig": true
+    },
+    {
+     "name": "Whispers of Sirens",
+     "sig": false
+    },
+    {
+     "name": "Rime-Draped Sprouts",
+     "sig": false
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Empyrean Anthem",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron",
+    "Nightmare: Tempest Mephis"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) = Урон навыка %",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "xiangli-yao",
+     "yinlin",
+     "shorekeeper"
+    ],
+    [
+     "jinhsi",
+     "yinlin",
+     "verina"
+    ]
+   ]
+  },
+  "released": "2024-06-06",
+  "tags": [
+   "Concerto Efficiency",
+   "Resonance Skill DMG",
+   "Coordinated Attack",
+   "Electro DMG Amplification",
+   "Resonance Liberation DMG Amplification"
+  ],
+  "icon": "assets/chars/yinlin.webp",
+  "art": "assets/art/yinlin.webp",
+  "card": "assets/cards/yinlin.jpg"
+ },
+ {
+  "id": "jinhsi",
+  "gameId": 1304,
+  "name": "Jinhsi",
+  "ru": "Цзиньси",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "broadblade",
+  "limited": true,
+  "signature": "Ages of Harvest",
+  "role": "dps",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Ages of Harvest",
+     "sig": true
+    },
+    {
+     "name": "Kumokiri",
+     "sig": false
+    },
+    {
+     "name": "Wildfire Mark",
+     "sig": false
+    },
+    {
+     "name": "Verdant Summit",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Celestial Light",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Jué"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро ≥ Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон навыка % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "jinhsi",
+     "zhezhi",
+     "shorekeeper"
+    ],
+    [
+     "hsin",
+     "jinhsi",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2024-06-28",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Skill DMG",
+   "Unison"
+  ],
+  "icon": "assets/chars/jinhsi.webp",
+  "art": "assets/art/jinhsi.webp",
+  "card": "assets/cards/jinhsi.jpg"
+ },
+ {
+  "id": "changli",
+  "gameId": 1205,
+  "name": "Changli",
+  "ru": "Чанли",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Blazing Brilliance",
+  "role": "hybrid",
+  "tier": "T2",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blazing Brilliance",
+     "sig": true
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Emerald Sentence",
+     "sig": false
+    },
+    {
+     "name": "Frostburn",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Molten Rift",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Inferno Rider"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % ≥ Урон Фьюжн"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон навыка %",
+   "skills": [
+    "Навык резонанса",
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "changli",
+     "brant",
+     "shorekeeper"
+    ],
+    [
+     "galbrena",
+     "changli",
+     "brant"
+    ]
+   ]
+  },
+  "released": "2024-07-22",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Skill DMG",
+   "Fusion DMG Amplification",
+   "Resonance Liberation DMG Amplification"
+  ],
+  "icon": "assets/chars/changli.webp",
+  "art": "assets/art/changli.webp",
+  "card": "assets/cards/changli.jpg"
+ },
+ {
+  "id": "zhezhi",
+  "gameId": 1105,
+  "name": "Zhezhi",
+  "ru": "Чжэчжи",
+  "rarity": 5,
+  "element": "glacio",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Rime-Draped Sprouts",
+  "role": "hybrid",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Rime-Draped Sprouts",
+     "sig": true
+    },
+    {
+     "name": "Whispers of Sirens",
+     "sig": false
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    },
+    {
+     "name": "Stringmaster",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Empyrean Anthem",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Lampylumen Myriad",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон обычной атаки % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "carlotta",
+     "zhezhi",
+     "shorekeeper"
+    ],
+    [
+     "jinhsi",
+     "zhezhi",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2024-08-15",
+  "tags": [
+   "Concerto Efficiency",
+   "Basic Attack DMG",
+   "Coordinated Attack",
+   "Resonance Liberation Regeneration",
+   "Glacio DMG Amplification",
+   "Resonance Skill DMG Amplification"
+  ],
+  "icon": "assets/chars/zhezhi.webp",
+  "art": "assets/art/zhezhi.webp",
+  "card": "assets/cards/zhezhi.jpg"
+ },
+ {
+  "id": "xiangli-yao",
+  "gameId": 1305,
+  "name": "Xiangli Yao",
+  "ru": "Сянли Яо",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "gauntlets",
+  "limited": true,
+  "signature": "Verity's Handle",
+  "role": "dps",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Moongazer's Sigil",
+     "sig": false
+    },
+    {
+     "name": "Verity's Handle",
+     "sig": true
+    },
+    {
+     "name": "Blazing Justice",
+     "sig": false
+    },
+    {
+     "name": "Tragicomedy",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Void Thunder",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Thundering Mephis",
+    "Nightmare: Tempest Mephis"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % ≥ Урон Электро"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон высвобождения % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Интро",
+    "Навык резонанса",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "xiangli-yao",
+     "yinlin",
+     "shorekeeper"
+    ],
+    [
+     "xiangli-yao",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2024-09-07",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Liberation Damage"
+  ],
+  "icon": "assets/chars/xiangli-yao.webp",
+  "art": "assets/art/xiangli-yao.webp",
+  "card": "assets/cards/xiangli-yao.jpg"
+ },
+ {
+  "id": "shorekeeper",
+  "gameId": 1505,
+  "name": "Shorekeeper",
+  "ru": "Хранительница берега",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Stellar Symphony",
+  "role": "support",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Stellar Symphony",
+     "sig": true
+    },
+    {
+     "name": "Variation",
+     "sig": false
+    },
+    {
+     "name": "Rectifier#25",
+     "sig": false
+    },
+    {
+     "name": "Call of the Abyss",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Halo of Starry Radiance",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return",
+    "Spacetrek Explorer"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. урон > HP %"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Спектро"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    }
+   ],
+   "substats": "Восст. энергии (до 230%) > Крит. урон ≥ Урон высвобождения % > HP % > Крит. шанс > HP (число) > Атака % = Атака (число)",
+   "skills": [
+    "Интро",
+    "Навык резонанса",
+    "Обычная атака",
+    "Контур форте",
+    "Высвобождение"
+   ],
+   "teams": [
+    [
+     "jinhsi",
+     "zhezhi",
+     "shorekeeper"
+    ],
+    [
+     "jingran",
+     "iuno",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2024-09-29",
+  "tags": [
+   "Support and Healer",
+   "Traction",
+   "DMG Amplification"
+  ],
+  "icon": "assets/chars/shorekeeper.webp",
+  "art": "assets/art/shorekeeper.webp",
+  "card": "assets/cards/shorekeeper.jpg"
+ },
+ {
+  "id": "camellya",
+  "gameId": 1603,
+  "name": "Camellya",
+  "ru": "Камелия",
+  "rarity": 5,
+  "element": "havoc",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Red Spring",
+  "role": "dps",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Red Spring",
+     "sig": true
+    },
+    {
+     "name": "Emerald Sentence",
+     "sig": false
+    },
+    {
+     "name": "Frostburn",
+     "sig": false
+    },
+    {
+     "name": "Everbright Polestar",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Havoc Eclipse",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Crownless",
+    "Mech Abomination"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % ≥ Урон Хавок"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон обычной атаки % > Атака (число)",
+   "skills": [
+    "Навык резонанса",
+    "Контур форте",
+    "Высвобождение",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "camellya",
+     "roccia",
+     "shorekeeper"
+    ],
+    [
+     "camellya",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2024-11-14",
+  "tags": [
+   "Main Damage Dealer",
+   "Concerto Efficiency",
+   "Basic Attack DMG"
+  ],
+  "icon": "assets/chars/camellya.webp",
+  "art": "assets/art/camellya.webp",
+  "card": "assets/cards/camellya.jpg"
+ },
+ {
+  "id": "carlotta",
+  "gameId": 1107,
+  "name": "Carlotta",
+  "ru": "Карлотта",
+  "rarity": 5,
+  "element": "glacio",
+  "weapon": "pistols",
+  "limited": true,
+  "signature": "The Last Dance",
+  "role": "dps",
+  "tier": "T1.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "The Last Dance",
+     "sig": true
+    },
+    {
+     "name": "Phasic Homogenizer",
+     "sig": false
+    },
+    {
+     "name": "Woodland Aria",
+     "sig": false
+    },
+    {
+     "name": "Spectrum Blaster",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Frosty Resolve",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Sentry Construct"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио ≥ Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон навыка % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Навык резонанса",
+    "Контур форте",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "carlotta",
+     "zhezhi",
+     "shorekeeper"
+    ],
+    [
+     "carlotta",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2025-01-02",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Skill DMG"
+  ],
+  "icon": "assets/chars/carlotta.webp",
+  "art": "assets/art/carlotta.webp",
+  "card": "assets/cards/carlotta.jpg"
+ },
+ {
+  "id": "roccia",
+  "gameId": 1606,
+  "name": "Roccia",
+  "ru": "Роччиа",
+  "rarity": 5,
+  "element": "havoc",
+  "weapon": "gauntlets",
+  "limited": true,
+  "signature": "Tragicomedy",
+  "role": "hybrid",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Tragicomedy",
+     "sig": true
+    },
+    {
+     "name": "Solsworn Ciphers",
+     "sig": false
+    },
+    {
+     "name": "Blazing Justice",
+     "sig": false
+    },
+    {
+     "name": "Verity's Handle",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Midnight Veil",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Impermanence Heron",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс > Крит. урон > Атака % > Урон тяжёлой атаки % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "camellya",
+     "roccia",
+     "shorekeeper"
+    ],
+    [
+     "phrolova",
+     "cantarella",
+     "roccia"
+    ]
+   ]
+  },
+  "released": "2025-01-23",
+  "tags": [
+   "Concerto Efficiency",
+   "Heavy Attack DMG",
+   "Traction",
+   "Havoc DMG Amplification",
+   "Basic Attack DMG Amplification"
+  ],
+  "icon": "assets/chars/roccia.webp",
+  "art": "assets/art/roccia.webp",
+  "card": "assets/cards/roccia.jpg"
+ },
+ {
+  "id": "phoebe",
+  "gameId": 1506,
+  "name": "Phoebe",
+  "ru": "Фиби",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Luminous Hymn",
+  "role": "dps",
+  "tier": "T2",
+  "build": {
+   "weapons": [
+    {
+     "name": "Luminous Hymn",
+     "sig": true
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    },
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Whispers of Sirens",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Eternal Radiance",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Mourning Aix",
+    "Capitaneus"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро = Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон тяжёлой атаки %",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "phoebe",
+     "chisa",
+     "rover-spectro"
+    ],
+    [
+     "zani",
+     "phoebe",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2025-02-13",
+  "tags": [
+   "Main Damage Dealer",
+   "Concerto Efficiency",
+   "Spectro Frazzle"
+  ],
+  "icon": "assets/chars/phoebe.webp",
+  "art": "assets/art/phoebe.webp",
+  "card": "assets/cards/phoebe.jpg"
+ },
+ {
+  "id": "brant",
+  "gameId": 1206,
+  "name": "Brant",
+  "ru": "Брант",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Unflickering Valor",
+  "role": "hybrid",
+  "tier": "T1.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Unflickering Valor",
+     "sig": true
+    },
+    {
+     "name": "Laser Shearer",
+     "sig": false
+    },
+    {
+     "name": "Bloodpact's Pledge",
+     "sig": false
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Molten Rift",
+     "pieces": 5
+    },
+    {
+     "name": "Tidebreaking Courage",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Inferno Rider",
+    "Dragon of Dirge"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Фьюжн"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до 250%) > Крит. шанс = Крит. урон > Восст. энергии (сверх 250%) > Урон обычной атаки % > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Обычная атака",
+    "Высвобождение",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "brant",
+     "lupa",
+     "mornye"
+    ],
+    [
+     "changli",
+     "brant",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2025-03-06",
+  "tags": [
+   "Support and Healer",
+   "Basic Attack DMG",
+   "Fusion DMG Amplification",
+   "Resonance Skill DMG Amplification"
+  ],
+  "icon": "assets/chars/brant.webp",
+  "art": "assets/art/brant.webp",
+  "card": "assets/cards/brant.jpg"
+ },
+ {
+  "id": "cantarella",
+  "gameId": 1607,
+  "name": "Cantarella",
+  "ru": "Кантарелла",
+  "rarity": 5,
+  "element": "havoc",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Whispers of Sirens",
+  "role": "hybrid",
+  "tier": "T2",
+  "build": {
+   "weapons": [
+    {
+     "name": "Whispers of Sirens",
+     "sig": true
+    },
+    {
+     "name": "Rime-Draped Sprouts",
+     "sig": false
+    },
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Midnight Veil",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Lorelei",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок > Восст. энергии"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) = Урон обычной атаки %",
+   "skills": [
+    "Контур форте",
+    "Навык резонанса",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "phrolova",
+     "cantarella",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2025-03-27",
+  "tags": [
+   "Support and Healer",
+   "Concerto Efficiency",
+   "Basic Attack DMG",
+   "Coordinated Attack",
+   "Havoc DMG Amplification",
+   "Resonance Skill DMG Amplification"
+  ],
+  "icon": "assets/chars/cantarella.webp",
+  "art": "assets/art/cantarella.webp",
+  "card": "assets/cards/cantarella.jpg"
+ },
+ {
+  "id": "zani",
+  "gameId": 1507,
+  "name": "Zani",
+  "ru": "Зани",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "gauntlets",
+  "limited": true,
+  "signature": "Blazing Justice",
+  "role": "dps",
+  "tier": "T2",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blazing Justice",
+     "sig": true
+    },
+    {
+     "name": "Tragicomedy",
+     "sig": false
+    },
+    {
+     "name": "Verity's Handle",
+     "sig": false
+    },
+    {
+     "name": "Pulsation Bracer",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Eternal Radiance",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Capitaneus",
+    "Nightmare: Mourning Aix"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "zani",
+     "phoebe",
+     "shorekeeper"
+    ],
+    [
+     "zani",
+     "phoebe",
+     "rover-spectro"
+    ]
+   ]
+  },
+  "released": "2025-04-29",
+  "tags": [
+   "Main Damage Dealer",
+   "Heavy Attack DMG",
+   "Spectro DMG Amplification",
+   "Spectro Frazzle"
+  ],
+  "icon": "assets/chars/zani.webp",
+  "art": "assets/art/zani.webp",
+  "card": "assets/cards/zani.jpg"
+ },
+ {
+  "id": "ciaccona",
+  "gameId": 1407,
+  "name": "Ciaccona",
+  "ru": "Чаккона",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "pistols",
+  "limited": true,
+  "signature": "Woodland Aria",
+  "role": "hybrid",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Woodland Aria",
+     "sig": true
+    },
+    {
+     "name": "Phasic Homogenizer",
+     "sig": false
+    },
+    {
+     "name": "Spectrum Blaster",
+     "sig": false
+    },
+    {
+     "name": "Lux & Umbra",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Gusts of Welkin",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Windward Pilgrimage",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Kelpie",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Обычная атака",
+    "Контур форте",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "cartethyia",
+     "ciaccona",
+     "chisa"
+    ],
+    [
+     "jiyan",
+     "ciaccona",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2025-05-22",
+  "tags": [
+   "Concerto Efficiency",
+   "Traction",
+   "Aero Erosion"
+  ],
+  "icon": "assets/chars/ciaccona.webp",
+  "art": "assets/art/ciaccona.webp",
+  "card": "assets/cards/ciaccona.jpg"
+ },
+ {
+  "id": "cartethyia",
+  "gameId": 1409,
+  "name": "Cartethyia",
+  "ru": "Картетия",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Defier's Thorn",
+  "role": "dps",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Defier's Thorn",
+     "sig": true
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Feather Edge",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Windward Pilgrimage",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Reminiscence: Fleurdelys"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс"
+    },
+    {
+     "cost": 4,
+     "stat": "Крит. урон"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > HP % > Урон обычной атаки % = Урон высвобождения % > HP (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "cartethyia",
+     "ciaccona",
+     "chisa"
+    ],
+    [
+     "cartethyia",
+     "ciaccona",
+     "rover-aero"
+    ]
+   ]
+  },
+  "released": "2025-06-12",
+  "tags": [
+   "Main Damage Dealer",
+   "Traction",
+   "Aero DMG Amplification",
+   "Aero Erosion"
+  ],
+  "icon": "assets/chars/cartethyia.webp",
+  "art": "assets/art/cartethyia.webp",
+  "card": "assets/cards/cartethyia.jpg"
+ },
+ {
+  "id": "lupa",
+  "gameId": 1207,
+  "name": "Lupa",
+  "ru": "Лупа",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "broadblade",
+  "limited": true,
+  "signature": "Wildfire Mark",
+  "role": "hybrid",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Wildfire Mark",
+     "sig": true
+    },
+    {
+     "name": "Ages of Harvest",
+     "sig": false
+    },
+    {
+     "name": "Kumokiri",
+     "sig": false
+    },
+    {
+     "name": "Verdant Summit",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Flaming Clawprint",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Lioness of Glory"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон высвобождения %",
+   "skills": [
+    "Высвобождение",
+    "Интро",
+    "Контур форте",
+    "Обычная атака",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "galbrena",
+     "lupa",
+     "mornye"
+    ],
+    [
+     "aemeath",
+     "lupa",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2025-07-03",
+  "tags": [
+   "Concerto Efficiency",
+   "Resonance Liberation Damage",
+   "Fusion DMG Amplification",
+   "Basic Attack DMG Amplification"
+  ],
+  "icon": "assets/chars/lupa.webp",
+  "art": "assets/art/lupa.webp",
+  "card": "assets/cards/lupa.jpg"
+ },
+ {
+  "id": "phrolova",
+  "gameId": 1608,
+  "name": "Phrolova",
+  "ru": "Фролова",
+  "rarity": 5,
+  "element": "havoc",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Lethean Elegy",
+  "role": "dps",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Lethean Elegy",
+     "sig": true
+    },
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Whispers of Sirens",
+     "sig": false
+    },
+    {
+     "name": "Rime-Draped Sprouts",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Dream of the Lost",
+     "pieces": 3
+    },
+    {
+     "name": "Havoc Eclipse",
+     "pieces": 5
+    },
+    {
+     "name": "Midnight Veil",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Hecate"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Крит. шанс = Крит. урон > Атака % > Урон навыка % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Обычная атака",
+    "Контур форте",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "phrolova",
+     "cantarella",
+     "shorekeeper"
+    ],
+    [
+     "phrolova",
+     "lucilla",
+     "lynae"
+    ]
+   ]
+  },
+  "released": "2025-07-24",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Skill DMG",
+   "Havoc DMG Amplification",
+   "Heavy Attack DMG Amplification"
+  ],
+  "icon": "assets/chars/phrolova.webp",
+  "art": "assets/art/phrolova.webp",
+  "card": "assets/cards/phrolova.jpg"
+ },
+ {
+  "id": "augusta",
+  "gameId": 1306,
+  "name": "Augusta",
+  "ru": "Августа",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "broadblade",
+  "limited": true,
+  "signature": "Thunderflare Dominion",
+  "role": "dps",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Thunderflare Dominion",
+     "sig": true
+    },
+    {
+     "name": "Verdant Summit",
+     "sig": false
+    },
+    {
+     "name": "Ages of Harvest",
+     "sig": false
+    },
+    {
+     "name": "Wildfire Mark",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Crown of Valor",
+     "pieces": 3
+    },
+    {
+     "name": "Void Thunder",
+     "pieces": 5
+    },
+    {
+     "name": "Reel of Spliced Memories",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "The False Sovereign"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % = Урон тяжёлой атаки % > Атака (число) > Урон навыка %",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "augusta",
+     "iuno",
+     "shorekeeper"
+    ],
+    [
+     "augusta",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2025-08-28",
+  "tags": [
+   "Main Damage Dealer",
+   "Heavy Attack DMG",
+   "DMG Amplification"
+  ],
+  "icon": "assets/chars/augusta.webp",
+  "art": "assets/art/augusta.webp",
+  "card": "assets/cards/augusta.jpg"
+ },
+ {
+  "id": "iuno",
+  "gameId": 1410,
+  "name": "Iuno",
+  "ru": "Юно",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "gauntlets",
+  "limited": true,
+  "signature": "Moongazer's Sigil",
+  "role": "hybrid",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Moongazer's Sigil",
+     "sig": true
+    },
+    {
+     "name": "Verity's Handle",
+     "sig": false
+    },
+    {
+     "name": "Blazing Justice",
+     "sig": false
+    },
+    {
+     "name": "Aether Strike",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Crown of Valor",
+     "pieces": 3
+    },
+    {
+     "name": "Sierra Gale",
+     "pieces": 5
+    },
+    {
+     "name": "Gusts of Welkin",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Lady of the Sea",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Урон высвобождения % ≥ Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "iuno",
+     "lynae",
+     "mornye"
+    ],
+    [
+     "jingran",
+     "iuno",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2025-09-17",
+  "tags": [
+   "Support and Healer",
+   "Concerto Efficiency",
+   "Resonance Liberation Damage",
+   "Heavy Attack DMG Amplification"
+  ],
+  "icon": "assets/chars/iuno.webp",
+  "art": "assets/art/iuno.webp",
+  "card": "assets/cards/iuno.jpg"
+ },
+ {
+  "id": "galbrena",
+  "gameId": 1208,
+  "name": "Galbrena",
+  "ru": "Гальбрена",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "pistols",
+  "limited": true,
+  "signature": "Lux & Umbra",
+  "role": "dps",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Lux & Umbra",
+     "sig": true
+    },
+    {
+     "name": "Phasic Homogenizer",
+     "sig": false
+    },
+    {
+     "name": "Spectrum Blaster",
+     "sig": false
+    },
+    {
+     "name": "The Last Dance",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Flamewing's Shadow",
+     "pieces": 3
+    },
+    {
+     "name": "Molten Rift",
+     "pieces": 5
+    },
+    {
+     "name": "Flaming Clawprint",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Corrosaurus"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон тяжёлой атаки %",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "galbrena",
+     "lupa",
+     "mornye"
+    ],
+    [
+     "galbrena",
+     "qiuyuan",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2025-10-09",
+  "tags": [
+   "Main Damage Dealer",
+   "Heavy Attack DMG"
+  ],
+  "icon": "assets/chars/galbrena.webp",
+  "art": "assets/art/galbrena.webp",
+  "card": "assets/cards/galbrena.jpg"
+ },
+ {
+  "id": "qiuyuan",
+  "gameId": 1411,
+  "name": "Qiuyuan",
+  "ru": "Цююань",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Emerald Sentence",
+  "role": "hybrid",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Emerald Sentence",
+     "sig": true
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Law of Harmony",
+     "pieces": 3
+    },
+    {
+     "name": "Sierra Gale",
+     "pieces": 5
+    },
+    {
+     "name": "Gusts of Welkin",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Reminiscence: Fenrico",
+    "Bell-Borne Geochelone"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон тяжёлой атаки % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Интро",
+    "Навык резонанса",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "sigrika",
+     "qiuyuan",
+     "shorekeeper"
+    ],
+    [
+     "galbrena",
+     "qiuyuan",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2025-10-30",
+  "tags": [
+   "Concerto Efficiency",
+   "Heavy Attack DMG",
+   "Echo Skill DMG Amplification"
+  ],
+  "icon": "assets/chars/qiuyuan.webp",
+  "art": "assets/art/qiuyuan.webp",
+  "card": "assets/cards/qiuyuan.jpg"
+ },
+ {
+  "id": "chisa",
+  "gameId": 1508,
+  "name": "Chisa",
+  "ru": "Чиса",
+  "rarity": 5,
+  "element": "havoc",
+  "weapon": "broadblade",
+  "limited": true,
+  "signature": "Kumokiri",
+  "role": "support",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Kumokiri",
+     "sig": true
+    },
+    {
+     "name": "Wildfire Mark",
+     "sig": false
+    },
+    {
+     "name": "Ages of Harvest",
+     "sig": false
+    },
+    {
+     "name": "Verdant Summit",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Thread of Severed Fate",
+     "pieces": 3
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок ≥ Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон высвобождения % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "yangyang-xuanling",
+     "chisa",
+     "suisui"
+    ],
+    [
+     "hiyuki",
+     "lucilla",
+     "chisa"
+    ]
+   ]
+  },
+  "released": "2025-11-20",
+  "tags": [
+   "Support and Healer",
+   "Resonance Liberation Damage",
+   "Havoc Bane"
+  ],
+  "icon": "assets/chars/chisa.webp",
+  "art": "assets/art/chisa.webp",
+  "card": "assets/cards/chisa.jpg"
+ },
+ {
+  "id": "lynae",
+  "gameId": 1509,
+  "name": "Lynae",
+  "ru": "Лайни",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "pistols",
+  "limited": true,
+  "signature": "Spectrum Blaster",
+  "role": "hybrid",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Spectrum Blaster",
+     "sig": true
+    },
+    {
+     "name": "Static Mist",
+     "sig": false
+    },
+    {
+     "name": "Phasic Homogenizer",
+     "sig": false
+    },
+    {
+     "name": "Woodland Aria",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Pact of Neonlight Leap",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Hyvatia"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) = Урон обычной атаки %",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "aemeath",
+     "lynae",
+     "mornye"
+    ],
+    [
+     "qingxiao",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2025-12-25",
+  "tags": [
+   "Concerto Efficiency",
+   "Basic Attack DMG",
+   "DMG Amplification",
+   "Resonance Liberation DMG Amplification",
+   "Tune Rupture Response",
+   "Tune Break Boost",
+   "Tune Strain Response"
+  ],
+  "icon": "assets/chars/lynae.webp",
+  "art": "assets/art/lynae.webp",
+  "card": "assets/cards/lynae.jpg"
+ },
+ {
+  "id": "mornye",
+  "gameId": 1209,
+  "name": "Mornye",
+  "ru": "Морнье",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "broadblade",
+  "limited": true,
+  "signature": "Starfield Calibrator",
+  "role": "support",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Starfield Calibrator",
+     "sig": true
+    },
+    {
+     "name": "Discord",
+     "sig": false
+    },
+    {
+     "name": "Broadblade#41",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Halo of Starry Radiance",
+     "pieces": 5
+    },
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Reactor Husk",
+    "Spacetrek Explorer"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Защита % > Бонус лечения"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Фьюжн"
+    },
+    {
+     "cost": 1,
+     "stat": "Защита %"
+    },
+    {
+     "cost": 1,
+     "stat": "Защита %"
+    }
+   ],
+   "substats": "Восст. энергии (до 260%) >>> Урон высвобождения % > Крит. урон > Защита % > Крит. шанс (до 20%) > Атака % > Защита (число) > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Обычная атака",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "qingxiao",
+     "denia",
+     "mornye"
+    ],
+    [
+     "aemeath",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2026-01-15",
+  "tags": [
+   "Support and Healer",
+   "DMG Amplification",
+   "Tune Rupture Response",
+   "Off-Tune Buildup Efficiency",
+   "Tune Strain Response"
+  ],
+  "icon": "assets/chars/mornye.webp",
+  "art": "assets/art/mornye.webp",
+  "card": "assets/cards/mornye.jpg"
+ },
+ {
+  "id": "aemeath",
+  "gameId": 1210,
+  "name": "Aemeath",
+  "ru": "Эмеат",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Everbright Polestar",
+  "role": "dps",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Everbright Polestar",
+     "sig": true
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Emerald Sentence",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Trailblazing Star",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Sigillum"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % = Урон Фьюжн"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. урон = Крит. шанс > Атака % > Урон высвобождения % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Навык резонанса",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "aemeath",
+     "denia",
+     "chisa"
+    ],
+    [
+     "aemeath",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2026-02-05",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Liberation Damage",
+   "DMG Amplification",
+   "Fusion Burst",
+   "Tune Rupture Response"
+  ],
+  "icon": "assets/chars/aemeath.webp",
+  "art": "assets/art/aemeath.webp",
+  "card": "assets/cards/aemeath.jpg"
+ },
+ {
+  "id": "luuk-herssen",
+  "gameId": 1510,
+  "name": "Luuk Herssen",
+  "ru": "Люк Херссен",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "gauntlets",
+  "limited": true,
+  "signature": "Daybreaker's Spine",
+  "role": "dps",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Daybreaker's Spine",
+     "sig": true
+    },
+    {
+     "name": "Pulsation Bracer",
+     "sig": false
+    },
+    {
+     "name": "Blazing Justice",
+     "sig": false
+    },
+    {
+     "name": "Moongazer's Sigil",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rite of Gilded Revelation",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Twin Nova: Nebulous Cannon"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % = Урон Спектро"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. урон = Крит. шанс > Атака % = Урон обычной атаки % > Атака (число)",
+   "skills": [
+    "Навык резонанса",
+    "Высвобождение",
+    "Обычная атака",
+    "Контур форте",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "luuk-herssen",
+     "denia",
+     "mornye"
+    ],
+    [
+     "luuk-herssen",
+     "lynae",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2026-02-26",
+  "tags": [
+   "Main Damage Dealer",
+   "Basic Attack DMG",
+   "Tune Strain Response"
+  ],
+  "icon": "assets/chars/luuk-herssen.webp",
+  "art": "assets/art/luuk-herssen.webp",
+  "card": "assets/cards/luuk-herssen.jpg"
+ },
+ {
+  "id": "sigrika",
+  "gameId": 1412,
+  "name": "Sigrika",
+  "ru": "Сигрика",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "gauntlets",
+  "limited": true,
+  "signature": "Solsworn Ciphers",
+  "role": "dps",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Solsworn Ciphers",
+     "sig": true
+    },
+    {
+     "name": "Blazing Justice",
+     "sig": false
+    },
+    {
+     "name": "Pulsation Bracer",
+     "sig": false
+    },
+    {
+     "name": "Verity's Handle",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Sound of True Name",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nameless Explorer"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % > Восст. энергии"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. урон = Крит. шанс > Восст. энергии (сверх 125% — до 150%) > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "sigrika",
+     "qiuyuan",
+     "shorekeeper"
+    ],
+    [
+     "sigrika",
+     "lucilla",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2026-03-19",
+  "tags": [
+   "Main Damage Dealer",
+   "Traction",
+   "Echo Skill DMG"
+  ],
+  "icon": "assets/chars/sigrika.webp",
+  "art": "assets/art/sigrika.webp",
+  "card": "assets/cards/sigrika.jpg"
+ },
+ {
+  "id": "hiyuki",
+  "gameId": 1108,
+  "name": "Hiyuki",
+  "ru": "Хиюки",
+  "rarity": 5,
+  "element": "glacio",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Frostburn",
+  "role": "dps",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Frostburn",
+     "sig": true
+    },
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Emerald Sentence",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Wishes of Quiet Snowfall",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Reminiscence: Threnodian - Voidborne Construct"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио ≥ Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. урон = Крит. шанс (до 75%) > Атака % > Урон высвобождения % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Обычная атака",
+    "Контур форте",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "hiyuki",
+     "lucilla",
+     "chisa"
+    ],
+    [
+     "hiyuki",
+     "lynae",
+     "suisui"
+    ]
+   ]
+  },
+  "released": "2026-04-30",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Liberation Damage",
+   "Glacio Chafe"
+  ],
+  "icon": "assets/chars/hiyuki.webp",
+  "art": "assets/art/hiyuki.webp",
+  "card": "assets/cards/hiyuki.jpg"
+ },
+ {
+  "id": "denia",
+  "gameId": 1211,
+  "name": "Denia",
+  "ru": "Дения",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Forged Dwarf Star",
+  "role": "hybrid",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Forged Dwarf Star",
+     "sig": true
+    },
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    },
+    {
+     "name": "Luminous Hymn",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Chromatic Foam",
+     "pieces": 5
+    },
+    {
+     "name": "Reel of Spliced Memories",
+     "pieces": 5
+    },
+    {
+     "name": "Flaming Clawprint",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Reminiscence: Denia",
+    "Voidwing Moth"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Урон высвобождения % ≥ Атака % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Навык резонанса",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "qingxiao",
+     "denia",
+     "mornye"
+    ],
+    [
+     "aemeath",
+     "denia",
+     "chisa"
+    ]
+   ]
+  },
+  "released": "2026-05-21",
+  "tags": [
+   "Concerto Efficiency",
+   "Resonance Liberation Damage",
+   "Traction",
+   "Fusion Burst",
+   "Tune Break Boost",
+   "Tune Strain Response"
+  ],
+  "icon": "assets/chars/denia.webp",
+  "art": "assets/art/denia.webp",
+  "card": "assets/cards/denia.jpg"
+ },
+ {
+  "id": "lucy",
+  "gameId": 1511,
+  "name": "Lucy",
+  "ru": "Люси",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "pistols",
+  "limited": true,
+  "signature": "Spectral Trigger",
+  "role": "dps",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Spectral Trigger",
+     "sig": true
+    },
+    {
+     "name": "Lux & Umbra",
+     "sig": false
+    },
+    {
+     "name": "Skull Thrasher",
+     "sig": false
+    },
+    {
+     "name": "Phasic Homogenizer",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Shadow of Shattered Dreams",
+     "pieces": 1
+    },
+    {
+     "name": "Rite of Gilded Revelation",
+     "pieces": 5
+    },
+    {
+     "name": "Pact of Neonlight Leap",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Reminiscence - Nightmare: Adam Smasher"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро ≥ Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон тяжёлой атаки % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Обычная атака",
+    "Контур форте",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "lucy",
+     "rebecca",
+     "mornye"
+    ],
+    [
+     "lucy",
+     "rebecca",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2026-06-08",
+  "tags": [
+   "Main Damage Dealer",
+   "Heavy Attack DMG",
+   "Basic Attack DMG Amplification",
+   "Hack Response"
+  ],
+  "icon": "assets/chars/lucy.webp",
+  "art": "assets/art/lucy.webp",
+  "card": "assets/cards/lucy.jpg"
+ },
+ {
+  "id": "rebecca",
+  "gameId": 1308,
+  "name": "Rebecca",
+  "ru": "Ребекка",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "pistols",
+  "limited": true,
+  "signature": "Skull Thrasher",
+  "role": "hybrid",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Skull Thrasher",
+     "sig": true
+    },
+    {
+     "name": "Spectrum Blaster",
+     "sig": false
+    },
+    {
+     "name": "Static Mist",
+     "sig": false
+    },
+    {
+     "name": "Phasic Homogenizer",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Shadow of Shattered Dreams",
+     "pieces": 1
+    },
+    {
+     "name": "Void Thunder",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Bell-Borne Geochelone",
+    "Stonewall Bracer"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Урон обычной атаки % > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "lucy",
+     "rebecca",
+     "mornye"
+    ],
+    [
+     "yangyang-xuanling",
+     "rebecca",
+     "suisui"
+    ]
+   ]
+  },
+  "released": "2026-06-08",
+  "tags": [
+   "Concerto Efficiency",
+   "Basic Attack DMG",
+   "Heavy Attack DMG Amplification",
+   "Tune Break Boost",
+   "Hack Response"
+  ],
+  "icon": "assets/chars/rebecca.webp",
+  "art": "assets/art/rebecca.webp",
+  "card": "assets/cards/rebecca.jpg"
+ },
+ {
+  "id": "lucilla",
+  "gameId": 1109,
+  "name": "Lucilla",
+  "ru": "Люцилла",
+  "rarity": 5,
+  "element": "glacio",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Freeze Frame",
+  "role": "hybrid",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Freeze Frame",
+     "sig": true
+    },
+    {
+     "name": "Whispers of Sirens",
+     "sig": false
+    },
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Wishes of Quiet Snowfall",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Dream of the Lost",
+     "pieces": 3
+    }
+   ],
+   "mainEcho": [
+    "Glommoth",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Крит. шанс = Крит. урон > Атака % > Атака (число) = Урон обычной атаки %",
+   "skills": [
+    "Высвобождение",
+    "Навык резонанса",
+    "Контур форте",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "hiyuki",
+     "lucilla",
+     "chisa"
+    ],
+    [
+     "sigrika",
+     "lucilla",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2026-06-13",
+  "tags": [
+   "Concerto Efficiency",
+   "Basic Attack DMG",
+   "Glacio Chafe",
+   "Echo Skill DMG Amplification",
+   "Echo Skill DMG"
+  ],
+  "icon": "assets/chars/lucilla.webp",
+  "art": "assets/art/lucilla.webp",
+  "card": "assets/cards/lucilla.jpg"
+ },
+ {
+  "id": "yangyang-xuanling",
+  "gameId": 1610,
+  "name": "Yangyang: Xuanling",
+  "ru": "Янъян: Сюаньлин",
+  "rarity": 5,
+  "element": "havoc",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Azure Oath",
+  "role": "dps",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Azure Oath",
+     "sig": true
+    },
+    {
+     "name": "Emerald Sentence",
+     "sig": false
+    },
+    {
+     "name": "Everbright Polestar",
+     "sig": false
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Song of Feathered Trace",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Thousand-Puppet Pavilion"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % = Урон Хавок"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % = Урон тяжёлой атаки % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро",
+    "Навык резонанса"
+   ],
+   "teams": [
+    [
+     "yangyang-xuanling",
+     "chisa",
+     "suisui"
+    ],
+    [
+     "yangyang-xuanling",
+     "rebecca",
+     "lynae"
+    ]
+   ]
+  },
+  "released": "2026-07-10",
+  "tags": [
+   "Main Damage Dealer",
+   "Heavy Attack DMG",
+   "Traction",
+   "Havoc Bane"
+  ],
+  "icon": "assets/chars/yangyang-xuanling.webp",
+  "art": "assets/art/yangyang-xuanling.webp",
+  "card": "assets/cards/yangyang-xuanling.jpg"
+ },
+ {
+  "id": "suisui",
+  "gameId": 1110,
+  "name": "Suisui",
+  "ru": "Суйсуй",
+  "rarity": 5,
+  "element": "glacio",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Firstlight's Herald",
+  "role": "support",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Firstlight's Herald",
+     "sig": true
+    },
+    {
+     "name": "Stellar Symphony",
+     "sig": false
+    },
+    {
+     "name": "Variation",
+     "sig": false
+    },
+    {
+     "name": "Call of the Abyss",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Song of Feathered Trace",
+     "pieces": 5
+    },
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Forbidden Bastion",
+    "Fallacy of No Return"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    }
+   ],
+   "substats": "Восст. энергии (до 260%) > Крит. урон > HP % > Крит. шанс > Урон обычной атаки % > HP (число)",
+   "skills": [
+    "Интро",
+    "Контур форте",
+    "Навык резонанса",
+    "Высвобождение",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "hiyuki",
+     "lucilla",
+     "suisui"
+    ],
+    [
+     "yangyang-xuanling",
+     "chisa",
+     "suisui"
+    ]
+   ]
+  },
+  "released": "2026-07-30",
+  "tags": [
+   "Support and Healer",
+   "DMG Amplification",
+   "Glacio Chafe"
+  ],
+  "icon": "assets/chars/suisui.webp",
+  "art": "assets/art/suisui.webp",
+  "card": "assets/cards/suisui.jpg"
+ },
+ {
+  "id": "qingxiao",
+  "gameId": 1413,
+  "name": "Qingxiao",
+  "ru": "Цинсяо",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Glint of Clouds",
+  "role": "dps",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Glint of Clouds",
+     "sig": true
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Azure Oath",
+     "sig": false
+    },
+    {
+     "name": "Everbright Polestar",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Heart of Evil's Purge",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Calamity Effigy"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Атака % ≥ Урон Аэро"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон тяж./высв./обычн. %",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "qingxiao",
+     "denia",
+     "mornye"
+    ],
+    [
+     "qingxiao",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": "2026-08-20",
+  "tags": [
+   "Main Damage Dealer",
+   "Tune Strain Response"
+  ],
+  "icon": "assets/chars/qingxiao.webp",
+  "art": "assets/art/qingxiao.webp",
+  "card": "assets/cards/qingxiao.jpg"
+ },
+ {
+  "id": "jingran",
+  "gameId": 1212,
+  "name": "Jingran",
+  "ru": "Цзинжань",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "broadblade",
+  "limited": true,
+  "signature": "Thousandfold Deliverance",
+  "role": "dps",
+  "tier": "T0",
+  "build": {
+   "weapons": [
+    {
+     "name": "Thousandfold Deliverance",
+     "sig": true
+    },
+    {
+     "name": "Thunderflare Dominion",
+     "sig": false
+    },
+    {
+     "name": "Verdant Summit",
+     "sig": false
+    },
+    {
+     "name": "Wildfire Mark",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Lamp of Nether Road",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Myriad Snare: Rustfire Chassis"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. урон / HP %"
+    },
+    {
+     "cost": 4,
+     "stat": "Крит. урон / HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > HP (до 50000) > Крит. шанс = Крит. урон > Урон тяжёлой атаки % > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jingran",
+     "iuno",
+     "shorekeeper"
+    ],
+    [
+     "jingran",
+     "mortefi",
+     "lupa"
+    ]
+   ]
+  },
+  "released": "2026-09-10",
+  "tags": [
+   "Main Damage Dealer",
+   "Heavy Attack DMG"
+  ],
+  "icon": "assets/chars/jingran.webp",
+  "art": "assets/art/jingran.webp",
+  "card": "assets/cards/jingran.jpg"
+ },
+ {
+  "id": "hsin",
+  "gameId": 1311,
+  "name": "Hsin",
+  "ru": "Синь",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "rectifier",
+  "limited": true,
+  "signature": "Blooming Jadehaven",
+  "role": "dps",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blooming Jadehaven",
+     "sig": true
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    },
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Whispers of Sirens",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Heart of Sworn Vigil",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Reminiscence: Suhsin the Inevitable"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро ≥ Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % = Урон навыка % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "hsin",
+     "rover-electro",
+     "suisui"
+    ],
+    [
+     "hsin",
+     "jinhsi",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": "2026-09-30",
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Skill DMG",
+   "Coordinated Attack",
+   "Electro Flare",
+   "Unison"
+  ],
+  "icon": "assets/chars/hsin.webp",
+  "art": "assets/art/hsin.webp",
+  "card": "assets/cards/hsin.jpg"
+ },
+ {
+  "id": "suoming",
+  "gameId": 1312,
+  "name": "Suoming",
+  "ru": "Суомин",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "sword",
+  "limited": true,
+  "signature": "Unspoken Rue",
+  "role": "support",
+  "tier": null,
+  "build": {
+   "preliminary": true,
+   "weapons": [
+    {
+     "name": "Unspoken Rue",
+     "sig": true
+    }
+   ],
+   "sets": [
+    {
+     "name": "Flower of Tinged Yearning",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [],
+   "mainStats": [],
+   "substats": "",
+   "skills": [],
+   "teams": [
+    [
+     "hsin",
+     "suoming",
+     "jinhsi"
+    ]
+   ]
+  },
+  "released": "2026-10-21",
+  "tags": [
+   "Concerto Efficiency",
+   "Basic Attack DMG",
+   "Electro DMG Amplification",
+   "Resonance Skill DMG Amplification",
+   "Unison"
+  ],
+  "icon": "assets/chars/suoming.webp",
+  "art": "assets/art/suoming.webp",
+  "card": "assets/cards/suoming.jpg"
+ },
+ {
+  "id": "verina",
+  "gameId": 1503,
+  "name": "Verina",
+  "ru": "Верина",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "rectifier",
+  "limited": false,
+  "signature": null,
+  "role": "support",
+  "tier": "T0.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Variation",
+     "sig": false
+    },
+    {
+     "name": "Rectifier#25",
+     "sig": false
+    },
+    {
+     "name": "Call of the Abyss",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс > Атака %"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Спектро"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jiyan",
+     "mortefi",
+     "verina"
+    ],
+    [
+     "aemeath",
+     "lynae",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Support and Healer",
+   "Coordinated Attack",
+   "DMG Amplification"
+  ],
+  "icon": "assets/chars/verina.webp",
+  "art": "assets/art/verina.webp",
+  "card": "assets/cards/verina.jpg"
+ },
+ {
+  "id": "encore",
+  "gameId": 1203,
+  "name": "Encore",
+  "ru": "Энкор",
+  "rarity": 5,
+  "element": "fusion",
+  "weapon": "rectifier",
+  "limited": false,
+  "signature": null,
+  "role": "dps",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Rime-Draped Sprouts",
+     "sig": false
+    },
+    {
+     "name": "Whispers of Sirens",
+     "sig": false
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Molten Rift",
+     "pieces": 5
+    },
+    {
+     "name": "Flaming Clawprint",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Inferno Rider",
+    "Inferno Rider"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон обычной атаки % > Урон навыка %",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "encore",
+     "lupa",
+     "mornye"
+    ],
+    [
+     "encore",
+     "brant",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Main Damage Dealer",
+   "Basic Attack DMG"
+  ],
+  "icon": "assets/chars/encore.webp",
+  "art": "assets/art/encore.webp",
+  "card": "assets/cards/encore.jpg"
+ },
+ {
+  "id": "calcharo",
+  "gameId": 1301,
+  "name": "Calcharo",
+  "ru": "Калькаро",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "broadblade",
+  "limited": false,
+  "signature": null,
+  "role": "dps",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Wildfire Mark",
+     "sig": false
+    },
+    {
+     "name": "Lustrous Razor",
+     "sig": false
+    },
+    {
+     "name": "Ages of Harvest",
+     "sig": false
+    },
+    {
+     "name": "Verdant Summit",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Void Thunder",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Thundering Mephis",
+    "Nightmare: Tempest Mephis"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) = Урон высвобождения %",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "calcharo",
+     "xiangli-yao",
+     "shorekeeper"
+    ],
+    [
+     "calcharo",
+     "yinlin",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Main Damage Dealer",
+   "Resonance Liberation Damage"
+  ],
+  "icon": "assets/chars/calcharo.webp",
+  "art": "assets/art/calcharo.webp",
+  "card": "assets/cards/calcharo.jpg"
+ },
+ {
+  "id": "lingyang",
+  "gameId": 1104,
+  "name": "Lingyang",
+  "ru": "Линъян",
+  "rarity": 5,
+  "element": "glacio",
+  "weapon": "gauntlets",
+  "limited": false,
+  "signature": null,
+  "role": "dps",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Moongazer's Sigil",
+     "sig": false
+    },
+    {
+     "name": "Blazing Justice",
+     "sig": false
+    },
+    {
+     "name": "Verity's Handle",
+     "sig": false
+    },
+    {
+     "name": "Tragicomedy",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Frosty Resolve",
+     "pieces": 5
+    },
+    {
+     "name": "Freezing Frost",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Mech Abomination",
+    "Sentry Construct"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Интро",
+    "Навык резонанса",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "lingyang",
+     "zhezhi",
+     "shorekeeper"
+    ],
+    [
+     "lingyang",
+     "lynae",
+     "mornye"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Main Damage Dealer"
+  ],
+  "icon": "assets/chars/lingyang.webp",
+  "art": "assets/art/lingyang.webp",
+  "card": "assets/cards/lingyang.jpg"
+ },
+ {
+  "id": "jianxin",
+  "gameId": 1405,
+  "name": "Jianxin",
+  "ru": "Цзяньсинь",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "gauntlets",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Verity's Handle",
+     "sig": false
+    },
+    {
+     "name": "Moongazer's Sigil",
+     "sig": false
+    },
+    {
+     "name": "Blazing Justice",
+     "sig": false
+    },
+    {
+     "name": "Tragicomedy",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро / Восст. энергии"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон высвобождения % > Урон тяжёлой атаки % > Урон обычной атаки %",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jiyan",
+     "jianxin",
+     "verina"
+    ],
+    [
+     "xiangli-yao",
+     "jianxin",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Support and Healer",
+   "Heavy Attack DMG",
+   "Traction",
+   "Resonance Liberation DMG Amplification"
+  ],
+  "icon": "assets/chars/jianxin.webp",
+  "art": "assets/art/jianxin.webp",
+  "card": "assets/cards/jianxin.jpg"
+ },
+ {
+  "id": "rover-spectro",
+  "gameId": 1501,
+  "name": "Rover (Spectro)",
+  "ru": "Скиталец: Спектро",
+  "rarity": 5,
+  "element": "spectro",
+  "weapon": "sword",
+  "limited": false,
+  "signature": null,
+  "role": "support",
+  "tier": "T2",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Lunar Cutter",
+     "sig": false
+    },
+    {
+     "name": "Endless Collapse",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Eternal Radiance",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron",
+    "Fallacy of No Return"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Спектро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон навыка % > Урон высвобождения %",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "zani",
+     "phoebe",
+     "rover-spectro"
+    ],
+    [
+     "phoebe",
+     "chisa",
+     "rover-spectro"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Stagnation"
+  ],
+  "icon": "assets/chars/rover-spectro.webp",
+  "art": "assets/art/rover-spectro.webp",
+  "card": "assets/cards/rover-spectro.jpg"
+ },
+ {
+  "id": "rover-havoc",
+  "gameId": 1604,
+  "name": "Rover (Havoc)",
+  "ru": "Скиталец: Хавок",
+  "rarity": 5,
+  "element": "havoc",
+  "weapon": "sword",
+  "limited": false,
+  "signature": null,
+  "role": "dps",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Somnoire Anchor",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Havoc Eclipse",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Dreamless"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон обычной атаки % > Урон высвобождения %",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Навык резонанса",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "rover-havoc",
+     "roccia",
+     "shorekeeper"
+    ],
+    [
+     "rover-havoc",
+     "danjin",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Main Damage Dealer"
+  ],
+  "icon": "assets/chars/rover-havoc.webp",
+  "art": "assets/art/rover-havoc.webp",
+  "card": "assets/cards/rover-havoc.jpg"
+ },
+ {
+  "id": "rover-aero",
+  "gameId": 1406,
+  "name": "Rover (Aero)",
+  "ru": "Скиталец: Аэро",
+  "rarity": 5,
+  "element": "aero",
+  "weapon": "sword",
+  "limited": false,
+  "signature": "Bloodpact's Pledge",
+  "role": "support",
+  "tier": "T1.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Bloodpact's Pledge",
+     "sig": true
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Windward Pilgrimage",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Bell-Borne Geochelone",
+    "Reminiscence: Fleurdelys"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон навыка % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "cartethyia",
+     "ciaccona",
+     "rover-aero"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Support and Healer",
+   "Resonance Skill DMG",
+   "Aero Erosion"
+  ],
+  "icon": "assets/chars/rover-aero.webp",
+  "art": "assets/art/rover-aero.webp",
+  "card": "assets/cards/rover-aero.jpg"
+ },
+ {
+  "id": "rover-electro",
+  "gameId": 1309,
+  "name": "Rover (Electro)",
+  "ru": "Скиталец: Электро",
+  "rarity": 5,
+  "element": "electro",
+  "weapon": "sword",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Azure Oath",
+     "sig": false
+    },
+    {
+     "name": "Everbright Polestar",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Flash of Electric Reflection",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Soulfrayer"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Урон навыка % = Атака (число) > Урон высвобождения %",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "hsin",
+     "rover-electro",
+     "suisui"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Resonance Skill DMG",
+   "Electro Flare"
+  ],
+  "icon": "assets/chars/rover-electro.webp",
+  "art": "assets/art/rover-electro.webp",
+  "card": "assets/cards/rover-electro.jpg"
+ },
+ {
+  "id": "yangyang",
+  "gameId": 1402,
+  "name": "Yangyang",
+  "ru": "Янъян",
+  "rarity": 4,
+  "element": "aero",
+  "weapon": "sword",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Lumingloss",
+     "sig": false
+    },
+    {
+     "name": "Endless Collapse",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Sierra Gale",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron",
+    "Nightmare: Feilian Beringal"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон высвобождения % > Урон обычной атаки %",
+   "skills": [
+    "Высвобождение",
+    "Навык резонанса",
+    "Контур форте",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jiyan",
+     "yangyang",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Traction",
+   "Resonance Liberation Regeneration"
+  ],
+  "icon": "assets/chars/yangyang.webp",
+  "art": "assets/art/yangyang.webp",
+  "card": "assets/cards/yangyang.jpg"
+ },
+ {
+  "id": "chixia",
+  "gameId": 1202,
+  "name": "Chixia",
+  "ru": "Чися",
+  "rarity": 4,
+  "element": "fusion",
+  "weapon": "pistols",
+  "limited": false,
+  "signature": null,
+  "role": "dps",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "The Last Dance",
+     "sig": false
+    },
+    {
+     "name": "Static Mist",
+     "sig": false
+    },
+    {
+     "name": "Thunderbolt",
+     "sig": false
+    },
+    {
+     "name": "Relativistic Jet",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Molten Rift",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Inferno Rider",
+    "Inferno Rider"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "chixia",
+     "brant",
+     "mornye"
+    ],
+    [
+     "chixia",
+     "lupa",
+     "mornye"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Main Damage Dealer"
+  ],
+  "icon": "assets/chars/chixia.webp",
+  "art": "assets/art/chixia.webp",
+  "card": "assets/cards/chixia.jpg"
+ },
+ {
+  "id": "sanhua",
+  "gameId": 1102,
+  "name": "Sanhua",
+  "ru": "Саньхуа",
+  "rarity": 4,
+  "element": "glacio",
+  "weapon": "sword",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T2",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Commando of Conviction",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Глацио > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "camellya",
+     "sanhua",
+     "shorekeeper"
+    ],
+    [
+     "luuk-herssen",
+     "sanhua",
+     "mornye"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Basic Attack DMG Amplification"
+  ],
+  "icon": "assets/chars/sanhua.webp",
+  "art": "assets/art/sanhua.webp",
+  "card": "assets/cards/sanhua.jpg"
+ },
+ {
+  "id": "taoqi",
+  "gameId": 1601,
+  "name": "Taoqi",
+  "ru": "Таоци",
+  "rarity": 4,
+  "element": "havoc",
+  "weapon": "broadblade",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Discord",
+     "sig": false
+    },
+    {
+     "name": "Dauntless Evernight",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Защита %"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Хавок"
+    },
+    {
+     "cost": 1,
+     "stat": "Защита %"
+    },
+    {
+     "cost": 1,
+     "stat": "Защита %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Защита % > Защита (число)",
+   "skills": [
+    "Контур форте",
+    "Навык резонанса",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jinhsi",
+     "taoqi",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Support and Healer",
+   "Resonance Liberation Damage",
+   "Resonance Skill DMG Amplification"
+  ],
+  "icon": "assets/chars/taoqi.webp",
+  "art": "assets/art/taoqi.webp",
+  "card": "assets/cards/taoqi.jpg"
+ },
+ {
+  "id": "baizhi",
+  "gameId": 1103,
+  "name": "Baizhi",
+  "ru": "Байчжи",
+  "rarity": 4,
+  "element": "glacio",
+  "weapon": "rectifier",
+  "limited": false,
+  "signature": null,
+  "role": "support",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Stellar Symphony",
+     "sig": false
+    },
+    {
+     "name": "Variation",
+     "sig": false
+    },
+    {
+     "name": "Call of the Abyss",
+     "sig": false
+    },
+    {
+     "name": "Rectifier of Voyager",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "HP % / Крит. шанс"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    },
+    {
+     "cost": 1,
+     "stat": "HP %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > HP % > HP (число)",
+   "skills": [
+    "Высвобождение",
+    "Навык резонанса",
+    "Контур форте",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "lingyang",
+     "zhezhi",
+     "baizhi"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Support and Healer",
+   "Coordinated Attack",
+   "DMG Amplification"
+  ],
+  "icon": "assets/chars/baizhi.webp",
+  "art": "assets/art/baizhi.webp",
+  "card": "assets/cards/baizhi.jpg"
+ },
+ {
+  "id": "danjin",
+  "gameId": 1602,
+  "name": "Danjin",
+  "ru": "Даньцзинь",
+  "rarity": 4,
+  "element": "havoc",
+  "weapon": "sword",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T3",
+  "build": {
+   "weapons": [
+    {
+     "name": "Blazing Brilliance",
+     "sig": false
+    },
+    {
+     "name": "Red Spring",
+     "sig": false
+    },
+    {
+     "name": "Emerald of Genesis",
+     "sig": false
+    },
+    {
+     "name": "Commando of Conviction",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Midnight Veil",
+     "pieces": 5
+    },
+    {
+     "name": "Havoc Eclipse",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron",
+    "Lorelei"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Хавок > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон тяжёлой атаки % > Урон навыка %",
+   "skills": [
+    "Контур форте",
+    "Навык резонанса",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "rover-havoc",
+     "danjin",
+     "verina"
+    ],
+    [
+     "camellya",
+     "danjin",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Havoc DMG Amplification"
+  ],
+  "icon": "assets/chars/danjin.webp",
+  "art": "assets/art/danjin.webp",
+  "card": "assets/cards/danjin.jpg"
+ },
+ {
+  "id": "aalto",
+  "gameId": 1403,
+  "name": "Aalto",
+  "ru": "Аалто",
+  "rarity": 4,
+  "element": "aero",
+  "weapon": "pistols",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "The Last Dance",
+     "sig": false
+    },
+    {
+     "name": "Woodland Aria",
+     "sig": false
+    },
+    {
+     "name": "Static Mist",
+     "sig": false
+    },
+    {
+     "name": "Relativistic Jet",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Sierra Gale",
+     "pieces": 5
+    },
+    {
+     "name": "Windward Pilgrimage",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Nightmare: Feilian Beringal",
+    "Nightmare: Kelpie"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Аэро > Восст. энергии"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) ≥ Урон обычной атаки % > Урон навыка %",
+   "skills": [
+    "Обычная атака",
+    "Навык резонанса",
+    "Высвобождение",
+    "Контур форте",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jiyan",
+     "aalto",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Aero DMG Amplification"
+  ],
+  "icon": "assets/chars/aalto.webp",
+  "art": "assets/art/aalto.webp",
+  "card": "assets/cards/aalto.jpg"
+ },
+ {
+  "id": "mortefi",
+  "gameId": 1204,
+  "name": "Mortefi",
+  "ru": "Мортефи",
+  "rarity": 4,
+  "element": "fusion",
+  "weapon": "pistols",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T1",
+  "build": {
+   "weapons": [
+    {
+     "name": "Static Mist",
+     "sig": false
+    },
+    {
+     "name": "The Last Dance",
+     "sig": false
+    },
+    {
+     "name": "Relativistic Jet",
+     "sig": false
+    },
+    {
+     "name": "Novaburst",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Empyrean Anthem",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron",
+    "Stonewall Bracer"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Фьюжн > Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Высвобождение",
+    "Контур форте",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jiyan",
+     "mortefi",
+     "verina"
+    ],
+    [
+     "jingran",
+     "mortefi",
+     "shorekeeper"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Resonance Liberation Damage",
+   "Coordinated Attack",
+   "Heavy Attack DMG Amplification"
+  ],
+  "icon": "assets/chars/mortefi.webp",
+  "art": "assets/art/mortefi.webp",
+  "card": "assets/cards/mortefi.jpg"
+ },
+ {
+  "id": "yuanwu",
+  "gameId": 1303,
+  "name": "Yuanwu",
+  "ru": "Юаньу",
+  "rarity": 4,
+  "element": "electro",
+  "weapon": "gauntlets",
+  "limited": false,
+  "signature": null,
+  "role": "support",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Verity's Handle",
+     "sig": false
+    },
+    {
+     "name": "Amity Accord",
+     "sig": false
+    },
+    {
+     "name": "Stonard",
+     "sig": false
+    },
+    {
+     "name": "Guardian Gauntlets",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Empyrean Anthem",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро > Защита %"
+    },
+    {
+     "cost": 1,
+     "stat": "Защита %"
+    },
+    {
+     "cost": 1,
+     "stat": "Защита %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Защита % > Защита (число)",
+   "skills": [
+    "Высвобождение",
+    "Навык резонанса",
+    "Контур форте",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "calcharo",
+     "yuanwu",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Concerto Efficiency",
+   "Coordinated Attack",
+   "Vibration Strength Reduction",
+   "Interruption Resistance Boost"
+  ],
+  "icon": "assets/chars/yuanwu.webp",
+  "art": "assets/art/yuanwu.webp",
+  "card": "assets/cards/yuanwu.jpg"
+ },
+ {
+  "id": "lumi",
+  "gameId": 1504,
+  "name": "Lumi",
+  "ru": "Люми",
+  "rarity": 4,
+  "element": "electro",
+  "weapon": "broadblade",
+  "limited": false,
+  "signature": null,
+  "role": "hybrid",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Ages of Harvest",
+     "sig": false
+    },
+    {
+     "name": "Verdant Summit",
+     "sig": false
+    },
+    {
+     "name": "Lustrous Razor",
+     "sig": false
+    },
+    {
+     "name": "Autumntrace",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    },
+    {
+     "name": "Void Thunder",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Impermanence Heron",
+    "Nightmare: Thundering Mephis"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро > Восст. энергии"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Высвобождение",
+    "Навык резонанса",
+    "Интро",
+    "Обычная атака"
+   ],
+   "teams": [
+    [
+     "jinhsi",
+     "lumi",
+     "verina"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Main Damage Dealer",
+   "Basic Attack DMG",
+   "Resonance Skill DMG Amplification"
+  ],
+  "icon": "assets/chars/lumi.webp",
+  "art": "assets/art/lumi.webp",
+  "card": "assets/cards/lumi.jpg"
+ },
+ {
+  "id": "youhu",
+  "gameId": 1106,
+  "name": "Youhu",
+  "ru": "Юху",
+  "rarity": 4,
+  "element": "glacio",
+  "weapon": "gauntlets",
+  "limited": false,
+  "signature": null,
+  "role": "support",
+  "tier": "T4",
+  "build": {
+   "weapons": [
+    {
+     "name": "Marcato",
+     "sig": false
+    },
+    {
+     "name": "Gauntlets#21D",
+     "sig": false
+    },
+    {
+     "name": "Abyss Surges",
+     "sig": false
+    },
+    {
+     "name": "Celestial Spiral",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    },
+    {
+     "name": "Moonlit Clouds",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return",
+    "Impermanence Heron"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Глацио"
+    },
+    {
+     "cost": 3,
+     "stat": "Восст. энергии / Урон Глацио"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число) > Урон навыка %",
+   "skills": [
+    "Навык резонанса",
+    "Контур форте",
+    "Высвобождение",
+    "Обычная атака",
+    "Интро"
+   ],
+   "teams": [
+    [
+     "jiyan",
+     "mortefi",
+     "youhu"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Support and Healer",
+   "Resonance Skill DMG",
+   "Vibration Strength Reduction",
+   "Coordinated Attack DMG Amplification"
+  ],
+  "icon": "assets/chars/youhu.webp",
+  "art": "assets/art/youhu.webp",
+  "card": "assets/cards/youhu.jpg"
+ },
+ {
+  "id": "buling",
+  "gameId": 1307,
+  "name": "Buling",
+  "ru": "Булин",
+  "rarity": 4,
+  "element": "electro",
+  "weapon": "rectifier",
+  "limited": false,
+  "signature": null,
+  "role": "support",
+  "tier": "T1.5",
+  "build": {
+   "weapons": [
+    {
+     "name": "Stringmaster",
+     "sig": false
+    },
+    {
+     "name": "Lethean Elegy",
+     "sig": false
+    },
+    {
+     "name": "Rime-Draped Sprouts",
+     "sig": false
+    },
+    {
+     "name": "Luminous Hymn",
+     "sig": false
+    }
+   ],
+   "sets": [
+    {
+     "name": "Rejuvenating Glow",
+     "pieces": 5
+    }
+   ],
+   "mainEcho": [
+    "Fallacy of No Return"
+   ],
+   "mainStats": [
+    {
+     "cost": 4,
+     "stat": "Крит. шанс / Крит. урон"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро"
+    },
+    {
+     "cost": 3,
+     "stat": "Урон Электро > Восст. энергии"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    },
+    {
+     "cost": 1,
+     "stat": "Атака %"
+    }
+   ],
+   "substats": "Восст. энергии (до нужного порога) > Крит. шанс = Крит. урон > Атака % > Атака (число)",
+   "skills": [
+    "Контур форте",
+    "Обычная атака",
+    "Навык резонанса",
+    "Интро",
+    "Высвобождение"
+   ],
+   "teams": [
+    [
+     "hsin",
+     "rover-electro",
+     "buling"
+    ]
+   ]
+  },
+  "released": null,
+  "tags": [
+   "Support and Healer",
+   "DMG Amplification",
+   "Electro Flare"
+  ],
+  "icon": "assets/chars/buling.webp",
+  "art": "assets/art/buling.webp",
+  "card": "assets/cards/buling.jpg"
+ }
+]

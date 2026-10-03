@@ -1,0 +1,357 @@
+{
+ "Verdant Summit": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/verdant-summit.webp"
+ },
+ "Thunderflare Dominion": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/thunderflare-dominion.webp"
+ },
+ "Ages of Harvest": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/ages-of-harvest.webp"
+ },
+ "Kumokiri": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/kumokiri.webp"
+ },
+ "Stringmaster": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/stringmaster.webp"
+ },
+ "Whispers of Sirens": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/whispers-of-sirens.webp"
+ },
+ "Rime-Draped Sprouts": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/rime-draped-sprouts.webp"
+ },
+ "Lethean Elegy": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/lethean-elegy.webp"
+ },
+ "Wildfire Mark": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/wildfire-mark.webp"
+ },
+ "Blazing Brilliance": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/blazing-brilliance.webp"
+ },
+ "Emerald of Genesis": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/emerald-of-genesis.webp"
+ },
+ "Emerald Sentence": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/emerald-sentence.webp"
+ },
+ "Frostburn": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/frostburn.webp"
+ },
+ "Moongazer's Sigil": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/moongazers-sigil.webp"
+ },
+ "Verity's Handle": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/veritys-handle.webp"
+ },
+ "Blazing Justice": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/blazing-justice.webp"
+ },
+ "Tragicomedy": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/tragicomedy.webp"
+ },
+ "Stellar Symphony": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/stellar-symphony.webp"
+ },
+ "Variation": {
+  "rarity": 4,
+  "type": "rectifier",
+  "icon": "assets/weapons/variation.webp"
+ },
+ "Rectifier#25": {
+  "rarity": 4,
+  "type": "rectifier",
+  "icon": "assets/weapons/rectifier25.webp"
+ },
+ "Call of the Abyss": {
+  "rarity": 4,
+  "type": "rectifier",
+  "icon": "assets/weapons/call-of-the-abyss.webp"
+ },
+ "Red Spring": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/red-spring.webp"
+ },
+ "Everbright Polestar": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/everbright-polestar.webp"
+ },
+ "The Last Dance": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/the-last-dance.webp"
+ },
+ "Phasic Homogenizer": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/phasic-homogenizer.webp"
+ },
+ "Woodland Aria": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/woodland-aria.webp"
+ },
+ "Spectrum Blaster": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/spectrum-blaster.webp"
+ },
+ "Solsworn Ciphers": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/solsworn-ciphers.webp"
+ },
+ "Luminous Hymn": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/luminous-hymn.webp"
+ },
+ "Unflickering Valor": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/unflickering-valor.webp"
+ },
+ "Laser Shearer": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/laser-shearer.webp"
+ },
+ "Bloodpact's Pledge": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/bloodpacts-pledge.webp"
+ },
+ "Pulsation Bracer": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/pulsation-bracer.webp"
+ },
+ "Lux & Umbra": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/lux-and-umbra.webp"
+ },
+ "Defier's Thorn": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/defiers-thorn.webp"
+ },
+ "Feather Edge": {
+  "rarity": 4,
+  "type": "sword",
+  "icon": "assets/weapons/feather-edge.webp"
+ },
+ "Aether Strike": {
+  "rarity": 4,
+  "type": "gauntlets",
+  "icon": "assets/weapons/aether-strike.webp"
+ },
+ "Static Mist": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/static-mist.webp"
+ },
+ "Starfield Calibrator": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/starfield-calibrator.webp"
+ },
+ "Discord": {
+  "rarity": 4,
+  "type": "broadblade",
+  "icon": "assets/weapons/discord.webp"
+ },
+ "Broadblade#41": {
+  "rarity": 4,
+  "type": "broadblade",
+  "icon": "assets/weapons/broadblade41.webp"
+ },
+ "Daybreaker's Spine": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/daybreakers-spine.webp"
+ },
+ "Forged Dwarf Star": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/forged-dwarf-star.webp"
+ },
+ "Spectral Trigger": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/spectral-trigger.webp"
+ },
+ "Skull Thrasher": {
+  "rarity": 5,
+  "type": "pistols",
+  "icon": "assets/weapons/skull-thrasher.webp"
+ },
+ "Freeze Frame": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/freeze-frame.webp"
+ },
+ "Azure Oath": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/azure-oath.webp"
+ },
+ "Firstlight's Herald": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/firstlights-herald.webp"
+ },
+ "Glint of Clouds": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/glint-of-clouds.webp"
+ },
+ "Thousandfold Deliverance": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/thousandfold-deliverance.webp"
+ },
+ "Blooming Jadehaven": {
+  "rarity": 5,
+  "type": "rectifier",
+  "icon": "assets/weapons/blooming-jadehaven.webp"
+ },
+ "Unspoken Rue": {
+  "rarity": 5,
+  "type": "sword",
+  "icon": "assets/weapons/unspoken-rue.webp"
+ },
+ "Lustrous Razor": {
+  "rarity": 5,
+  "type": "broadblade",
+  "icon": "assets/weapons/lustrous-razor.webp"
+ },
+ "Lunar Cutter": {
+  "rarity": 4,
+  "type": "sword",
+  "icon": "assets/weapons/lunar-cutter.webp"
+ },
+ "Endless Collapse": {
+  "rarity": 4,
+  "type": "sword",
+  "icon": "assets/weapons/endless-collapse.webp"
+ },
+ "Somnoire Anchor": {
+  "rarity": 4,
+  "type": "sword",
+  "icon": "assets/weapons/somnoire-anchor.webp"
+ },
+ "Lumingloss": {
+  "rarity": 4,
+  "type": "sword",
+  "icon": "assets/weapons/lumingloss.webp"
+ },
+ "Thunderbolt": {
+  "rarity": 4,
+  "type": "pistols",
+  "icon": "assets/weapons/thunderbolt.webp"
+ },
+ "Relativistic Jet": {
+  "rarity": 4,
+  "type": "pistols",
+  "icon": "assets/weapons/relativistic-jet.webp"
+ },
+ "Commando of Conviction": {
+  "rarity": 4,
+  "type": "sword",
+  "icon": "assets/weapons/commando-of-conviction.webp"
+ },
+ "Dauntless Evernight": {
+  "rarity": 4,
+  "type": "broadblade",
+  "icon": "assets/weapons/dauntless-evernight.webp"
+ },
+ "Rectifier of Voyager": {
+  "rarity": 3,
+  "type": "rectifier",
+  "icon": "assets/weapons/rectifier-of-voyager.webp"
+ },
+ "Novaburst": {
+  "rarity": 4,
+  "type": "pistols",
+  "icon": "assets/weapons/novaburst.webp"
+ },
+ "Amity Accord": {
+  "rarity": 4,
+  "type": "gauntlets",
+  "icon": "assets/weapons/amity-accord.webp"
+ },
+ "Stonard": {
+  "rarity": 4,
+  "type": "gauntlets",
+  "icon": "assets/weapons/stonard.webp"
+ },
+ "Guardian Gauntlets": {
+  "rarity": 3,
+  "type": "gauntlets",
+  "icon": "assets/weapons/guardian-gauntlets.webp"
+ },
+ "Autumntrace": {
+  "rarity": 4,
+  "type": "broadblade",
+  "icon": "assets/weapons/autumntrace.webp"
+ },
+ "Marcato": {
+  "rarity": 4,
+  "type": "gauntlets",
+  "icon": "assets/weapons/marcato.webp"
+ },
+ "Gauntlets#21D": {
+  "rarity": 4,
+  "type": "gauntlets",
+  "icon": "assets/weapons/gauntlets21d.webp"
+ },
+ "Abyss Surges": {
+  "rarity": 5,
+  "type": "gauntlets",
+  "icon": "assets/weapons/abyss-surges.webp"
+ },
+ "Celestial Spiral": {
+  "rarity": 4,
+  "type": "gauntlets",
+  "icon": "assets/weapons/celestial-spiral.webp"
+ }
+}

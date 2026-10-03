@@ -1,0 +1,138 @@
+{
+ "mode": "Башня невзгод (Tower of Adversity)",
+ "patch": "3.7",
+ "updated": "2026-09-30",
+ "tiers": [
+  {
+   "tier": "T0",
+   "label": "Мета",
+   "dps": [
+    "hiyuki",
+    "jingran",
+    "qingxiao",
+    "yangyang-xuanling"
+   ],
+   "hybrid": [
+    "denia",
+    "iuno",
+    "lucilla",
+    "lynae"
+   ],
+   "support": [
+    "chisa",
+    "mornye",
+    "suisui",
+    "shorekeeper"
+   ]
+  },
+  {
+   "tier": "T0.5",
+   "label": "Мета",
+   "dps": [
+    "aemeath",
+    "hsin",
+    "luuk-herssen",
+    "sigrika"
+   ],
+   "hybrid": [
+    "lupa",
+    "qiuyuan",
+    "rebecca"
+   ],
+   "support": [
+    "verina"
+   ]
+  },
+  {
+   "tier": "T1",
+   "label": "Сильные",
+   "dps": [
+    "augusta",
+    "cartethyia",
+    "galbrena",
+    "iuno",
+    "lucy",
+    "phrolova"
+   ],
+   "hybrid": [
+    "ciaccona",
+    "mortefi",
+    "rover-electro"
+   ],
+   "support": []
+  },
+  {
+   "tier": "T1.5",
+   "label": "Сильные",
+   "dps": [
+    "carlotta"
+   ],
+   "hybrid": [
+    "brant"
+   ],
+   "support": [
+    "buling",
+    "rover-aero"
+   ]
+  },
+  {
+   "tier": "T2",
+   "label": "Рабочие",
+   "dps": [
+    "brant",
+    "jiyan",
+    "phoebe",
+    "zani"
+   ],
+   "hybrid": [
+    "cantarella",
+    "changli",
+    "phoebe",
+    "sanhua"
+   ],
+   "support": [
+    "rover-spectro"
+   ]
+  },
+  {
+   "tier": "T3",
+   "label": "Вне меты",
+   "dps": [
+    "camellya",
+    "encore",
+    "jinhsi",
+    "lingyang",
+    "xiangli-yao"
+   ],
+   "hybrid": [
+    "danjin",
+    "roccia",
+    "yinlin",
+    "zhezhi"
+   ],
+   "support": [
+    "baizhi"
+   ]
+  },
+  {
+   "tier": "T4",
+   "label": "Вне меты",
+   "dps": [
+    "calcharo",
+    "chixia",
+    "rover-havoc"
+   ],
+   "hybrid": [
+    "aalto",
+    "jianxin",
+    "lumi",
+    "taoqi",
+    "yangyang"
+   ],
+   "support": [
+    "youhu",
+    "yuanwu"
+   ]
+  }
+ ]
+}
